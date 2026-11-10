@@ -40,8 +40,10 @@
     ["leadership", /^(leadership( (and|&) (involvement|activities|extracurriculars?|volunteering))?|extra-?curricular( activities)?|volunteer(ing)?( experience| work)?|community (involvement|service)|activities|involvement|co-?curricular( activities)?)$/],
     ["interests", /^(interests|hobbies( (and|&) interests)?|interests (and|&) hobbies)$/],
     ["references", /^(referees?|references)( available (up)?on request)?$/],
-    ["languages", /^languages$/]
+    ["languages", /^languages$/],
+    ["additional", /^(additional information|other information|personal information|additional details|extra information)$/]
   ];
+  const LOCATION_RE = /^[A-Z][A-Za-z .'-]{1,30},?\s+(WA|NSW|VIC|QLD|SA|TAS|NT|ACT|Western Australia|Australia)\.?$/i;
   const EXP_TYPES = new Set(["experience", "projects", "leadership"]);
   const BULLET_RE = /^\s*([•●▪◦‣∙·‧■□►➢➤✓✔\-–—*]|o(?=\s)|\d{1,2}[.)](?=\s))\s*/;
   const MONTH = "(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\\.?";
@@ -86,7 +88,10 @@
     for (const rawLine of lines) {
       const line = rawLine.trim();
       if (!line) continue;
-      const ht = headingType(line, seenKnown);
+      const isPlace = LOCATION_RE.test(line);
+      if (isPlace && cur && !cur.items.length) continue; // e.g. "PERTH, WA" printed under a heading
+      let ht = isPlace ? null : headingType(line, seenKnown);
+      if (ht === "other" && cur && !cur.items.length && cur.type !== "other") continue; // decoration under a real heading
       if (ht) {
         if (ht !== "other") seenKnown = true;
         cur = { id: nid("s"), title: line.split(/\s{2,}|\t|\|/)[0].replace(/[:\s]+$/, "").trim(), type: ht, items: [] };
@@ -189,7 +194,7 @@
   }
 
   /* ---------------- dictionaries ---------------- */
-  const HARD_SKILLS = ["advanced excel", "excel", "vba", "python", "sql", "power bi", "tableau", "matlab", "autocad", "civil 3d", "revit", "solidworks", "ansys", "sap", "xero", "myob", "quickbooks", "bloomberg", "capital iq", "factset", "refinitiv", "financial modelling", "financial modeling", "dcf", "valuation", "accounting", "bookkeeping", "reconciliation", "reconciliations", "budgeting", "forecasting", "financial analysis", "financial reporting", "data analysis", "statistics", "econometrics", "powerpoint", "microsoft word", "microsoft office", "ms office", "google sheets", "java", "c++", "c#", "javascript", "html", "css", "git", "arduino", "plc", "labview", "project management", "risk assessment", "hazop", "gis", "arcgis", "qgis", "microstation", "primavera", "ms project", "legal research", "legal writing", "drafting", "contract review", "lexisnexis", "westlaw", "jade", "due diligence", "conveyancing", "case management", "first aid", "white card", "rsa", "forklift licence", "salesforce", "hubspot", "crm", "canva", "adobe", "photoshop", "stata", "spss", "eviews", "alteryx", "jira", "agile", "scrum", "lean", "six sigma", "point of sale", "pos", "cash handling", "stock control", "inventory management", "customer service", "sales", "negotiation", "research", "report writing"];
+  const HARD_SKILLS = ["advanced excel", "excel", "vba", "python", "sql", "power bi", "tableau", "matlab", "autocad", "civil 3d", "revit", "solidworks", "ansys", "sap", "xero", "myob", "quickbooks", "bloomberg", "capital iq", "factset", "refinitiv", "financial modelling", "financial modeling", "dcf", "valuation", "accounting", "bookkeeping", "reconciliation", "reconciliations", "budgeting", "forecasting", "financial analysis", "financial reporting", "data analysis", "statistics", "econometrics", "powerpoint", "microsoft word", "microsoft office", "ms office", "google sheets", "java", "c++", "c#", "javascript", "html", "css", "git", "arduino", "plc", "labview", "project management", "risk assessment", "hazop", "gis", "arcgis", "qgis", "microstation", "primavera", "ms project", "legal research", "legal writing", "drafting", "contract review", "lexisnexis", "westlaw", "jade", "due diligence", "conveyancing", "case management", "first aid", "white card", "rsa", "forklift licence", "salesforce", "hubspot", "crm", "canva", "adobe", "photoshop", "stata", "spss", "eviews", "alteryx", "jira", "agile", "scrum", "lean", "six sigma", "point of sale", "pos", "cash handling", "stock control", "inventory management", "customer service", "sales", "negotiation", "research", "report writing", "microsoft excel", "excel modelling", "outlook", "microsoft outlook", "social media management", "change management", "database management", "power query", "pivot tables", "property analysis", "real estate"];
   const SOFT_SKILLS = ["communication", "teamwork", "leadership", "time management", "problem solving", "problem-solving", "attention to detail", "adaptability", "work ethic", "interpersonal", "organisation", "organization", "critical thinking", "creativity", "initiative", "reliability", "collaboration", "resilience", "multitasking"];
   const FIELDS = {
     finance: /\b(financ\w*|accounting|accountant|audit\w*|tax|taxation|invest\w*|banking|bank|valuation\w*|equity|corporate|economics?|commerce|m&a|deals?|modelling|modeling|analyst|treasury|credit|portfolio|wealth|advisory|capital|markets?|bcom)\b/gi,
@@ -455,7 +460,7 @@
         original: first.item.text, itemId: first.item.id, why: "Openers like \"responsible for\" or \"helped\" hide what you actually did. Recruiters skim the first two or three words of each line.",
         recommendation: "Start each bullet point with a specific action verb (Prepared, Reconciled, Coordinated, Designed).", example: rw.changed ? rw.text : "", needsFacts: false });
     }
-    const unq = expLines.filter(x => !isQuantified(x.item.text) && verbInfo(x.item.text).verb);
+    const unq = expLines.filter(x => !isQuantified(x.item.text) && verbInfo(x.item.text).verb && !/\[/.test(x.item.text));
     if (nExp && quant.length / nExp < (mode === "graduate" ? 0.25 : 0.4) && unq.length) {
       const first = unq[0];
       finding({ category: "experience", severity: "Medium", kind: "subjective", impact: 3, title: "Few results or figures", location: `${first.section.title}`,
@@ -519,7 +524,7 @@
       const t = x.item.text;
       const issues = [];
       const layoutLine = x.item.kind === "entry" || /(?:19|20)\d{2}/.test(t);
-      if (/\S\s{2,}\S/.test(t) && !layoutLine) issues.push("double space");
+      if (/\S {2,3}(?! )\S/.test(t) && !layoutLine && !/\S {4,}\S/.test(t)) issues.push("double space");
       if (x.item.bullet && /^[a-z]/.test(t)) issues.push("starts with a lowercase letter");
       const rep = t.match(/\b(\w{2,})\s+\1\b/i); if (rep && !/^(that|had)$/i.test(rep[1])) issues.push(`repeated word "${rep[1]}"`);
       if (/\s[,.;:](?!\d)/.test(t)) issues.push("space before punctuation");
@@ -588,7 +593,7 @@
     const dp = (dates >= 2 ? 2 : dates ? 1 : 0) + (fmts.size <= 1 ? 1 : 0);
     add("ats", dp, dates ? `${dates} dates found${fmts.size > 1 ? `, in ${fmts.size} formats (${[...fmts].join(", ")})` : ""}.` : "No dates found for education or roles.", dp >= 3 ? 1 : -1);
     if (!dates) finding({ category: "ats", severity: "Medium", kind: "objective", impact: 2, title: "No dates", location: "Education and experience", original: "", why: "Recruiters and ATS software use dates to work out how recent and how long each role was.", recommendation: "Add month and year for each role and your expected graduation date (e.g. Mar 2024 – Present).", example: "", needsFacts: true, question: "When did each role start and finish, and when do you graduate?" });
-    const longLine = lines.some(l => l.length > 400);
+    const longLine = lines.some(l => l.length > 400 && /\S {4,}\S/.test(l));
     const ep = (wordCount >= 120 ? 1 : 0) + (longLine ? 0 : 1);
     add("ats", ep, longLine ? "Some lines are very long, which suggests text from columns was merged." : wordCount >= 120 ? "Enough text was extracted to read the CV reliably." : "Very little text was extracted.", ep === 2 ? 1 : -1);
 
@@ -619,6 +624,14 @@
     const unbacked = hard.filter(k => !evidenced.includes(k));
     if (hard.length && unbacked.length >= 2) finding({ category: "relevance", severity: "Low", kind: "subjective", impact: 2, title: "Skills not shown in your experience", location: skillSecs[0].title, original: unbacked.slice(0, 6).join(", "),
       why: "A skill in a list carries more weight when a bullet point shows you using it.", recommendation: `Where it's true, mention ${unbacked.slice(0, 3).join(", ")} in the bullet point where you used it.`, example: "", needsFacts: true, question: `Where have you used ${unbacked[0]}?` });
+    const unlisted = [...new Set(hits(restText, HARD_SKILLS))].filter(k => !hard.includes(k) && !["sales", "research", "customer service", "accounting", "real estate"].includes(k) && !hard.some(h => h.includes(k) || k.includes(h)));
+    if (skillText && unlisted.length) {
+      const where = items.find(x => x.section && x.section.type !== "skills" && hits(x.item.text, [unlisted[0]]).length);
+      finding({ category: "relevance", severity: "Medium", kind: "objective", impact: 1, title: "Skills you use but haven't listed", location: skillSecs[0].title,
+        original: where ? where.item.text : "", itemId: where ? where.item.id : null,
+        why: `Your CV shows you using ${unlisted.slice(0, 5).join(", ")}, but they're not in your skills list. Recruiters and ATS filters often search the skills list for these exact terms.`,
+        recommendation: `Add ${unlisted.slice(0, 5).join(", ")} to your skills section, since your experience already backs them up.`, example: "", needsFacts: false });
+    }
     const share = fieldTotal ? topField[1] / fieldTotal : 0;
     const fp = !fieldTotal ? 1 : share >= 0.6 ? 3 : share >= 0.4 ? 2 : 1;
     add("relevance", fp, fieldTotal ? `Clearest field: ${topField[0]} (${Math.round(share * 100)}% of field-specific terms).` : "No field-specific terms found.", fp >= 2 ? 1 : -1);
@@ -648,12 +661,13 @@
       why: "Australian CVs don't usually include date of birth, age, marital status or a photo, and employers shouldn't use them. This doesn't affect your score.", recommendation: "Consider removing it.", example: "", needsFacts: false });
     if (!linkedin && contactOk) finding({ category: "professionalism", severity: "Low", kind: "subjective", impact: 0, title: "No LinkedIn URL", location: "Header / contact details", original: "", why: "Perth recruiters often check LinkedIn. This doesn't affect your score.", recommendation: "Add your LinkedIn profile URL (linkedin.com/in/yourname) to your contact line.", example: "", needsFacts: true, question: "What's your LinkedIn URL?" });
 
-    const ph = items.filter(x => /\[[^\]]{0,60}\]|\bX{1,3}\b(?=\s*(?:prospective|properties|people|customers|clients|staff|per|%))/.test(x.item.text));
+    const ph = items.filter(x => /\[[^\]]{0,60}\]|\bX{1,3}\b(?=\s*(?:prospective|properties|people|customers|clients|staff|per|%))/.test(x.item.text)
+      || (x.section && x.section.type !== "interests" && wordsOf(x.item.text).length <= 5 && /\w\s*[-–:]\s*$/.test(x.item.text)));
     if (ph.length) {
       cats.professionalism.score -= Math.min(4, ph.length);
-      cats.professionalism.reasons.push({ sign: -1, text: `${ph.length} line${ph.length > 1 ? "s" : ""} still contain placeholders like "${(ph[0].item.text.match(/\[[^\]]{0,60}\]/) || ["[X]"])[0]}".` });
-      finding({ category: "professionalism", severity: "High", kind: "objective", impact: Math.min(4, ph.length) + 2, title: "Unfinished placeholders left in", location: `${loc(ph[0])}${ph.length > 1 ? ` (and ${ph.length - 1} more)` : ""}`,
-        original: ph[0].item.text, itemId: ph[0].item.id, why: "Brackets like [X] or [client/sector] tell a recruiter the CV wasn't finished. This is one of the quickest ways to be screened out.",
+      cats.professionalism.reasons.push({ sign: -1, text: `${ph.length} line${ph.length > 1 ? "s" : ""} still contain placeholders or blank fields, e.g. "${short(ph[0].item.text, 60)}".` });
+      finding({ category: "professionalism", severity: "High", kind: "objective", impact: Math.min(4, ph.length) + 2, title: "Unfinished placeholders or blank fields", location: `${loc(ph[0])}${ph.length > 1 ? ` (and ${ph.length - 1} more)` : ""}`,
+        original: ph[0].item.text, itemId: ph[0].item.id, why: "Brackets like [X] or [client/sector], or a label with nothing after it (e.g. \"Course Weighted Average-\"), tell a recruiter the CV wasn't finished. This is one of the quickest ways to be screened out.",
         recommendation: "Replace each placeholder with the real detail, or delete it. Don't guess a figure you can't back up in an interview.", example: "", needsFacts: true,
         question: "What should go in the brackets? If you don't know, remove that part of the sentence.", placeholder: true });
     }
@@ -682,7 +696,7 @@
       if (x.item.kind === "line" && /(?:19|20)\d{2}/.test(x.item.text) && wordsOf(x.item.text).length < 14) continue; // dated heading-style lines
       const isExp = EXP_TYPES.has(x.section.type) && (x.item.kind === "bullet" || x.item.kind === "statement");
       const rw = rewrite(x.item.text, isExp ? "improve" : "tidy", { variant, current: x.item.current, period: isExp && x.item.bullet ? majorityPeriod : undefined });
-      if (!rw.changed) continue;
+      if (!rw.changed || rw.text.replace(/\s+/g, " ").trim() === x.item.text.replace(/\s+/g, " ").trim()) continue; // layout spacing only
       suggestions.push({ id: nid("g"), itemId: x.item.id, section: x.section.title, original: x.item.text, revised: rw.text, why: explain(rw.notes), needsFacts: false, kind: "wording" });
     }
     for (const x of expLines) {

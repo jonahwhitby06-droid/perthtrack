@@ -58,11 +58,17 @@
       this.prefs = { ...PT.DEFAULT_PREFS, ...this.prefs };
       this.allPrograms = this.programs;
       this.byId = Object.fromEntries(this.allPrograms.map(p => [p.id, p]));
-      this.programs = this.allPrograms.filter(p => PT.inField(p, this.prefs.field));
+      if (this.prefs.spec && PT.FIELD_OF[this.prefs.spec] && this.prefs.field !== "All" && PT.FIELD_OF[this.prefs.spec] !== this.prefs.field) this.prefs.spec = "";
+      this.programs = this.allPrograms.filter(p => PT.inField(p, this.prefs.field) && PT.inCity(p, this.prefs.city) && PT.hasSpec(p, this.prefs.spec));
     },
+    get city() { return this.prefs.city || "Perth"; },
+    get spec() { return this.prefs.spec || ""; },
+    async setCity(city) { await this.setPrefs({ city }); },
+    async setSpec(spec) { await this.setPrefs({ spec }); },
     get field() { return this.prefs.field || "All"; },
     async setField(field) {
       const prefs = { field };
+      if (this.prefs.spec && field !== "All" && PT.FIELD_OF[this.prefs.spec] !== field) prefs.spec = "";
       if (field !== "All" && !this.prefs.interests.some(x => PT.FIELD_OF[x] === field)) {
         prefs.interests = [...PT.DEFAULT_INTERESTS[field], ...this.prefs.interests].slice(0, 6);
       }
@@ -124,6 +130,12 @@
     ["tracker.html", "Tracker"], ["best-bets.html", "Best bets"], ["companies.html", "Companies"],
     ["calendar.html", "Calendar"], ["saved.html", "Applications"], ["network.html", "Network"], ["alerts.html", "Alerts"], ["cv.html", "CV Score"], ["resources.html", "Guides"]
   ];
+  const FILTER_PAGES = new Set(["index.html", "tracker.html", "best-bets.html", "companies.html", "calendar.html", "saved.html", "network.html", "alerts.html", ""]);
+  /* Specialty options, alphabetical, with paralegal roles last. */
+  function specOptions(f) {
+    return PT.CATEGORIES.filter(c => c.field === f).sort((a, b) => (a.id === "paralegal") - (b.id === "paralegal") || a.label.localeCompare(b.label))
+      .map(c => `<option value="${c.id}"${Store.spec === c.id ? " selected" : ""}>${esc(c.label)}</option>`).join("");
+  }
   function renderChrome() {
     const here = location.pathname.split("/").pop() || "index.html";
     const hdr = document.getElementById("hdr");
@@ -134,23 +146,32 @@
       hdr.innerHTML = `<header class="top"><div class="wrap">
         <a class="logo" href="index.html"><span class="dot"></span>PerthTrack</a>
         <button class="menu-btn" aria-expanded="false" aria-controls="mainnav" aria-label="Open menu">☰</button>
-        <div class="fieldswitch" role="group" aria-label="Show internships for">${["Finance", "Engineering", "Law", "All"].map(f => `<button data-field="${f}" aria-pressed="${Store.field === f}">${f}</button>`).join("")}</div>
         <nav class="main" id="mainnav" aria-label="Main">${NAV.map(([h, t]) => `<a href="${h}"${h === here ? ' aria-current="page"' : ""}>${t}</a>`).join("")}</nav>
         <div class="acct"><button class="btn small li-btn" id="liBtn" type="button">${window.Net && Net.has ? `<span class="in">in</span> ${Net.count} connected` : `<span class="in">in</span> Connect LinkedIn`}</button>${acct}</div>
-      </div></header>`;
+      </div>${FILTER_PAGES.has(here) ? `<div class="subbar"><div class="wrap">
+        <span class="subbar-l">Showing</span>
+        <div class="fieldswitch" role="group" aria-label="Show internships for">${["Finance", "Engineering", "Law", "All"].map(f => `<button data-field="${f}" aria-pressed="${Store.field === f}">${f}</button>`).join("")}</div>
+        <span class="subbar-l">in</span>
+        <label class="sr" for="citySel">City</label><select id="citySel" class="subsel">${["All", ...PT.CITIES].map(c => `<option value="${c}"${Store.city === c ? " selected" : ""}>${c === "All" ? "All cities" : c}</option>`).join("")}</select>
+        <label class="sr" for="specSel">Specialty</label><select id="specSel" class="subsel spec"><option value="">All specialties</option>${(Store.field === "All" ? PT.FIELDS : [Store.field]).map(f => `<optgroup label="${f}">${specOptions(f)}</optgroup>`).join("")}</select>
+        ${Store.spec || Store.city !== "Perth" || Store.field !== "All" ? `<button class="linkbtn subbar-reset" id="resetFilters" type="button">Reset</button>` : ""}
+      </div></div>` : ""}</header>`;
       hdr.querySelector("#liBtn").onclick = () => openLinkedIn();
+      const rs = hdr.querySelector("#resetFilters"); if (rs) rs.onclick = async () => { try { await Store.setPrefs({ field: "All", city: "Perth", spec: "" }); } catch (x) {} location.reload(); };
       hdr.querySelectorAll("[data-field]").forEach(b => b.onclick = async () => {
         if (b.dataset.field === Store.field) return;
         try { await Store.setField(b.dataset.field); } catch (e) {}
         location.reload();
       });
+      if (hdr.querySelector("#citySel")) hdr.querySelector("#citySel").onchange = async e => { try { await Store.setCity(e.target.value); } catch (x) {} location.reload(); };
+      if (hdr.querySelector("#specSel")) hdr.querySelector("#specSel").onchange = async e => { try { await Store.setSpec(e.target.value); } catch (x) {} location.reload(); };
       const btn = hdr.querySelector(".menu-btn"), nav = hdr.querySelector("nav.main");
       btn.onclick = () => { const o = nav.classList.toggle("open"); btn.setAttribute("aria-expanded", o); btn.setAttribute("aria-label", o ? "Close menu" : "Open menu"); };
     }
     const ftr = document.getElementById("ftr");
     if (ftr) ftr.innerHTML = `<footer class="foot"><div class="wrap">
       <div class="foot-grid">
-        <div><a class="logo" href="index.html"><span class="dot"></span>PerthTrack</a><p>Every finance, engineering and law internship in Perth, and when its window opens. Built by a Perth student, for Perth students.</p></div>
+        <div><a class="logo" href="index.html"><span class="dot"></span>PerthTrack</a><p>Every finance, engineering and law internship in Perth, Melbourne, Sydney, Brisbane, Adelaide and Hobart, and when its window opens. Built by a Perth student.</p></div>
         <div><h4>Tracker</h4><a href="tracker.html">All programs</a><a href="best-bets.html">Best bets</a><a href="companies.html">Companies</a><a href="calendar.html">Calendar</a></div>
         <div><h4>Guides</h4><a href="cv.html">CV Score</a><a href="guide-timeline.html">Perth recruiting timeline</a><a href="guide-winter.html">Winter internships</a><a href="guide-cv.html">Finance CV checklist</a><a href="guide-cover-letter.html">Cover letter template</a><a href="guide-engineering.html">Engineering vacation programs</a><a href="guide-law.html">Law clerkships &amp; paralegal roles</a><a href="guide-linkedin.html">How to connect LinkedIn</a></div>
         <div><h4>About</h4><a href="faq.html">FAQ</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
@@ -391,6 +412,29 @@
     if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
   }
   document.addEventListener("click", e => { const a = e.target.closest("[data-connect-li]"); if (a) { e.preventDefault(); openLinkedIn(); } });
+  /* Live search links to the big job boards for the current city, field and specialty. */
+  function boardsHtml() {
+    const city = Store.city === "All" ? "" : Store.city;
+    const field = Store.field === "All" ? "" : Store.field.toLowerCase();
+    const cat = Store.spec ? PT.CATEGORIES.find(c => c.id === Store.spec) : null;
+    const topic = cat ? cat.label.split(/[,&]/)[0].trim().toLowerCase() : field;
+    const kinds = [["internship", "Internships"], ["graduate", "Graduate roles"], [field === "law" ? "clerkship" : "vacation program", field === "law" ? "Clerkships" : "Vacation programs"]];
+    if (field === "law") kinds.push(["paralegal", "Paralegal"]);
+    const where = city ? `${city} ${PT.STATE_OF[city]}` : "Australia";
+    const q = k => encodeURIComponent(`${topic} ${k}`.trim());
+    const gcDisc = { finance: "finance", engineering: "engineering", law: "law" }[field] || "all";
+    const gcLoc = city ? city.toLowerCase() : "australia";
+    const rows = kinds.map(([k, label]) => `<tr><th scope="row">${label}${topic ? ` · ${esc(topic)}` : ""}</th>
+      <td><a href="https://www.seek.com.au/jobs?keywords=${q(k)}&where=${encodeURIComponent(where)}" target="_blank" rel="noopener">SEEK ↗</a></td>
+      <td><a href="https://www.linkedin.com/jobs/search/?keywords=${q(k)}&location=${encodeURIComponent(city ? city + ", Australia" : "Australia")}" target="_blank" rel="noopener">LinkedIn ↗</a></td>
+      <td><a href="https://au.indeed.com/jobs?q=${q(k)}&l=${encodeURIComponent(where)}" target="_blank" rel="noopener">Indeed ↗</a></td>
+      <td><a href="https://au.gradconnection.com/${k === "graduate" ? "graduate-jobs" : k === "clerkship" ? "clerkships" : "internships"}/${gcDisc}/${gcLoc}/" target="_blank" rel="noopener">SEEK Grad ↗</a></td></tr>`).join("");
+    return `<details class="boards card"><summary><b>Live listings on SEEK, LinkedIn, Indeed and SEEK Grad</b> <span class="sector">${esc(city || "All of Australia")}${topic ? " · " + esc(topic) : ""}: catch ad-hoc roles that aren't programs</span></summary>
+      <p class="sector">PerthTrack lists programs with set application windows. Smaller firms often advertise once on a job board instead, so check these searches weekly. They open the live search on each site; we don't copy listings from them.</p>
+      <div class="table-wrap"><table class="boards-t"><tbody>${rows}</tbody></table></div></details>`;
+  }
+  function renderBoards() { const el = document.getElementById("boards"); if (el) el.innerHTML = boardsHtml(); }
+
   function qs() { return Object.fromEntries(new URLSearchParams(location.search)); }
 
   window.App = { Store, api, esc, interestChecks, readInterests, networkBlock, openLinkedIn, initials, mark, windowText, pill, toast, download, meter, teamTiles, detailBlock, bindDetailActions, qs,
@@ -398,6 +442,7 @@
       try { await Store.init(); }
       catch (e) { console.error(e); }
       renderChrome();
+      renderBoards();
       if (fn) await fn();
     } };
 })();

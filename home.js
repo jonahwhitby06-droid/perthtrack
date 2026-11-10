@@ -5,6 +5,7 @@ App.boot(() => {
   const withS = P.map(p => ({ p, s: PT.statusOf(p) }));
 
   const F = Store.field;
+  const cw = document.getElementById("cityWord"); if (cw) cw.textContent = Store.city === "All" ? "Australia" : Store.city;
   $("fieldWord").textContent = F === "Engineering" ? "engineering" : F === "Finance" ? "finance" : F === "Law" ? "law" : "finance, engineering and law";
   $("quick").innerHTML = "Most searched: " + (F === "Law"
     ? [["clerkship", "Clerkships"], ["paralegal", "Paralegal"], ["corporate", "Corporate & M&A"], ["disputes", "Disputes"], ["resources", "Energy & resources"]].map(([q, t]) => `<a class="chip" href="tracker.html?q=${q}">${t}</a>`).join("") + `<a class="chip" href="tracker.html?season=Winter">Winter clerkships</a>`
@@ -24,7 +25,7 @@ App.boot(() => {
   /* stats */
   const cnt = k => withS.filter(x => x.s.key === k).length;
   const firms = new Set(P.map(p => p.firm.replace(/\s*\(.*\)/, ""))).size;
-  $("stats").innerHTML = [[P.length, "programs tracked"], [firms, "Perth firms"], [cnt("open"), "open right now"], [cnt("soon"), "open within 90 days"]]
+  $("stats").innerHTML = [[P.length, "programs tracked"], [firms, `${Store.city === "All" ? "" : Store.city + " "}firms`], [cnt("open"), "open right now"], [cnt("soon"), "open within 90 days"]]
     .map(([b, t]) => `<div class="stat"><b>${b}</b><span>${t}</span></div>`).join("");
 
   /* ticker */
