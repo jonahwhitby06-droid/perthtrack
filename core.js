@@ -50,7 +50,7 @@
           this.watch = new Set(me.watch); this.contacts = new Set(me.contacts);
         } else this.loadLocalState();
       } else {
-        const r = await fetch("data/programs.json");
+        const r = await fetch("programs.json");
         const pd = await r.json();
         this.programs = pd.programs; this.updated = pd.updated;
         this.loadLocalState();
