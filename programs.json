@@ -4192,6 +4192,1242 @@
     "Engineering"
    ],
    "windows": []
+  },
+  {
+   "id": "allens",
+   "firm": "Allens",
+   "color": "#003b5c",
+   "sector": "Law firms",
+   "program": "Perth Clerkship Program",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Corporate & M&A, Banking & Finance, Disputes & Litigation, Energy & Resources, Projects & Construction, Real Estate, Employment & Workplace, Competition & Regulatory",
+   "teamsList": [
+    "Corporate & M&A",
+    "Banking & Finance",
+    "Disputes & Litigation",
+    "Energy & Resources",
+    "Projects & Construction",
+    "Real Estate",
+    "Employment & Workplace",
+    "Competition & Regulatory"
+   ],
+   "duration": "3 weeks: Summer 1 (16 Nov\u20134 Dec), Summer 2 (18 Jan\u20135 Feb) or Winter (14 Jun\u20132 Jul)",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "2026/27: closed 26 Jul 2026 (plus online strengths assessment). Law Society of WA uniform dates: 2026 round open 22 Jun \u2013 26 Jul 2026, offers 11 Sep 2026.",
+   "windows": [
+    {
+     "o": "2027-06-21",
+     "c": "2027-07-25",
+     "est": true,
+     "label": "WA clerkship round"
+    }
+   ],
+   "url": "https://www.allens.com.au/careers/students/",
+   "note": "Most Perth firms make graduate offers to their clerks first (WA first-round graduate offers: 17 Jul 2026).",
+   "fields": [
+    "Law"
+   ],
+   "brand": 5
+  },
+  {
+   "id": "ashurst",
+   "firm": "Ashurst",
+   "color": "#00395d",
+   "sector": "Law firms",
+   "program": "Perth Clerkship",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Corporate & M&A, Banking & Finance, Disputes & Litigation, Energy & Resources, Projects & Construction, Real Estate, Employment & Workplace, Competition & Regulatory",
+   "teamsList": [
+    "Corporate & M&A",
+    "Banking & Finance",
+    "Disputes & Litigation",
+    "Energy & Resources",
+    "Projects & Construction",
+    "Real Estate",
+    "Employment & Workplace",
+    "Competition & Regulatory"
+   ],
+   "duration": "Summer 1 (16 Nov\u20134 Dec), Summer 2 (18 Jan\u20135 Feb), Winter (14 Jun\u20132 Jul)",
+   "elig": "Penultimate and final year LLB/JD; Australian/NZ citizen or PR",
+   "last": "2026/27: 22 Jun \u2013 26 Jul 2026, offers 11 Sep",
+   "windows": [
+    {
+     "o": "2027-06-21",
+     "c": "2027-07-25",
+     "est": true,
+     "label": "WA clerkship round"
+    }
+   ],
+   "url": "https://www.ashurst.com/en/careers/students-and-graduates/australia-clerkship/",
+   "note": "Most Perth firms make graduate offers to their clerks first (WA first-round graduate offers: 17 Jul 2026).",
+   "fields": [
+    "Law"
+   ],
+   "brand": 5
+  },
+  {
+   "id": "claytonutz",
+   "firm": "Clayton Utz",
+   "color": "#e2231a",
+   "sector": "Law firms",
+   "program": "Perth Clerkship Program",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Corporate & M&A, Banking & Finance, Disputes & Litigation, Energy & Resources, Projects & Construction, Real Estate, Employment & Workplace, Competition & Regulatory",
+   "teamsList": [
+    "Corporate & M&A",
+    "Banking & Finance",
+    "Disputes & Litigation",
+    "Energy & Resources",
+    "Projects & Construction",
+    "Real Estate",
+    "Employment & Workplace",
+    "Competition & Regulatory"
+   ],
+   "duration": "Summer 2 (18 Jan\u20135 Feb 2027) or Winter (14 Jun\u20132 Jul 2027); two practice-area rotations",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "2026/27: 22 Jun \u2013 26 Jul 2026, offers 11 Sep",
+   "windows": [
+    {
+     "o": "2027-06-21",
+     "c": "2027-07-25",
+     "est": true,
+     "label": "WA clerkship round"
+    }
+   ],
+   "url": "https://www.claytonutz.com/early-careers/clerkship-program/",
+   "note": "Most Perth firms make graduate offers to their clerks first (WA first-round graduate offers: 17 Jul 2026).",
+   "fields": [
+    "Law"
+   ],
+   "brand": 5
+  },
+  {
+   "id": "corrs",
+   "firm": "Corrs Chambers Westgarth",
+   "color": "#002f5f",
+   "sector": "Law firms",
+   "program": "Perth Clerkship Program",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Corporate & M&A, Banking & Finance, Disputes & Litigation, Energy & Resources, Projects & Construction, Real Estate, Employment & Workplace, Competition & Regulatory",
+   "teamsList": [
+    "Corporate & M&A",
+    "Banking & Finance",
+    "Disputes & Litigation",
+    "Energy & Resources",
+    "Projects & Construction",
+    "Real Estate",
+    "Employment & Workplace",
+    "Competition & Regulatory"
+   ],
+   "duration": "Summer and winter",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "2026/27 Perth clerkships advertised. Law Society of WA uniform dates: 2026 round open 22 Jun \u2013 26 Jul 2026, offers 11 Sep 2026.",
+   "windows": [
+    {
+     "o": "2027-06-21",
+     "c": "2027-07-25",
+     "est": true,
+     "label": "WA clerkship round"
+    }
+   ],
+   "url": "https://www.corrs.com.au/careers/students",
+   "note": "Most Perth firms make graduate offers to their clerks first (WA first-round graduate offers: 17 Jul 2026).",
+   "fields": [
+    "Law"
+   ],
+   "brand": 5
+  },
+  {
+   "id": "hsf",
+   "firm": "HSF Kramer (Herbert Smith Freehills)",
+   "color": "#00263e",
+   "sector": "Law firms",
+   "program": "Perth Vacation Clerkships",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Corporate & M&A, Banking & Finance, Disputes & Litigation, Energy & Resources, Projects & Construction, Real Estate, Employment & Workplace, Competition & Regulatory",
+   "teamsList": [
+    "Corporate & M&A",
+    "Banking & Finance",
+    "Disputes & Litigation",
+    "Energy & Resources",
+    "Projects & Construction",
+    "Real Estate",
+    "Employment & Workplace",
+    "Competition & Regulatory"
+   ],
+   "duration": "Summer 16 Nov\u201311 Dec 2026 or Winter 14 Jun\u20138 Jul 2027; 30\u201335 Perth places",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "2026/27: 22 Jun \u2013 26 Jul 2026, offers 11 Sep",
+   "windows": [
+    {
+     "o": "2027-06-21",
+     "c": "2027-07-25",
+     "est": true,
+     "label": "WA clerkship round"
+    }
+   ],
+   "url": "https://careers.hsfkramer.com/global/en/australia/early-careers/vacation-clerkships",
+   "note": "Most Perth firms make graduate offers to their clerks first (WA first-round graduate offers: 17 Jul 2026).",
+   "fields": [
+    "Law"
+   ],
+   "brand": 5
+  },
+  {
+   "id": "kwm",
+   "firm": "King & Wood Mallesons",
+   "color": "#7a0019",
+   "sector": "Law firms",
+   "program": "Perth Clerkship",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Corporate & M&A, Banking & Finance, Disputes & Litigation, Energy & Resources, Projects & Construction, Real Estate, Employment & Workplace, Competition & Regulatory",
+   "teamsList": [
+    "Corporate & M&A",
+    "Banking & Finance",
+    "Disputes & Litigation",
+    "Energy & Resources",
+    "Projects & Construction",
+    "Real Estate",
+    "Employment & Workplace",
+    "Competition & Regulatory"
+   ],
+   "duration": "Summer and winter",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "Perth dates not confirmed. Law Society of WA uniform dates: 2026 round open 22 Jun \u2013 26 Jul 2026, offers 11 Sep 2026.",
+   "windows": [],
+   "url": "https://www.mallesons.com/au/en/careers/graduates/graduates-australia/penultimate-year-law-students/clerkship-program.html",
+   "note": "KWM has a Perth office. Check its clerkship page for the Perth round.",
+   "fields": [
+    "Law"
+   ],
+   "brand": 5,
+   "tbc": true
+  },
+  {
+   "id": "minterellison",
+   "firm": "MinterEllison",
+   "color": "#d4002a",
+   "sector": "Law firms",
+   "program": "Perth Clerkship Program",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Corporate & M&A, Banking & Finance, Disputes & Litigation, Energy & Resources, Projects & Construction, Real Estate, Employment & Workplace, Competition & Regulatory",
+   "teamsList": [
+    "Corporate & M&A",
+    "Banking & Finance",
+    "Disputes & Litigation",
+    "Energy & Resources",
+    "Projects & Construction",
+    "Real Estate",
+    "Employment & Workplace",
+    "Competition & Regulatory"
+   ],
+   "duration": "Summer and winter",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "2026/27 Perth clerkships advertised. Law Society of WA uniform dates: 2026 round open 22 Jun \u2013 26 Jul 2026, offers 11 Sep 2026.",
+   "windows": [
+    {
+     "o": "2027-06-21",
+     "c": "2027-07-25",
+     "est": true,
+     "label": "WA clerkship round"
+    }
+   ],
+   "url": "https://www.minterellison.com/careers/graduates-and-students",
+   "note": "Most Perth firms make graduate offers to their clerks first (WA first-round graduate offers: 17 Jul 2026).",
+   "fields": [
+    "Law"
+   ],
+   "brand": 5
+  },
+  {
+   "id": "gtlaw",
+   "firm": "Gilbert + Tobin",
+   "color": "#e4002b",
+   "sector": "Law firms",
+   "program": "Perth Seasonal Clerk Program",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Corporate & M&A, Banking & Finance, Disputes & Litigation, Energy & Resources, Competition & Regulatory, Technology & IP",
+   "teamsList": [
+    "Corporate & M&A",
+    "Banking & Finance",
+    "Disputes & Litigation",
+    "Energy & Resources",
+    "Competition & Regulatory",
+    "Technology & IP"
+   ],
+   "duration": "3 weeks, summer or winter",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "2026/27: 22 Jun \u2013 26 Jul 2026; interviews to 4 Sep; offers 11 Sep",
+   "windows": [
+    {
+     "o": "2027-06-21",
+     "c": "2027-07-25",
+     "est": true,
+     "label": "WA clerkship round"
+    }
+   ],
+   "url": "https://www.gtlaw.com.au/careers/students",
+   "note": "Most Perth firms make graduate offers to their clerks first (WA first-round graduate offers: 17 Jul 2026).",
+   "fields": [
+    "Law"
+   ],
+   "brand": 5
+  },
+  {
+   "id": "dlapiper",
+   "firm": "DLA Piper",
+   "color": "#2b2b2b",
+   "sector": "Law firms",
+   "program": "Summer Clerkship Programme (Perth)",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Corporate & M&A, Banking & Finance, Disputes & Litigation, Energy & Resources, Projects & Construction, Real Estate",
+   "teamsList": [
+    "Corporate & M&A",
+    "Banking & Finance",
+    "Disputes & Litigation",
+    "Energy & Resources",
+    "Projects & Construction",
+    "Real Estate"
+   ],
+   "duration": "4 weeks: Summer 1 (Nov\u2013Dec) or Summer 2 (Jan\u2013Feb)",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "2026/27 closed 26 Jul 2026; all clerks assessed for 2028 graduate roles",
+   "windows": [
+    {
+     "o": "2027-06-21",
+     "c": "2027-07-25",
+     "est": true,
+     "label": "WA clerkship round"
+    }
+   ],
+   "url": "https://careers.dlapiper.com",
+   "note": "Most Perth firms make graduate offers to their clerks first (WA first-round graduate offers: 17 Jul 2026).",
+   "fields": [
+    "Law"
+   ],
+   "brand": 4
+  },
+  {
+   "id": "aoshearman",
+   "firm": "A&O Shearman",
+   "color": "#5c068c",
+   "sector": "Law firms",
+   "program": "Perth Summer Clerks",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Corporate & M&A, Banking & Finance, Energy & Resources, Projects, Disputes & Litigation",
+   "teamsList": [
+    "Corporate & M&A",
+    "Banking & Finance",
+    "Energy & Resources",
+    "Projects",
+    "Disputes & Litigation"
+   ],
+   "duration": "Summer",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "2026/27 closed 26 Jul 2026; interviews from end of August",
+   "windows": [
+    {
+     "o": "2027-06-21",
+     "c": "2027-07-25",
+     "est": true,
+     "label": "WA clerkship round"
+    }
+   ],
+   "url": "https://careers.aoshearman.com",
+   "note": "Main route into its 2028 Perth graduate intake.",
+   "fields": [
+    "Law"
+   ],
+   "brand": 4
+  },
+  {
+   "id": "hfw",
+   "firm": "HFW",
+   "color": "#002855",
+   "sector": "Law firms",
+   "program": "Perth Clerkship",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Shipping & Trade, Insurance, Energy & Resources, Disputes & Litigation, Construction",
+   "teamsList": [
+    "Shipping & Trade",
+    "Insurance",
+    "Energy & Resources",
+    "Disputes & Litigation",
+    "Construction"
+   ],
+   "duration": "Summer 24 Nov\u201311 Dec 2026 or Winter 29 Jun\u201316 Jul 2027",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "2026/27: 22 Jun \u2013 26 Jul 2026",
+   "windows": [
+    {
+     "o": "2027-06-21",
+     "c": "2027-07-25",
+     "est": true,
+     "label": "WA clerkship round"
+    }
+   ],
+   "url": "https://www.hfw.com/careers",
+   "note": "Most Perth firms make graduate offers to their clerks first (WA first-round graduate offers: 17 Jul 2026).",
+   "fields": [
+    "Law"
+   ],
+   "brand": 4
+  },
+  {
+   "id": "jws",
+   "firm": "Johnson Winter Slattery",
+   "color": "#1f3a5f",
+   "sector": "Law firms",
+   "program": "Perth Seasonal Clerkship",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Corporate & M&A, Disputes & Litigation, Competition & Regulatory, Funds, Tax",
+   "teamsList": [
+    "Corporate & M&A",
+    "Disputes & Litigation",
+    "Competition & Regulatory",
+    "Funds",
+    "Tax"
+   ],
+   "duration": "3 weeks; intakes Nov\u2013Dec, Jan\u2013Feb, Apr\u2013May or Jun\u2013Jul",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "2026/27: 22 Jun \u2013 26 Jul 2026, offers 11 Sep",
+   "windows": [
+    {
+     "o": "2027-06-21",
+     "c": "2027-07-25",
+     "est": true,
+     "label": "WA clerkship round"
+    }
+   ],
+   "url": "https://jws.com.au/work-with-us/careers/clerks/",
+   "note": "Most Perth firms make graduate offers to their clerks first (WA first-round graduate offers: 17 Jul 2026).",
+   "fields": [
+    "Law"
+   ],
+   "brand": 4
+  },
+  {
+   "id": "hopgoodganim",
+   "firm": "HopgoodGanim",
+   "color": "#00a3ad",
+   "sector": "Law firms",
+   "program": "Perth Vacation Clerkship",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Corporate & Commercial, Disputes & Litigation, Energy & Resources, Construction & Projects, Property, Employment",
+   "teamsList": [
+    "Corporate & Commercial",
+    "Disputes & Litigation",
+    "Energy & Resources",
+    "Construction & Projects",
+    "Property",
+    "Employment"
+   ],
+   "duration": "Summer and winter",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "2026/27: 22 Jun \u2013 26 Jul 2026, offers 11 Sep",
+   "windows": [
+    {
+     "o": "2027-06-21",
+     "c": "2027-07-25",
+     "est": true,
+     "label": "WA clerkship round"
+    }
+   ],
+   "url": "https://www.hopgoodganim.com.au/careers/graduates-and-clerks/",
+   "note": "Most Perth firms make graduate offers to their clerks first (WA first-round graduate offers: 17 Jul 2026).",
+   "fields": [
+    "Law"
+   ],
+   "brand": 3
+  },
+  {
+   "id": "hamiltonlocke",
+   "firm": "Hamilton Locke",
+   "color": "#3d1f5c",
+   "sector": "Law firms",
+   "program": "Perth Clerkship Program",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Corporate & Commercial, Disputes & Litigation, Energy & Resources, Construction & Projects, Property, Employment",
+   "teamsList": [
+    "Corporate & Commercial",
+    "Disputes & Litigation",
+    "Energy & Resources",
+    "Construction & Projects",
+    "Property",
+    "Employment"
+   ],
+   "duration": "Summer and winter (mid-Jun \u2013 mid-Jul 2027); 12 places",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "2026/27 closed 26 Jul 2026",
+   "windows": [
+    {
+     "o": "2027-06-21",
+     "c": "2027-07-25",
+     "est": true,
+     "label": "WA clerkship round"
+    }
+   ],
+   "url": "https://hamiltonlocke.com.au/careers",
+   "note": "Most Perth firms make graduate offers to their clerks first (WA first-round graduate offers: 17 Jul 2026).",
+   "fields": [
+    "Law"
+   ],
+   "brand": 3
+  },
+  {
+   "id": "hallwilcox",
+   "firm": "Hall & Wilcox",
+   "color": "#e35205",
+   "sector": "Law firms",
+   "program": "Perth Seasonal Clerkship",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Corporate & Commercial, Disputes & Litigation, Energy & Resources, Construction & Projects, Property, Employment",
+   "teamsList": [
+    "Corporate & Commercial",
+    "Disputes & Litigation",
+    "Energy & Resources",
+    "Construction & Projects",
+    "Property",
+    "Employment"
+   ],
+   "duration": "Summer and winter",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "2026/27 closed 26 Jul 2026",
+   "windows": [
+    {
+     "o": "2027-06-21",
+     "c": "2027-07-25",
+     "est": true,
+     "label": "WA clerkship round"
+    }
+   ],
+   "url": "https://careers.hallandwilcox.com.au",
+   "note": "Most Perth firms make graduate offers to their clerks first (WA first-round graduate offers: 17 Jul 2026).",
+   "fields": [
+    "Law"
+   ],
+   "brand": 3
+  },
+  {
+   "id": "millsoakley",
+   "firm": "Mills Oakley",
+   "color": "#00205b",
+   "sector": "Law firms",
+   "program": "Perth Seasonal Clerkship",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Corporate & Commercial, Disputes & Litigation, Energy & Resources, Construction & Projects, Property, Employment",
+   "teamsList": [
+    "Corporate & Commercial",
+    "Disputes & Litigation",
+    "Energy & Resources",
+    "Construction & Projects",
+    "Property",
+    "Employment"
+   ],
+   "duration": "Summer and winter",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "2026/27 Perth clerkships advertised. Law Society of WA uniform dates: 2026 round open 22 Jun \u2013 26 Jul 2026, offers 11 Sep 2026.",
+   "windows": [
+    {
+     "o": "2027-06-21",
+     "c": "2027-07-25",
+     "est": true,
+     "label": "WA clerkship round"
+    }
+   ],
+   "url": "https://www.millsoakley.com.au/careers",
+   "note": "Most Perth firms make graduate offers to their clerks first (WA first-round graduate offers: 17 Jul 2026).",
+   "fields": [
+    "Law"
+   ],
+   "brand": 3
+  },
+  {
+   "id": "piperalderman",
+   "firm": "Piper Alderman",
+   "color": "#8a1538",
+   "sector": "Law firms",
+   "program": "Perth Clerkship",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Corporate & Commercial, Disputes & Litigation, Energy & Resources, Construction & Projects, Property, Employment",
+   "teamsList": [
+    "Corporate & Commercial",
+    "Disputes & Litigation",
+    "Energy & Resources",
+    "Construction & Projects",
+    "Property",
+    "Employment"
+   ],
+   "duration": "Summer 1 (Nov/Dec 2026) or Summer 2 (Jan/Feb 2027)",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "2026/27 closed 26 Jul 2026",
+   "windows": [
+    {
+     "o": "2027-06-21",
+     "c": "2027-07-25",
+     "est": true,
+     "label": "WA clerkship round"
+    }
+   ],
+   "url": "https://piperalderman.com.au/careers/",
+   "note": "Most Perth firms make graduate offers to their clerks first (WA first-round graduate offers: 17 Jul 2026).",
+   "fields": [
+    "Law"
+   ],
+   "brand": 3
+  },
+  {
+   "id": "hwle",
+   "firm": "HWL Ebsworth",
+   "color": "#0a2240",
+   "sector": "Law firms",
+   "program": "Perth Clerkship Program",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Corporate & Commercial, Disputes & Litigation, Energy & Resources, Construction & Projects, Property, Employment",
+   "teamsList": [
+    "Corporate & Commercial",
+    "Disputes & Litigation",
+    "Energy & Resources",
+    "Construction & Projects",
+    "Property",
+    "Employment"
+   ],
+   "duration": "4 weeks summer or 3 weeks winter",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "2025/26 round open 23 Jun \u2013 27 Jul 2025",
+   "windows": [
+    {
+     "o": "2027-06-21",
+     "c": "2027-07-25",
+     "est": true,
+     "label": "WA clerkship round"
+    }
+   ],
+   "url": "https://careers.hwlebsworth.com.au",
+   "note": "Most Perth firms make graduate offers to their clerks first (WA first-round graduate offers: 17 Jul 2026).",
+   "fields": [
+    "Law"
+   ],
+   "brand": 3
+  },
+  {
+   "id": "squire",
+   "firm": "Squire Patton Boggs",
+   "color": "#000000",
+   "sector": "Law firms",
+   "program": "Perth Vacation Clerkship",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Corporate, Energy & Resources, Disputes & Litigation, Employment",
+   "teamsList": [
+    "Corporate",
+    "Energy & Resources",
+    "Disputes & Litigation",
+    "Employment"
+   ],
+   "duration": "Vacation clerkship",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "2027 Perth program open; interview with two senior members",
+   "windows": [
+    {
+     "o": "2027-06-21",
+     "c": "2027-07-25",
+     "est": true,
+     "label": "WA clerkship round"
+    }
+   ],
+   "url": "https://squirepattonboggs.com/en/careers",
+   "note": "Most Perth firms make graduate offers to their clerks first (WA first-round graduate offers: 17 Jul 2026).",
+   "fields": [
+    "Law"
+   ],
+   "brand": 4
+  },
+  {
+   "id": "klgates",
+   "firm": "K&L Gates",
+   "color": "#2b5c8a",
+   "sector": "Law firms",
+   "program": "Perth Clerkship + Casual Paralegal Program",
+   "season": [
+    "Summer",
+    "Paralegal"
+   ],
+   "teams": "Corporate, Energy & Resources, Disputes & Litigation, Paralegal",
+   "teamsList": [
+    "Corporate",
+    "Energy & Resources",
+    "Disputes & Litigation",
+    "Paralegal"
+   ],
+   "duration": "Paralegal program Mar\u2013Jun, 2 days/week; also clerkships",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "2026 paralegal program posted ~21 Jan, closed 17 Feb 2026 (final-year students; leads to graduate roles)",
+   "windows": [
+    {
+     "o": "2027-01-20",
+     "c": "2027-02-16",
+     "est": true,
+     "label": "Paralegal program"
+    },
+    {
+     "o": "2027-06-21",
+     "c": "2027-07-25",
+     "est": true,
+     "label": "WA clerkship round"
+    }
+   ],
+   "url": "https://www.klgates.com/careers",
+   "note": "The paralegal program is part of its graduate recruitment.",
+   "fields": [
+    "Law"
+   ],
+   "brand": 4
+  },
+  {
+   "id": "jacksonmcdonald",
+   "firm": "Jackson McDonald",
+   "color": "#00385d",
+   "sector": "Law firms",
+   "program": "Perth Vacation Clerkship",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Corporate & Commercial, Disputes & Litigation, Energy & Resources, Construction & Projects, Property, Employment",
+   "teamsList": [
+    "Corporate & Commercial",
+    "Disputes & Litigation",
+    "Energy & Resources",
+    "Construction & Projects",
+    "Property",
+    "Employment"
+   ],
+   "duration": "Summer and/or winter",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "Dates not confirmed in our sources. Law Society of WA uniform dates: 2026 round open 22 Jun \u2013 26 Jul 2026, offers 11 Sep 2026.",
+   "windows": [],
+   "url": "https://www.google.com/search?q=Jackson+McDonald+Perth+clerkship",
+   "note": "Most Perth firms follow the Law Society of WA uniform dates (late June to late July). Check the firm's careers page.",
+   "fields": [
+    "Law"
+   ],
+   "brand": 3,
+   "tbc": true
+  },
+  {
+   "id": "lavan",
+   "firm": "Lavan",
+   "color": "#00594f",
+   "sector": "Law firms",
+   "program": "Perth Vacation Clerkship",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Corporate & Commercial, Disputes & Litigation, Energy & Resources, Construction & Projects, Property, Employment",
+   "teamsList": [
+    "Corporate & Commercial",
+    "Disputes & Litigation",
+    "Energy & Resources",
+    "Construction & Projects",
+    "Property",
+    "Employment"
+   ],
+   "duration": "Summer and/or winter",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "Dates not confirmed in our sources. Law Society of WA uniform dates: 2026 round open 22 Jun \u2013 26 Jul 2026, offers 11 Sep 2026.",
+   "windows": [],
+   "url": "https://www.google.com/search?q=Lavan+Perth+clerkship",
+   "note": "Most Perth firms follow the Law Society of WA uniform dates (late June to late July). Check the firm's careers page.",
+   "fields": [
+    "Law"
+   ],
+   "brand": 3,
+   "tbc": true
+  },
+  {
+   "id": "nrf",
+   "firm": "Norton Rose Fulbright",
+   "color": "#cc0033",
+   "sector": "Law firms",
+   "program": "Perth Vacation Clerkship",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Corporate & Commercial, Disputes & Litigation, Energy & Resources, Construction & Projects, Property, Employment",
+   "teamsList": [
+    "Corporate & Commercial",
+    "Disputes & Litigation",
+    "Energy & Resources",
+    "Construction & Projects",
+    "Property",
+    "Employment"
+   ],
+   "duration": "Summer and/or winter",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "Dates not confirmed in our sources. Law Society of WA uniform dates: 2026 round open 22 Jun \u2013 26 Jul 2026, offers 11 Sep 2026.",
+   "windows": [],
+   "url": "https://www.google.com/search?q=Norton+Rose+Fulbright+Perth+clerkship",
+   "note": "Most Perth firms follow the Law Society of WA uniform dates (late June to late July). Check the firm's careers page.",
+   "fields": [
+    "Law"
+   ],
+   "brand": 4,
+   "tbc": true
+  },
+  {
+   "id": "bennett",
+   "firm": "Bennett",
+   "color": "#1c2b39",
+   "sector": "Law firms",
+   "program": "Perth Vacation Clerkship",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Corporate & Commercial, Disputes & Litigation, Energy & Resources, Construction & Projects, Property, Employment",
+   "teamsList": [
+    "Corporate & Commercial",
+    "Disputes & Litigation",
+    "Energy & Resources",
+    "Construction & Projects",
+    "Property",
+    "Employment"
+   ],
+   "duration": "Summer and/or winter",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "Dates not confirmed in our sources. Law Society of WA uniform dates: 2026 round open 22 Jun \u2013 26 Jul 2026, offers 11 Sep 2026.",
+   "windows": [],
+   "url": "https://www.google.com/search?q=Bennett+Perth+clerkship",
+   "note": "Most Perth firms follow the Law Society of WA uniform dates (late June to late July). Check the firm's careers page.",
+   "fields": [
+    "Law"
+   ],
+   "brand": 3,
+   "tbc": true
+  },
+  {
+   "id": "steinepreis",
+   "firm": "Steinepreis Paganin",
+   "color": "#003865",
+   "sector": "Law firms",
+   "program": "Perth Vacation Clerkship",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Corporate & Commercial, Disputes & Litigation, Energy & Resources, Construction & Projects, Property, Employment",
+   "teamsList": [
+    "Corporate & Commercial",
+    "Disputes & Litigation",
+    "Energy & Resources",
+    "Construction & Projects",
+    "Property",
+    "Employment"
+   ],
+   "duration": "Summer and/or winter",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "Dates not confirmed in our sources. Law Society of WA uniform dates: 2026 round open 22 Jun \u2013 26 Jul 2026, offers 11 Sep 2026.",
+   "windows": [],
+   "url": "https://www.google.com/search?q=Steinepreis+Paganin+Perth+clerkship",
+   "note": "Most Perth firms follow the Law Society of WA uniform dates (late June to late July). Check the firm's careers page.",
+   "fields": [
+    "Law"
+   ],
+   "brand": 3,
+   "tbc": true
+  },
+  {
+   "id": "kottgunning",
+   "firm": "Kott Gunning",
+   "color": "#6b2c91",
+   "sector": "Law firms",
+   "program": "Perth Vacation Clerkship",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Corporate & Commercial, Disputes & Litigation, Energy & Resources, Construction & Projects, Property, Employment",
+   "teamsList": [
+    "Corporate & Commercial",
+    "Disputes & Litigation",
+    "Energy & Resources",
+    "Construction & Projects",
+    "Property",
+    "Employment"
+   ],
+   "duration": "Summer and/or winter",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "Dates not confirmed in our sources. Law Society of WA uniform dates: 2026 round open 22 Jun \u2013 26 Jul 2026, offers 11 Sep 2026.",
+   "windows": [],
+   "url": "https://www.google.com/search?q=Kott+Gunning+Perth+clerkship",
+   "note": "Most Perth firms follow the Law Society of WA uniform dates (late June to late July). Check the firm's careers page.",
+   "fields": [
+    "Law"
+   ],
+   "brand": 3,
+   "tbc": true
+  },
+  {
+   "id": "thomsongeer",
+   "firm": "Thomson Geer",
+   "color": "#00263a",
+   "sector": "Law firms",
+   "program": "Perth Vacation Clerkship",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Corporate & Commercial, Disputes & Litigation, Energy & Resources, Construction & Projects, Property, Employment",
+   "teamsList": [
+    "Corporate & Commercial",
+    "Disputes & Litigation",
+    "Energy & Resources",
+    "Construction & Projects",
+    "Property",
+    "Employment"
+   ],
+   "duration": "Summer and/or winter",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "Dates not confirmed in our sources. Law Society of WA uniform dates: 2026 round open 22 Jun \u2013 26 Jul 2026, offers 11 Sep 2026.",
+   "windows": [],
+   "url": "https://www.google.com/search?q=Thomson+Geer+Perth+clerkship",
+   "note": "Most Perth firms follow the Law Society of WA uniform dates (late June to late July). Check the firm's careers page.",
+   "fields": [
+    "Law"
+   ],
+   "brand": 3,
+   "tbc": true
+  },
+  {
+   "id": "jonesday",
+   "firm": "Jones Day",
+   "color": "#1a1a1a",
+   "sector": "Law firms",
+   "program": "Perth Vacation Clerkship",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Corporate & Commercial, Disputes & Litigation, Energy & Resources, Construction & Projects, Property, Employment",
+   "teamsList": [
+    "Corporate & Commercial",
+    "Disputes & Litigation",
+    "Energy & Resources",
+    "Construction & Projects",
+    "Property",
+    "Employment"
+   ],
+   "duration": "Summer and/or winter",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "Dates not confirmed in our sources. Law Society of WA uniform dates: 2026 round open 22 Jun \u2013 26 Jul 2026, offers 11 Sep 2026.",
+   "windows": [],
+   "url": "https://www.google.com/search?q=Jones+Day+Perth+clerkship",
+   "note": "Most Perth firms follow the Law Society of WA uniform dates (late June to late July). Check the firm's careers page.",
+   "fields": [
+    "Law"
+   ],
+   "brand": 4,
+   "tbc": true
+  },
+  {
+   "id": "sso",
+   "firm": "State Solicitor's Office",
+   "color": "#00467f",
+   "sector": "Government & community legal",
+   "program": "Vacation Clerkship Program / Law Graduate Program",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Advice, Policy & Public Law, Civil Litigation, Native Title & State Lands, Commercial, State Counsel",
+   "teamsList": [
+    "Advice, Policy & Public Law",
+    "Civil Litigation",
+    "Native Title & State Lands",
+    "Commercial",
+    "State Counsel"
+   ],
+   "duration": "Paid clerkships in spring and summer; 2-year graduate program",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "2026/27 clerkships closed 3 Aug 2026, offers 11 Sep 2026 (no interviews: academic results + interest in government law)",
+   "windows": [
+    {
+     "o": "2027-06-21",
+     "c": "2027-08-02",
+     "est": true,
+     "label": "Clerkship round"
+    }
+   ],
+   "url": "https://www.wa.gov.au/organisation/state-solicitors-office/employment-opportunities-sso",
+   "note": "One graduate recruitment round a year via the WA Jobs Board.",
+   "fields": [
+    "Law"
+   ],
+   "brand": 4
+  },
+  {
+   "id": "odpp",
+   "firm": "Office of the DPP (WA)",
+   "color": "#7b1e1e",
+   "sector": "Government & community legal",
+   "program": "Vacation Clerkships (Summer and Winter) + Paralegal roles",
+   "season": [
+    "Summer",
+    "Winter",
+    "Paralegal"
+   ],
+   "teams": "Criminal Prosecutions, Confiscations, Paralegal",
+   "teamsList": [
+    "Criminal Prosecutions",
+    "Confiscations",
+    "Paralegal"
+   ],
+   "duration": "Casual clerkships; paralegal roles advertised separately",
+   "elig": "Students graduating this year or next",
+   "last": "2026/27 clerkships closed 3 Aug 2026",
+   "windows": [
+    {
+     "o": "2027-06-21",
+     "c": "2027-08-02",
+     "est": true,
+     "label": "Clerkship round"
+    }
+   ],
+   "url": "https://search.jobs.wa.gov.au",
+   "note": "Most Perth firms make graduate offers to their clerks first (WA first-round graduate offers: 17 Jul 2026).",
+   "fields": [
+    "Law"
+   ],
+   "brand": 4
+  },
+  {
+   "id": "ombudsmanwa",
+   "firm": "Ombudsman WA",
+   "color": "#2e5e4e",
+   "sector": "Government & community legal",
+   "program": "Clerkship Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Administrative & Public Law, Investigations",
+   "teamsList": [
+    "Administrative & Public Law",
+    "Investigations"
+   ],
+   "duration": "4 weeks over summer",
+   "elig": "Penultimate (some firms: final) year law students (LLB or JD)",
+   "last": "2026/27 closed 17 Aug 2026; offers 2 Oct 2026",
+   "windows": [
+    {
+     "o": "2027-07-15",
+     "c": "2027-08-16",
+     "est": true,
+     "label": "Clerkship round"
+    }
+   ],
+   "url": "https://search.jobs.wa.gov.au",
+   "note": "Most Perth firms make graduate offers to their clerks first (WA first-round graduate offers: 17 Jul 2026).",
+   "fields": [
+    "Law"
+   ],
+   "brand": 3
+  },
+  {
+   "id": "legalaidwa",
+   "firm": "Legal Aid WA",
+   "color": "#8e244d",
+   "sector": "Government & community legal",
+   "program": "Law Graduate Program / Regional Law Graduate Program",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "Criminal Law, Family Law, Civil Law",
+   "teamsList": [
+    "Criminal Law",
+    "Family Law",
+    "Civil Law"
+   ],
+   "duration": "Graduate program from January; 2-year regional program with funded PLT",
+   "elig": "Final-year law students / graduates",
+   "last": "2027 program applications opened April 2026",
+   "windows": [
+    {
+     "o": "2027-04-01",
+     "c": "2027-04-30",
+     "est": true,
+     "label": "Graduate round"
+    }
+   ],
+   "url": "https://www.legalaid.wa.gov.au",
+   "note": "Also runs a voluntary PLT program. Roles are listed on the WA Jobs Board.",
+   "fields": [
+    "Law"
+   ],
+   "brand": 3
+  },
+  {
+   "id": "gtparalegal",
+   "firm": "Gilbert + Tobin",
+   "color": "#e4002b",
+   "sector": "Law firms",
+   "program": "Paralegal Opportunities (Expression of Interest)",
+   "season": [
+    "Paralegal",
+    "Part-time"
+   ],
+   "teams": "Paralegal",
+   "teamsList": [
+    "Paralegal"
+   ],
+   "duration": "Short-term projects and ongoing casual work",
+   "elig": "3rd, 4th or 5th year law students",
+   "last": "Rolling EOI for 3rd\u20135th year law students; Perth included; current EOI closes 29 Oct 2026",
+   "windows": [],
+   "url": "https://au.gradconnection.com/employers/gilbert-tobin/",
+   "note": "Most Perth firms make graduate offers to their clerks first (WA first-round graduate offers: 17 Jul 2026).",
+   "fields": [
+    "Law"
+   ],
+   "brand": 4,
+   "adhoc": true
+  },
+  {
+   "id": "kennedys",
+   "firm": "Kennedys",
+   "color": "#5d2a7f",
+   "sector": "Law firms",
+   "program": "Part-time Paralegal (Perth)",
+   "season": [
+    "Paralegal",
+    "Part-time"
+   ],
+   "teams": "Paralegal, Insurance, Disputes & Litigation",
+   "teamsList": [
+    "Paralegal",
+    "Insurance",
+    "Disputes & Litigation"
+   ],
+   "duration": "Casual, 2\u20133 days a week",
+   "elig": "LLB/JD students in 3rd year or above",
+   "last": "Advertised for 3rd-year+ LLB/JD students",
+   "windows": [],
+   "url": "https://kennedyslaw.com/careers/",
+   "note": "Most Perth firms make graduate offers to their clerks first (WA first-round graduate offers: 17 Jul 2026).",
+   "fields": [
+    "Law"
+   ],
+   "brand": 2,
+   "adhoc": true
+  },
+  {
+   "id": "hbalegal",
+   "firm": "HBA Legal",
+   "color": "#2c3e50",
+   "sector": "Law firms",
+   "program": "Paralegal (Perth)",
+   "season": [
+    "Paralegal",
+    "Part-time"
+   ],
+   "teams": "Paralegal, Insurance, Workers Compensation",
+   "teamsList": [
+    "Paralegal",
+    "Insurance",
+    "Workers Compensation"
+   ],
+   "duration": "Casual, 2\u20133 days a week",
+   "elig": "Law students (ideally 2nd year)",
+   "last": "Advertised for 2nd-year law students",
+   "windows": [],
+   "url": "https://employmenthero.com/jobs/",
+   "note": "Most Perth firms make graduate offers to their clerks first (WA first-round graduate offers: 17 Jul 2026).",
+   "fields": [
+    "Law"
+   ],
+   "brand": 2,
+   "adhoc": true
+  },
+  {
+   "id": "lawparalegal",
+   "firm": "Perth law firms (general)",
+   "color": "#455a64",
+   "sector": "Law firms",
+   "program": "Paralegal and law clerk roles",
+   "season": [
+    "Paralegal",
+    "Part-time"
+   ],
+   "teams": "Paralegal",
+   "teamsList": [
+    "Paralegal"
+   ],
+   "duration": "Casual or part-time during semester",
+   "elig": "Law students (usually 2nd year+)",
+   "last": "Most Perth paralegal roles are advertised individually on SEEK, LinkedIn and the WA Jobs Board",
+   "windows": [],
+   "url": "https://www.seek.com.au/paralegal-jobs/in-Perth-WA",
+   "note": "Set a SEEK alert for \"paralegal Perth\" and check the WA Jobs Board for government paralegal roles.",
+   "fields": [
+    "Law"
+   ],
+   "brand": 2,
+   "adhoc": true
   }
  ]
 }

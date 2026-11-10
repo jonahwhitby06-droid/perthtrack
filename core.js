@@ -122,7 +122,7 @@
   /* ---------- header & footer ---------- */
   const NAV = [
     ["tracker.html", "Tracker"], ["best-bets.html", "Best bets"], ["companies.html", "Companies"],
-    ["calendar.html", "Calendar"], ["saved.html", "My applications"], ["network.html", "My network"], ["alerts.html", "Alerts"], ["resources.html", "Guides"]
+    ["calendar.html", "Calendar"], ["saved.html", "Applications"], ["network.html", "Network"], ["alerts.html", "Alerts"], ["cv.html", "CV Score"], ["resources.html", "Guides"]
   ];
   function renderChrome() {
     const here = location.pathname.split("/").pop() || "index.html";
@@ -134,7 +134,7 @@
       hdr.innerHTML = `<header class="top"><div class="wrap">
         <a class="logo" href="index.html"><span class="dot"></span>PerthTrack</a>
         <button class="menu-btn" aria-expanded="false" aria-controls="mainnav" aria-label="Open menu">☰</button>
-        <div class="fieldswitch" role="group" aria-label="Show internships for">${["Finance", "Engineering", "All"].map(f => `<button data-field="${f}" aria-pressed="${Store.field === f}">${f}</button>`).join("")}</div>
+        <div class="fieldswitch" role="group" aria-label="Show internships for">${["Finance", "Engineering", "Law", "All"].map(f => `<button data-field="${f}" aria-pressed="${Store.field === f}">${f}</button>`).join("")}</div>
         <nav class="main" id="mainnav" aria-label="Main">${NAV.map(([h, t]) => `<a href="${h}"${h === here ? ' aria-current="page"' : ""}>${t}</a>`).join("")}</nav>
         <div class="acct"><button class="btn small li-btn" id="liBtn" type="button">${window.Net && Net.has ? `<span class="in">in</span> ${Net.count} connected` : `<span class="in">in</span> Connect LinkedIn`}</button>${acct}</div>
       </div></header>`;
@@ -150,9 +150,9 @@
     const ftr = document.getElementById("ftr");
     if (ftr) ftr.innerHTML = `<footer class="foot"><div class="wrap">
       <div class="foot-grid">
-        <div><a class="logo" href="index.html"><span class="dot"></span>PerthTrack</a><p>Every finance and engineering internship in Perth, and when its window opens. Built by a Perth student, for Perth students.</p></div>
+        <div><a class="logo" href="index.html"><span class="dot"></span>PerthTrack</a><p>Every finance, engineering and law internship in Perth, and when its window opens. Built by a Perth student, for Perth students.</p></div>
         <div><h4>Tracker</h4><a href="tracker.html">All programs</a><a href="best-bets.html">Best bets</a><a href="companies.html">Companies</a><a href="calendar.html">Calendar</a></div>
-        <div><h4>Guides</h4><a href="guide-timeline.html">Perth recruiting timeline</a><a href="guide-winter.html">Winter internships</a><a href="guide-cv.html">Finance CV checklist</a><a href="guide-cover-letter.html">Cover letter template</a><a href="guide-engineering.html">Engineering vacation programs</a><a href="guide-linkedin.html">How to connect LinkedIn</a></div>
+        <div><h4>Guides</h4><a href="cv.html">CV Score</a><a href="guide-timeline.html">Perth recruiting timeline</a><a href="guide-winter.html">Winter internships</a><a href="guide-cv.html">Finance CV checklist</a><a href="guide-cover-letter.html">Cover letter template</a><a href="guide-engineering.html">Engineering vacation programs</a><a href="guide-law.html">Law clerkships &amp; paralegal roles</a><a href="guide-linkedin.html">How to connect LinkedIn</a></div>
         <div><h4>About</h4><a href="faq.html">FAQ</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
       </div>
       <p class="fine">Data checked against each firm's own pages${Store.updated ? `, last updated ${esc(String(Store.updated).slice(0, 10))}` : ""}. Dates marked “est.” are projected from last cycle. Not affiliated with any listed firm; verify on the firm's site before you apply.</p>
@@ -193,15 +193,81 @@
     const rs = PT.rolesFor(p, Store.prefs).sort((a, b) => b.score - a.score);
     const light = isLight(p.color);
     const conns = window.Net ? Net.atProgram(p) : [];
-    return `<div class="teams-h"><h4>Teams at ${esc(p.firm)}</h4><span>Ranked for you · click a team for the careers page</span></div>
-    <div class="tiles">${rs.map((r, i) => `<a class="tile${light ? " dark" : ""}" href="${esc(p.url)}" target="_blank" rel="noopener"
+    return `<div class="teams-h"><h4>Teams at ${esc(p.firm)}</h4><span>Ranked for you · click a team to see what it does and who you know there</span></div>
+    <div class="tiles">${rs.map((r, i) => `<button type="button" class="tile${light ? " dark" : ""}" data-team-tile="${esc(r.role)}" data-pid="${p.id}" aria-expanded="false"
       style="background:linear-gradient(180deg,${p.color},${shade(p.color, .18)});color:${light ? "#1a1a1a" : "#fff"}"
-      aria-label="${esc(r.role)} at ${esc(p.firm)}: fit ${r.fit} of 5, competition ${PT.COMP_LABEL[r.comp]}, score ${r.score}. Opens careers page">
+      aria-label="${esc(r.role)} at ${esc(p.firm)}: fit ${r.fit} of 5, competition ${PT.COMP_LABEL[r.comp]}, score ${r.score}. Show details">
       <span class="rank">#${i + 1}</span><span class="tn">${esc(r.role)}</span>
       ${(n => n ? `<span class="tconn">👥 ${n} connection${n > 1 ? "s" : ""} here</span>` : "")(conns.filter(c => c.team === r.role).length)}
       <span><span class="tm"><b>Fit ${r.fit}/5</b><b>Comp. ${PT.COMP_LABEL[r.comp]}</b><b>Score ${r.score}</b></span>
-      <span class="tf">Find out more <i>›</i></span></span></a>`).join("")}</div>`;
+      <span class="tf">See team details <i>▾</i></span></span></button>`).join("")}</div>
+    <div class="teampanel" id="tp-${p.id}" hidden></div>`;
   }
+
+  const SENIOR = /\b(partner|principal|director|head|chief|general manager|managing|lead|senior manager|special counsel|executive)\b/i;
+  function teamPanel(p, role) {
+    const r = PT.rolesFor(p, Store.prefs).find(x => x.role === role);
+    if (!r) return "";
+    const over = (window.TEAM_OVERRIDES || []).find(([re]) => re.test(role) && !(p.fields || []).includes("Law"));
+    const info = (over && over[1]) || (window.TEAM_INFO || {})[r.cat] || (window.TEAM_INFO || {}).other || { does: "", tasks: [], ask: "" };
+    const all = window.Net ? Net.atProgram(p) : [];
+    const inTeam = all.filter(c => c.team === role);
+    const senior = all.filter(c => SENIOR.test(c.position || ""));
+    const firmName = p.firm.replace(/\(.*?\)/g, "").trim();
+    const person = c => `<li>${c.url ? `<a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.name)}</a>` : `<b>${esc(c.name)}</b>`} · ${esc(c.position || "role not listed")}${SENIOR.test(c.position || "") ? ' <span class="fy net">Senior</span>' : ""}</li>`;
+    const liSearch = (kw, deg) => `https://www.linkedin.com/search/results/people/?keywords=${encodeURIComponent(kw)}${deg ? `&network=%5B%22${deg}%22%5D` : ""}&origin=FACETED_SEARCH`;
+    const seniorWord = (p.fields || []).includes("Law") ? "partner" : "director OR manager";
+    return `<div class="tp-head"><div><span class="sector">${esc(firmName)} · ${esc(p.program)}</span><h3>${esc(role)}</h3></div>
+        <button type="button" class="btn small ghost" data-tp-close="${p.id}">Close ✕</button></div>
+      <div class="tp-grid">
+        <div>
+          <h4>What this team does</h4><p>${esc(info.does)}</p>
+          <h4>What you'd do as a student</h4><ul>${info.tasks.map(t => `<li>${esc(t)}</li>`).join("")}</ul>
+          <h4>Your chances</h4><p>Fit <b>${r.fit}/5</b> for your interests · competition <b>${PT.COMP_LABEL[r.comp]}</b> (estimate) · score <b>${r.score}</b>. ${esc(p.elig)}.</p>
+          <h4>Good question to ask someone in the team</h4><p class="tp-q">“${esc(info.ask)}”</p>
+        </div>
+        <div>
+          <h4>👥 Your connections in this team</h4>
+          ${!window.Net || !Net.has ? `<p><a href="#" data-connect-li>Connect LinkedIn</a> to see who you know in this team.</p>`
+            : inTeam.length ? `<ul class="tp-people">${inTeam.map(person).join("")}</ul>` : `<p class="sector">None of your connections' job titles match this team.</p>`}
+          ${window.Net && Net.has && all.length > inTeam.length ? `<h4>Others you know at ${esc(firmName)}</h4><ul class="tp-people">${all.filter(c => !inTeam.includes(c)).slice(0, 8).map(person).join("")}</ul>` : ""}
+          ${senior.length ? `<p class="sector">⭐ ${senior.length} of your connections here ${senior.length === 1 ? "is" : "are"} senior. They're the best people to ask about which team to apply to.</p>` : ""}
+          <h4>Find more people</h4>
+          <ul class="tp-links">
+            <li><a href="${esc(liSearch(`${firmName} ${role}`, "S"))}" target="_blank" rel="noopener">2nd-degree connections in ${esc(role)} ↗</a></li>
+            <li><a href="${esc(liSearch(`${firmName} ${role} ${seniorWord}`))}" target="_blank" rel="noopener">Senior people in ${esc(role)} at ${esc(firmName)} on LinkedIn ↗</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="detail-actions">
+        <button type="button" class="btn small" data-tp-track="${p.id}" data-team="${esc(role)}">+ Track my application to this team</button>
+        <a class="btn small ghost" href="${esc(p.url)}" target="_blank" rel="noopener">Careers page ↗</a>
+      </div>
+      <p class="sector" style="font-size:12px;margin-top:8px">Team descriptions are general guides for this kind of team. Check the firm's site for its exact structure.</p>`;
+  }
+  document.addEventListener("click", async e => {
+    const tile = e.target.closest("[data-team-tile]");
+    if (tile) {
+      e.preventDefault(); e.stopPropagation();
+      const pid = tile.dataset.pid, role = tile.dataset.teamTile, panel = document.getElementById("tp-" + pid);
+      const p = Store.byId[pid]; if (!panel || !p) return;
+      const same = !panel.hidden && panel.dataset.role === role;
+      document.querySelectorAll(`[data-team-tile][data-pid="${pid}"]`).forEach(t => t.setAttribute("aria-expanded", "false"));
+      if (same) { panel.hidden = true; panel.dataset.role = ""; return; }
+      panel.innerHTML = teamPanel(p, role); panel.hidden = false; panel.dataset.role = role;
+      tile.setAttribute("aria-expanded", "true");
+      if (panel.scrollIntoView) panel.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      return;
+    }
+    const close = e.target.closest("[data-tp-close]");
+    if (close) { e.stopPropagation(); const panel = document.getElementById("tp-" + close.dataset.tpClose); panel.hidden = true; panel.dataset.role = ""; return; }
+    const track = e.target.closest("[data-tp-track]");
+    if (track) {
+      e.stopPropagation();
+      try { await Store.apps.add({ program_id: track.dataset.tpTrack, team: track.dataset.team, status: "Interested" }); toast(`Added ${track.dataset.team} to My applications.`); }
+      catch (err) { toast(err.message); }
+    }
+  });
 
   function detailBlock(p) {
     return `<dl class="detail-grid">

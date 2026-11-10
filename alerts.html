@@ -19,7 +19,7 @@
   <p class="notice" id="emailNote"></p>
   <div class="grid2">
     <form class="card form" id="alertForm" style="max-width:none">
-      <label>Field <select name="field"><option value="All">Finance and engineering</option><option value="Finance">Finance</option><option value="Engineering">Engineering</option></select></label>
+      <label>Field <select name="field"><option value="All">All fields</option><option value="Finance">Finance</option><option value="Engineering">Engineering</option><option value="Law">Law</option></select></label>
       <label>Alert name <input type="text" name="alertname" placeholder="e.g. Winter corporate finance" maxlength="80"></label>
       <div><div class="sector" style="font-weight:600;margin-bottom:6px">Sectors (leave empty for all)</div><div class="checks" id="sectors"></div></div>
       <div><div class="sector" style="font-weight:600;margin-bottom:6px">Intake (leave empty for any)</div><div class="checks" id="seasons"></div></div>
@@ -37,6 +37,7 @@
 <script src="shared.js"></script>
 <script src="core.js"></script>
 <script src="network.js"></script>
+<script src="teams.js"></script>
 <script src="alerts.js"></script>
 </body>
 </html>

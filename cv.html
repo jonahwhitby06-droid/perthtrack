@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-AU" data-static="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CV Score: is your CV good enough? · PerthTrack</title>
+<meta name="description" content="Upload your CV, get a score out of 100, see what is holding it back and exactly how to improve it. Free, private, built for Perth students.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='3' y='3' width='10' height='10' rx='2' transform='rotate(45 8 8)' fill='%23b8501a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="hdr"></div>
+<main>
+
+<div id="landing">
+<div class="wrap">
+  <section class="cv-hero">
+    <div>
+      <span class="eyebrow">CV Score</span>
+      <h1>Is your CV good enough? <em>Find out in seconds.</em></h1>
+      <p>Upload your CV, get a personalised score out of 100, discover what's holding it back, and see exactly how to improve it.</p>
+      <div class="factions"><a class="btn big" href="#upload" id="ctaAnalyse">Analyse my CV — free</a><a class="btn ghost" href="#how">How scoring works</a></div>
+      <ol class="cv-steps">
+        <li><b>Upload your CV</b><span>PDF, Word or text</span></li>
+        <li><b>Get an assessment</b><span>A score out of 100 across six categories</span></li>
+        <li><b>See strengths and weaknesses</b><span>Linked to the exact lines in your CV</span></li>
+        <li><b>Improve it</b><span>Before-and-after wording you accept, reject or edit</span></li>
+        <li><b>Download it</b><span>As PDF or Word, in an ATS-friendly template</span></li>
+      </ol>
+    </div>
+    <figure class="cv-example" aria-label="Example dashboard">
+      <figcaption>Example dashboard (illustration, not a real CV)</figcaption>
+      <div class="ex-score"><svg width="96" height="96" viewBox="0 0 96 96" aria-hidden="true"><circle cx="48" cy="48" r="38" fill="none" stroke="var(--line)" stroke-width="9"/><circle cx="48" cy="48" r="38" fill="none" stroke="#c26a00" stroke-width="9" stroke-linecap="round" stroke-dasharray="238.8" stroke-dashoffset="85.9" transform="rotate(-90 48 48)"/><text x="48" y="48" text-anchor="middle" dominant-baseline="central" class="ring-num" style="font-size:26px">64</text></svg>
+        <div><b style="color:#c26a00">Needs Improvement</b><span class="sector">Weakest: experience and achievements</span></div></div>
+      <ul class="ex-bars">
+        <li><span>Experience</span><i style="width:44%"></i><b>11/25</b></li><li><span>Writing</span><i style="width:75%"></i><b>15/20</b></li><li><span>Structure</span><i style="width:80%"></i><b>12/15</b></li>
+        <li><span>ATS</span><i style="width:73%"></i><b>11/15</b></li><li><span>Relevance</span><i style="width:47%"></i><b>7/15</b></li><li><span>Professionalism</span><i style="width:80%"></i><b>8/10</b></li></ul>
+      <div class="ex-ba"><span class="sev sev-high">High impact</span><p><del>Worked at a retail store and helped customers.</del><br><ins>Assisted customers at a retail store.</ins></p><p class="sector">We'd ask: how many customers did you serve per shift?</p></div>
+    </figure>
+  </section>
+
+  <section class="card upload" id="upload" aria-labelledby="upH">
+    <h2 id="upH">Analyse my CV</h2>
+    <div class="up-grid">
+      <div>
+        <div class="drop" id="drop" tabindex="0" role="button" aria-describedby="dropHelp">
+          <b>Drop your CV here</b><span>or <label for="cvFile" class="linkbtn">choose a file</label></span>
+          <input type="file" id="cvFile" accept=".pdf,.docx,.txt,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain" class="sr">
+          <span class="sector" id="dropHelp">PDF, Word (.docx) or .txt · up to 5 MB · read in your browser, never uploaded</span>
+        </div>
+        <details class="paste"><summary>Or paste your CV as text</summary><label class="sr" for="pasteText">CV text</label><textarea id="pasteText" rows="8" placeholder="Paste your CV here. Put each heading (Education, Experience, Skills) on its own line."></textarea><button class="btn small" id="pasteBtn" type="button">Analyse pasted text</button></details>
+        <div class="progress" id="progress" hidden aria-live="polite"><ol><li data-step="read">Reading file</li><li data-step="extract">Extracting text</li><li data-step="analyse">Analysing</li><li data-step="done">Done</li></ol><p id="progressMsg"></p></div>
+        <p class="err" id="uploadErr" role="alert" hidden></p>
+      </div>
+      <div class="up-opts">
+        <label class="lbl" for="cvMode">I'm applying as</label>
+        <select id="cvMode"><option value="graduate">A student or graduate (internships, vacation and grad programs)</option><option value="experienced">An experienced professional</option></select>
+        <label class="lbl" for="cvVariant">Spelling</label>
+        <select id="cvVariant"><option value="en-AU">Australian English</option><option value="en-GB">British English</option><option value="en-US">US English</option></select>
+        <label class="lbl" for="cvEngine">Analysis</label>
+        <select id="cvEngine"><option value="rules">Rule-based check — free, stays in your browser</option><option value="ai">AI analysis</option></select>
+        <p class="sector" id="aiNote"></p>
+        <label class="consent" id="consentRow" hidden><input type="checkbox" id="consent"> I agree to my CV text (and any job ad I paste) being sent to the AI provider, Anthropic, for this analysis. PerthTrack doesn't store it. <a href="privacy.html">Privacy</a></label>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="how">
+    <div class="sec-head"><div><h2>How the score works</h2><p>Six categories that always add up to 100. Every point given or taken away is explained with text from your CV.</p></div></div>
+    <div class="table-wrap"><table class="how"><thead><tr><th>Category</th><th>Points</th><th>What we look at</th></tr></thead><tbody>
+      <tr><td>Work experience and achievements</td><td class="mono">25</td><td>Action verbs, results and figures, duties versus accomplishments. In student mode, part-time work, projects, volunteering and clubs all count.</td></tr>
+      <tr><td>Writing quality and clarity</td><td class="mono">20</td><td>Vague or repeated wording, bullet length, grammar and spelling.</td></tr>
+      <tr><td>Structure and organisation</td><td class="mono">15</td><td>Contact details, education, experience and skills sections; order; length; bullet points.</td></tr>
+      <tr><td>ATS readability and compatibility</td><td class="mono">15</td><td>Standard headings, plain-text contact details, readable dates, signs of tables or columns.</td></tr>
+      <tr><td>Career relevance and targeting</td><td class="mono">15</td><td>A profile that names your target, specific skills, and skills backed up by your experience.</td></tr>
+      <tr><td>Professionalism and consistency</td><td class="mono">10</td><td>Consistent dates, bullets, tense and spelling; a professional email address.</td></tr>
+    </tbody></table></div>
+    <div class="grid3 how-notes">
+      <div class="card"><h3>We never invent facts</h3><p>Suggested rewrites only rephrase what you wrote. Where a number would help, we ask you for it. Any rewrite that adds a figure that isn't in your CV is thrown out automatically.</p></div>
+      <div class="card"><h3>Fair to students</h3><p>Student mode doesn't mark you down for limited paid work. Age, gender, background and other personal characteristics are never scored.</p></div>
+      <div class="card"><h3>Your CV stays private</h3><p>Files are read in your browser. The rule-based check never sends your CV anywhere. AI analysis only runs if you choose it and tick the consent box. <a href="privacy.html">Privacy</a></p></div>
+    </div>
+  </section>
+</div>
+</div>
+
+<div id="workspace" hidden>
+  <div class="cvbar"><div class="wrap cvbar-in">
+    <div class="cvbar-score" id="barScore"></div>
+    <div class="cvbar-file sector" id="barFile"></div>
+    <div class="cvbar-actions">
+      <span class="sector" id="reHint"></span>
+      <button class="btn ghost small" id="undoBtn" title="Undo (Ctrl+Z)">↶ Undo</button>
+      <button class="btn ghost small" id="redoBtn" title="Redo (Ctrl+Shift+Z)">↷ Redo</button>
+      <button class="btn small" id="reBtn">Reanalyse my CV</button>
+      <button class="btn ghost small" id="newCv">New CV</button>
+    </div>
+  </div></div>
+  <div class="wrap">
+    <div class="tabs cvtabs" role="tablist" id="cvTabs" aria-label="CV Score sections">
+      <button role="tab" data-tab="score" aria-controls="tab-score">Score</button>
+      <button role="tab" data-tab="improve" aria-controls="tab-improve">Before &amp; after</button>
+      <button role="tab" data-tab="editor" aria-controls="tab-editor">Editor</button>
+      <button role="tab" data-tab="match" aria-controls="tab-match">Job match</button>
+      <button role="tab" data-tab="export" aria-controls="tab-export">Download</button>
+    </div>
+    <section role="tabpanel" id="tab-score" class="tabpanel"></section>
+    <section role="tabpanel" id="tab-improve" class="tabpanel" hidden></section>
+    <section role="tabpanel" id="tab-editor" class="tabpanel" hidden></section>
+    <section role="tabpanel" id="tab-match" class="tabpanel" hidden></section>
+    <section role="tabpanel" id="tab-export" class="tabpanel" hidden></section>
+  </div>
+</div>
+
+</main>
+<div id="ftr"></div>
+<script src="shared.js"></script>
+<script src="core.js"></script>
+<script src="network.js"></script>
+<script src="teams.js"></script>
+<script src="cv-engine.js"></script>
+<script src="cv-io.js"></script>
+<script src="cv.js"></script>
+</body>
+</html>

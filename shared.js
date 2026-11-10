@@ -53,6 +53,15 @@
     { id: "mining",     field: "Engineering", label: "Mining, geology & geoscience",           re: /mining|geolog|geoscience|geospatial|hydrogeolog|subsurface/i },
     { id: "enviro",     field: "Engineering", label: "Environmental & sustainability",         re: /environment|sustainab/i },
     { id: "software",   field: "Engineering", label: "Software, data & technology",            re: /software|data|cyber|technology|computer|\bai\b|autonomy/i },
+    { id: "corplaw",    field: "Law", label: "Corporate, M&A & funds",             re: /corporate|m&a|commercial|funds|capital markets|equity|tax/i },
+    { id: "finlaw",     field: "Law", label: "Banking, finance & insolvency",      re: /banking|finance|restructuring|insolvency/i },
+    { id: "disputes",   field: "Law", label: "Disputes, litigation & insurance",   re: /dispute|litigation|arbitration|insurance|workers comp|state counsel|shipping/i },
+    { id: "resourceslaw", field: "Law", label: "Energy, resources & projects",      re: /energy|resources|projects|construction|native title|environment|planning|property|real estate/i },
+    { id: "workplace",  field: "Law", label: "Employment & workplace",             re: /employment|workplace|industrial/i },
+    { id: "publaw",     field: "Law", label: "Government, public & regulatory law",re: /public|government|policy|advice|administrative|regulatory|competition|investigations|ombudsman/i },
+    { id: "criminal",   field: "Law", label: "Criminal, family & community law",   re: /criminal|prosecution|confiscation|family|civil law|community/i },
+    { id: "techlaw",    field: "Law", label: "Technology, IP & privacy",           re: /technology|\bip\b|intellectual|privacy|data/i },
+    { id: "paralegal",  field: "Law", label: "Paralegal & law clerk roles",        re: /paralegal|law clerk/i },
     { id: "deals",      field: "Finance", label: "M&A, corporate finance & advisory", re: /m&a|corporate finance|deal|transaction|corporate advisory|capital raising|ecm|dcm|equity capital|investment bank|private equity|due diligence|acquisition|financing|infrastructure|restructuring|turnaround|insolvency|valuation|financial modelling/i },
     { id: "markets",    field: "Finance", label: "Markets, research & investments",   re: /research|sales|trading|markets|broking|stockbroking|capital markets|investment|funds management|venture|treasury|wealth|financial planning/i },
     { id: "banking",    field: "Finance", label: "Banking & credit",                   re: /bank|credit|lending|private bank|institutional/i },
@@ -67,10 +76,14 @@
   const FIELD_OF = Object.fromEntries(CATEGORIES.map(c => [c.id, c.field]));
   const FINANCE_FIRST = /investment bank|advisory|m&a|corporate finance|valuation|finance systems/i;
   const ENG_GENERAL = /engineer|technical/i;
-  function categoryOf(role) {
+  /* fields: the program's fields, so "Banking & Finance" at a law firm is a law team, not a bank team */
+  function categoryOf(role, fields) {
     if (OTHER.test(role)) return "other";
-    const list = FINANCE_FIRST.test(role) && !/engineer/i.test(role)
-      ? [...CATEGORIES.filter(c => c.field === "Finance"), ...CATEGORIES.filter(c => c.field !== "Finance")] : CATEGORIES;
+    const lawFirst = fields && fields.length === 1 && fields[0] === "Law";
+    const nonLaw = CATEGORIES.filter(c => c.field !== "Law");
+    let list = FINANCE_FIRST.test(role) && !/engineer/i.test(role)
+      ? [...nonLaw.filter(c => c.field === "Finance"), ...nonLaw.filter(c => c.field !== "Finance")] : nonLaw;
+    list = lawFirst ? [...CATEGORIES.filter(c => c.field === "Law"), ...list] : [...list, ...CATEGORIES.filter(c => c.field === "Law")];
     for (const c of list) if (c.re.test(role)) return c.id;
     if (ENG_GENERAL.test(role)) return "eng";   /* "Engineering", "Technical streams": any engineering discipline */
     return "other";
@@ -83,17 +96,21 @@
     consulting: ["deals", "commercial", "policy"], policy: ["commercial", "consulting"],
     civil: ["projects", "enviro", "mining"], mechanical: ["electrical", "chemical", "projects"], electrical: ["mechanical", "software"],
     chemical: ["mechanical", "mining", "enviro"], mining: ["civil", "chemical"], enviro: ["civil", "chemical"],
-    software: ["electrical"], projects: ["civil", "mechanical"], other: []
+    software: ["electrical"], projects: ["civil", "mechanical"],
+    corplaw: ["finlaw", "resourceslaw", "publaw"], finlaw: ["corplaw", "disputes"], disputes: ["finlaw", "criminal", "workplace"],
+    resourceslaw: ["corplaw", "publaw"], workplace: ["disputes", "publaw"], publaw: ["criminal", "resourceslaw", "workplace"],
+    criminal: ["publaw", "disputes"], techlaw: ["corplaw", "publaw"], paralegal: ["corplaw", "disputes", "finlaw", "resourceslaw", "workplace", "publaw", "criminal", "techlaw"], other: []
   };
-  const FIELDS = ["Finance", "Engineering"];
-  const DEFAULT_INTERESTS = { Finance: ["deals", "banking", "markets"], Engineering: ["civil", "mechanical", "electrical"] };
+  const FIELDS = ["Finance", "Engineering", "Law"];
+  const DEFAULT_INTERESTS = { Finance: ["deals", "banking", "markets"], Engineering: ["civil", "mechanical", "electrical"], Law: ["corplaw", "disputes", "resourceslaw"] };
   const DEFAULT_PREFS = { interests: ["deals", "banking", "markets"], fitWeight: 0.6, finalYear: false, field: "All" };
 
-  function fitOf(role, prefs) {
-    const cat = categoryOf(role);
+  function fitOf(role, prefs, fields) {
+    const cat = categoryOf(role, fields);
     const ints = (prefs && prefs.interests && prefs.interests.length) ? prefs.interests : DEFAULT_PREFS.interests;
     if (cat === "other") return 1;
     if (cat === "eng") return ints.some(x => FIELD_OF[x] === "Engineering") ? 3 : 1;
+    if (cat === "paralegal" && !ints.includes("paralegal")) return ints.some(x => FIELD_OF[x] === "Law") ? 4 : 1;
     const i = ints.indexOf(cat);
     if (i === 0 || i === 1) return 5;
     if (i > 1) return 4;
@@ -106,7 +123,7 @@
 
   /* Competition = estimated applicants per place, 1 (very low) to 5 (very high).
      No firm publishes applicant numbers; this blends brand pull, intake size and team popularity. */
-  const SECTOR_BASE = { "Engineering consulting": 3, "Construction & contracting": 2, "Big 4": 4, "Mid-tier accounting": 2, "Boutique & advisory": 3, "Consulting": 3, "Investment banking": 4,
+  const SECTOR_BASE = { "Law firms": 4, "Government & community legal": 3, "Engineering consulting": 3, "Construction & contracting": 2, "Big 4": 4, "Mid-tier accounting": 2, "Boutique & advisory": 3, "Consulting": 3, "Investment banking": 4,
     "Banking": 4, "Insurance": 2, "Property & real estate": 3, "Funds & super": 3, "Resources & energy": 3, "Government": 3 };
   function compOf(p, role) {
     let c = p.brand ?? SECTOR_BASE[p.sector] ?? 3;
@@ -123,8 +140,8 @@
   function rolesFor(p, prefs) {
     const w = prefs && prefs.fitWeight != null ? prefs.fitWeight : DEFAULT_PREFS.fitWeight;
     return (p.teamsList && p.teamsList.length ? p.teamsList : [p.teams]).map(role => {
-      const fit = fitOf(role, prefs), comp = compOf(p, role);
-      return { p, role, cat: categoryOf(role), fit, comp, score: scoreOf(fit, comp, w) };
+      const fit = fitOf(role, prefs, p.fields), comp = compOf(p, role);
+      return { p, role, cat: categoryOf(role, p.fields), fit, comp, score: scoreOf(fit, comp, w) };
     });
   }
 
@@ -169,8 +186,8 @@
     return lines.join("\r\n");
   }
 
-  const SECTORS = ["Engineering consulting","Construction & contracting","Big 4","Mid-tier accounting","Boutique & advisory","Consulting","Investment banking","Banking","Insurance","Property & real estate","Funds & super","Resources & energy","Government"];
-  const SEASONS = ["Summer","Winter","Part-time","Graduate","Pathway"];
+  const SECTORS = ["Law firms","Government & community legal","Engineering consulting","Construction & contracting","Big 4","Mid-tier accounting","Boutique & advisory","Consulting","Investment banking","Banking","Insurance","Property & real estate","Funds & super","Resources & energy","Government"];
+  const SEASONS = ["Summer","Winter","Part-time","Graduate","Paralegal","Pathway"];
   const PIPELINE = ["Interested","Applied","Online test","Interview","Offer","Rejected"];
 
   return { perthToday, d, fmt, fmtShort, statusOf, sortKey, CATEGORIES, categoryOf, fitOf, compOf, COMP_LABEL, scoreOf, rolesFor,

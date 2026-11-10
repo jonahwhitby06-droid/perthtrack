@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tracker · PerthTrack</title>
-<meta name="description" content="Every Perth finance and engineering internship, vacation program and graduate role, sorted by when it opens.">
+<meta name="description" content="Every Perth finance, engineering and law internship, clerkship, paralegal role and graduate program, sorted by when it opens.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='3' y='3' width='10' height='10' rx='2' transform='rotate(45 8 8)' fill='%23b8501a'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
 <body>
 <div id="hdr"></div>
 <main>
-<div class="wrap"><div class="page-head"><h1>Tracker</h1><p>Every program, sorted by when it opens. Use the Finance / Engineering switch at the top to change what you see. Click a row for its teams, eligibility, last cycle's dates and the source.</p></div></div>
+<div class="wrap"><div class="page-head"><h1>Tracker</h1><p>Every program, sorted by when it opens. Use the Finance / Engineering / Law switch at the top to change what you see. Click a row for its teams, eligibility, last cycle's dates and the source.</p></div></div>
 <div class="wrap">
   <div class="stats" id="stats"></div>
   <div class="filters"><input id="q" type="search" placeholder="Search a firm, program or team" style="flex:1;min-width:220px;font:inherit;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)" aria-label="Search"></div>
@@ -23,7 +23,7 @@
     <label for="statusSel" class="sector">Status</label>
     <select id="statusSel"><option value="all">All</option><option value="open">Open now</option><option value="soon">Opening within 90 days</option><option value="closed">Closed</option><option value="adhoc">Apply any time</option><option value="tbc">Dates TBC</option></select>
     <label for="seasonSel" class="sector">Intake</label>
-    <select id="seasonSel"><option value="all">All</option><option value="Summer">Summer</option><option value="Winter">Winter</option><option value="Part-time">Part-time during semester</option><option value="Graduate">Graduate program</option><option value="Pathway">Pathway event</option></select>
+    <select id="seasonSel"><option value="all">All</option><option value="Summer">Summer</option><option value="Winter">Winter</option><option value="Part-time">Part-time during semester</option><option value="Graduate">Graduate program</option><option value="Paralegal">Paralegal</option><option value="Pathway">Pathway event</option></select>
     <span class="sep"></span>
     <button class="chip" id="watchOnly" aria-pressed="false">★ Watchlist only</button>
     <button class="chip" id="finalOnly" aria-pressed="false">Open to final-year students</button>
@@ -40,6 +40,7 @@
 <script src="shared.js"></script>
 <script src="core.js"></script>
 <script src="network.js"></script>
+<script src="teams.js"></script>
 <script src="tracker.js"></script>
 </body>
 </html>

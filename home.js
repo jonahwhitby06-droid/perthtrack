@@ -5,8 +5,10 @@ App.boot(() => {
   const withS = P.map(p => ({ p, s: PT.statusOf(p) }));
 
   const F = Store.field;
-  $("fieldWord").textContent = F === "Engineering" ? "engineering" : F === "Finance" ? "finance" : "finance and engineering";
-  $("quick").innerHTML = "Most searched: " + (F === "Engineering"
+  $("fieldWord").textContent = F === "Engineering" ? "engineering" : F === "Finance" ? "finance" : F === "Law" ? "law" : "finance, engineering and law";
+  $("quick").innerHTML = "Most searched: " + (F === "Law"
+    ? [["clerkship", "Clerkships"], ["paralegal", "Paralegal"], ["corporate", "Corporate & M&A"], ["disputes", "Disputes"], ["resources", "Energy & resources"]].map(([q, t]) => `<a class="chip" href="tracker.html?q=${q}">${t}</a>`).join("") + `<a class="chip" href="tracker.html?season=Winter">Winter clerkships</a>`
+    : F === "Engineering"
     ? [["civil", "Civil & structural"], ["mechanical", "Mechanical"], ["electrical", "Electrical"], ["mining", "Mining"], ["process", "Chemical & process"]].map(([q, t]) => `<a class="chip" href="tracker.html?q=${q}">${t}</a>`).join("") + `<a class="chip" href="tracker.html?season=Winter">Winter internships</a>`
     : [["corporate%20finance", "Corporate Finance"], ["deal", "Deals / M&amp;A"], ["research", "Equity Research"], ["civil", "Civil engineering"], ["mechanical", "Mechanical engineering"]].map(([q, t]) => `<a class="chip" href="tracker.html?q=${q}">${t}</a>`).join("") + `<a class="chip" href="tracker.html?season=Winter">Winter internships</a>`);
   $("searchForm").onsubmit = e => { e.preventDefault(); location.href = `tracker.html?q=${encodeURIComponent($("q").value.trim())}`; };

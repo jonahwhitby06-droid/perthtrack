@@ -27,6 +27,12 @@
     shaw: ["shaw and partners", "shaw & partners"], wilsons: ["wilsons advisory", "wilsons"], dfk: ["dfk gooding", "dfk"],
     knightfrank: ["knight frank"], cbre: ["cbre"], htw: ["herron todd white"], australiansuper: ["australiansuper", "australian super"],
     lgt: ["lgt crestone", "crestone", "lgt wealth"], tattarang: ["tattarang", "minderoo"], mitsuiiod: ["mitsui"], dof: ["dof group", "dof subsea", "dof"],
+    hsf: ["herbert smith freehills", "hsf kramer", "hsf"], kwm: ["king and wood mallesons", "kwm"], gtlaw: ["gilbert tobin"], gtparalegal: ["gilbert tobin"],
+    corrs: ["corrs chambers westgarth", "corrs"], aoshearman: ["a and o shearman", "allen and overy"], jws: ["johnson winter slattery", "johnson winter"],
+    hwle: ["hwl ebsworth", "hwle"], nrf: ["norton rose fulbright", "norton rose"], minterellison: ["minterellison", "minter ellison"],
+    claytonutz: ["clayton utz"], dlapiper: ["dla piper"], klgates: ["k and l gates"], squire: ["squire patton boggs"], hallwilcox: ["hall and wilcox"],
+    sso: ["state solicitor s office", "state solicitors office", "state solicitor"], odpp: ["office of the director of public prosecutions", "odpp", "director of public prosecutions"],
+    ombudsmanwa: ["ombudsman western", "ombudsman"], legalaidwa: ["legal aid western", "legal aid"], jacksonmcdonald: ["jackson mcdonald"], steinepreis: ["steinepreis paganin"],
     lycopodium: ["lycopodium"], monadelphous: ["monadelphous"], civmec: ["civmec"], thiess: ["thiess"], newmont: ["newmont"]
   };
   const STOP = /\b(pty|ltd|limited|inc|llc|plc|group|holdings|australia|australian|wa|perth|the|co)\b/g;
@@ -37,7 +43,8 @@
   function aliasesFor(p) {
     const base = p.firm.replace(/\(.*?\)/g, "").split("/").map(s => s.trim()).filter(Boolean);
     const paren = (p.firm.match(/\((.*?)\)/) || [])[1];
-    if (paren && !/^(perth|wa|ecm|perpetual)$/i.test(paren)) base.push(paren);
+    if (paren && !/^(perth|wa|ecm|perpetual|general)$/i.test(paren)) base.push(paren);
+    if (p.id === "lawparalegal") return [];
     return [...new Set([...base, ...(ALIASES[p.id] || [])].map(a => core(a).trim()).filter(a => a.length >= 2))];
   }
   /* A connection's company matches when an alias appears as whole words in it.
