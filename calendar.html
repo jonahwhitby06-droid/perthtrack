@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-AU" data-static="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Opening calendar · PerthTrack</title>
+<meta name="description" content="Every Perth finance internship application window on one calendar, with a file to add them to your own.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='3' y='3' width='10' height='10' rx='2' transform='rotate(45 8 8)' fill='%23b8501a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<div id="hdr"></div>
+<main>
+<div class="wrap"><div class="page-head"><h1>Opening calendar</h1><p>Each bar is an application window. Plan your CV and cover letters a month before each bar starts.</p></div></div>
+<div class="wrap">
+  <div class="filters">
+    <label for="which" class="sector">Show</label>
+    <select id="which"><option value="watch">My watchlist</option><option value="all">All programs</option></select>
+    <span class="sector" id="calTitle"></span>
+    <button class="btn small" id="icsBtn" style="margin-left:auto">Add to my calendar (.ics)</button>
+  </div>
+  <div class="cal"><div class="cal-inner" id="cal"></div></div>
+  <div class="legend">
+    <span><i style="background:var(--accent)"></i>Confirmed dates</span>
+    <span><i style="background:repeating-linear-gradient(135deg,var(--accent) 0 4px,var(--accent-soft) 4px 8px)"></i>Estimated from last cycle</span>
+    <span><i style="background:var(--river)"></i>Rolling (apply any time)</span>
+  </div>
+  <p class="method">The calendar file adds an event on each opening and closing date. It works with Google Calendar, Apple Calendar and Outlook.</p>
+</div>
+</main>
+<div id="ftr"></div>
+<script src="assets/shared.js"></script>
+<script src="assets/core.js"></script>
+<script src="assets/network.js"></script>
+<script src="assets/calendar.js"></script>
+</body>
+</html>

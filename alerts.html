@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-AU" data-static="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alerts · PerthTrack</title>
+<meta name="description" content="Get an email when Perth finance internships matching your interests open.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='3' y='3' width='10' height='10' rx='2' transform='rotate(45 8 8)' fill='%23b8501a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<div id="hdr"></div>
+<main>
+<div class="wrap"><div class="page-head"><h1>Alerts</h1><p>Pick what you care about. We email you when a matching program opens, a week before its estimated opening, and when its careers page changes.</p></div></div>
+<div class="wrap">
+  <p class="notice" id="emailNote"></p>
+  <div class="grid2">
+    <form class="card form" id="alertForm" style="max-width:none">
+      <label>Field <select name="field"><option value="All">Finance and engineering</option><option value="Finance">Finance</option><option value="Engineering">Engineering</option></select></label>
+      <label>Alert name <input type="text" name="alertname" placeholder="e.g. Winter corporate finance" maxlength="80"></label>
+      <div><div class="sector" style="font-weight:600;margin-bottom:6px">Sectors (leave empty for all)</div><div class="checks" id="sectors"></div></div>
+      <div><div class="sector" style="font-weight:600;margin-bottom:6px">Intake (leave empty for any)</div><div class="checks" id="seasons"></div></div>
+      <label>Keywords, comma separated (matched against firm, program and team names) <input type="text" name="keywords" placeholder="corporate finance, valuation, M&amp;A" maxlength="200"></label>
+      <div class="checks"><label><input type="checkbox" name="finalYear"> Only programs open to final-year students</label></div>
+      <label>How often <select name="frequency"><option value="daily">Daily, only when there's something new</option><option value="weekly">Weekly summary (Mondays)</option></select></label>
+      <button class="btn" type="submit">Save alert</button>
+    </form>
+    <div><h3 style="font-size:16px;margin-bottom:10px">What this alert matches right now</h3><div id="preview"></div></div>
+  </div>
+  <section class="block"><div class="sec-head"><div><h2>Your alerts</h2></div></div><div id="list"></div></section>
+</div>
+</main>
+<div id="ftr"></div>
+<script src="assets/shared.js"></script>
+<script src="assets/core.js"></script>
+<script src="assets/network.js"></script>
+<script src="assets/alerts.js"></script>
+</body>
+</html>

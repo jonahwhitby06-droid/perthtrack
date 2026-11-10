@@ -1,0 +1,4197 @@
+{
+ "updated": "2026-11-10",
+ "programs": [
+  {
+   "id": "deloitte",
+   "firm": "Deloitte",
+   "color": "#2f7d32",
+   "sector": "Big 4",
+   "program": "Vacationer Program",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Perth: M&A, Turnaround & Restructuring, Forensic, Risk Advisory, Audit & Assurance",
+   "duration": "4 to 8 weeks, paid, in person",
+   "elig": "Penultimate-year students",
+   "last": "Main round 25 Feb to 7 Apr 2026; second round in July. The careers page now says the main intake has closed but limited Accounting & Audit roles remain",
+   "windows": [
+    {
+     "o": "2026-07-16",
+     "c": "2026-12-18",
+     "est": true,
+     "label": "Remaining Accounting & Audit roles",
+     "rolling": true
+    },
+    {
+     "o": "2027-02-24",
+     "c": "2027-04-06",
+     "est": true,
+     "label": "Main round"
+    },
+    {
+     "o": "2027-07-01",
+     "c": "2027-07-22",
+     "est": true,
+     "label": "Second round"
+    }
+   ],
+   "url": "https://www.deloitte.com/au/en/careers/students/summer-vacation-program-careers.html",
+   "note": "Deloitte opens applications twice a year, in February/March and July. The end date of the remaining Accounting & Audit window is our estimate.",
+   "teamsList": [
+    "Accounting & Audit",
+    "Business Advisory",
+    "Cyber",
+    "Data & Analytics",
+    "Finance & Economics",
+    "Science & Engineering",
+    "Tax Advisory",
+    "Technology"
+   ],
+   "brand": 4,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "pwc",
+   "firm": "PwC",
+   "color": "#c2410c",
+   "sector": "Big 4",
+   "program": "Vacation Program",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Deals, Assurance, Consulting, Risk, Tax, Actuarial",
+   "duration": "7 weeks summer, 4 weeks winter",
+   "elig": "Penultimate year; next cycle is for students graduating in 2028",
+   "last": "Opened 23 Feb 2026; careers page now says applications closed",
+   "windows": [
+    {
+     "o": "2027-02-22",
+     "c": "2027-03-31",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://jobs-au.pwc.com/au/en/vacation-program",
+   "note": "Summer program generally starts in December, winter in June.",
+   "teamsList": [
+    "Deals",
+    "Assurance",
+    "Consulting",
+    "Risk",
+    "Tax",
+    "Actuarial"
+   ],
+   "brand": 4,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "ey",
+   "firm": "EY",
+   "color": "#3d3d3d",
+   "sector": "Big 4",
+   "program": "Vacationer Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Assurance, Strategy & Transactions, Tax, Consulting",
+   "duration": "Summer, paid",
+   "elig": "Penultimate-year students",
+   "last": "2026/27 program still open (rolling), but its listings name Adelaide, Brisbane, Canberra, Melbourne and Sydney, not Perth",
+   "windows": [],
+   "tbc": true,
+   "url": "https://www.ey.com/en_au/careers/2026-27-vacationer-program-student-opportunities",
+   "note": "No Perth intake listed for 2026/27, so we show dates as TBC. If you want EY in Perth, contact their early careers team.",
+   "teamsList": [
+    "Strategy & Transactions",
+    "Assurance",
+    "Tax",
+    "Consulting"
+   ],
+   "brand": 4,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "kpmg",
+   "firm": "KPMG",
+   "color": "#1e40af",
+   "sector": "Big 4",
+   "program": "Vacationer Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Audit, Corporate Finance, Deal Advisory, Consulting, Actuarial",
+   "duration": "3 to 8 weeks from November",
+   "elig": "Second-last year of study",
+   "last": "Main intake posted 26 Feb 2026 with offers in May; rolling intake stayed open to 3 Oct 2026",
+   "windows": [
+    {
+     "o": "2027-02-25",
+     "c": "2027-04-15",
+     "est": true,
+     "label": "Main intake"
+    },
+    {
+     "o": "2027-04-16",
+     "c": "2027-10-03",
+     "est": true,
+     "label": "Rolling intake",
+     "rolling": true
+    }
+   ],
+   "url": "https://au.gradconnection.com/employers/kpmg/",
+   "note": "Most roles fill through the main intake (2026 technology roles closed 20 Apr). A KPMG listing showing a November 2027 start has already appeared, so the 2027/28 cycle may open early.",
+   "teamsList": [
+    "Corporate Finance",
+    "Deal Advisory",
+    "Audit",
+    "Consulting",
+    "Actuarial"
+   ],
+   "brand": 4,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "bdo",
+   "firm": "BDO",
+   "color": "#c8102e",
+   "sector": "Mid-tier accounting",
+   "program": "Vacation Program",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Deal Advisory, Project & Infrastructure Advisory, Consulting, Tax, Forensics",
+   "duration": "4 weeks, paid; June/July, Nov/Dec or Jan/Feb intakes",
+   "elig": "Penultimate or final year; accounting, finance, economics, law and related degrees",
+   "last": "BDO careers page currently says Undergraduate, Graduate and Vacation applications are open. Intakes: Jan-Feb, Jun-Jul, Nov-Dec. Last year winter roles closed Feb to Mar; summer roles 16 Aug to 28 Oct",
+   "windows": [
+    {
+     "o": "2026-11-01",
+     "c": "2027-03-20",
+     "est": true,
+     "label": "Open now (Jan-Feb and winter intakes)",
+     "rolling": true
+    },
+    {
+     "o": "2027-07-01",
+     "c": "2027-08-20",
+     "est": true,
+     "label": "Summer intake"
+    }
+   ],
+   "url": "https://www.bdo.com.au/en-au/graduates",
+   "note": "Close dates differ by team and are our estimates; check each SEEK Grad listing. Applications are reviewed as they arrive.",
+   "teamsList": [
+    "Deal Advisory",
+    "Project & Infrastructure Advisory",
+    "Consulting",
+    "Tax",
+    "Forensics"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "gt",
+   "firm": "Grant Thornton",
+   "color": "#5b2c83",
+   "sector": "Mid-tier accounting",
+   "program": "Vacation Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Audit, Advisory, Tax",
+   "duration": "4 to 6 weeks",
+   "elig": "Final or penultimate year",
+   "last": "Opened 20 Jul 2026, closed 14 Aug 2026",
+   "windows": [
+    {
+     "o": "2027-07-19",
+     "c": "2027-08-15",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://www.grantthornton.com.au/careers/student-opportunities/vacationer-program/",
+   "note": "Graduate and vacation applications open together.",
+   "teamsList": [
+    "Advisory",
+    "Audit",
+    "Tax"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "rsm",
+   "firm": "RSM",
+   "color": "#0a7ea4",
+   "sector": "Mid-tier accounting",
+   "program": "Summer Vacationer",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Corporate Finance (Perth), Business Advisory, Audit, Tax",
+   "duration": "4 to 8 weeks, paid ($30 to $33 an hour); Perth office",
+   "elig": "Penultimate-year commerce students (accounting major)",
+   "last": "Opening dates were not published in our sources",
+   "windows": [],
+   "tbc": true,
+   "url": "https://www.rsm.global/australia/node/302",
+   "note": "Check RSM's careers page; we will add dates once confirmed.",
+   "teamsList": [
+    "Corporate Finance",
+    "Business Advisory",
+    "Audit",
+    "Tax"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "argonaut",
+   "firm": "Argonaut",
+   "color": "#0f766e",
+   "sector": "Boutique & advisory",
+   "program": "Internship Program",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Corporate Finance, Research",
+   "duration": "Summer (Dec to Feb) and winter (Jun to Jul)",
+   "elig": "High-achieving commerce, economics, engineering, law, geology or maths students",
+   "last": "Applications accepted year-round. The 31 Aug 2026 cut-off covered summer 2026/27 and winter 2027; applications sent now go to the next round",
+   "windows": [
+    {
+     "o": "2026-09-01",
+     "c": "2027-08-31",
+     "est": false,
+     "label": "Year-round, cut-off 31 Aug",
+     "rolling": true
+    }
+   ],
+   "url": "https://www.argonaut.com/internship-program",
+   "note": "Applying now puts you in the round for summer 2027/28 and winter 2028. Penultimate-year students preferred. Interviews Sep/Oct. Graduate program closes 15 April each year.",
+   "teamsList": [
+    "Corporate Finance",
+    "Equity Research"
+   ],
+   "brand": 4,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "euroz",
+   "firm": "Euroz Hartleys",
+   "color": "#7c2d12",
+   "sector": "Boutique & advisory",
+   "program": "Internship Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Corporate Finance, Research, Institutional Sales, Private Wealth, Operations",
+   "duration": "4 to 5 weeks (2026 program: 16 Nov to 18 Dec)",
+   "elig": "University students interested in WA capital markets",
+   "last": "2026 intake posted 11 Jun 2026, closed 31 Jul 2026 (2025 intake opened 1 May)",
+   "windows": [
+    {
+     "o": "2027-06-01",
+     "c": "2027-07-31",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://eurozhartleys.com/internship-program",
+   "note": "Opening has moved between May and June in recent years, so start watching from May. Euroz also runs a separate Private Wealth internship for final-year financial planning students.",
+   "teamsList": [
+    "Corporate Finance",
+    "Equity Research",
+    "Institutional Sales",
+    "Private Wealth",
+    "Operations"
+   ],
+   "brand": 4,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "ubs",
+   "firm": "UBS",
+   "color": "#b91c1c",
+   "sector": "Investment banking",
+   "program": "Global Banking Summer Internship (Perth)",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Global Banking: natural resources coverage, M&A, capital markets",
+   "duration": "10 weeks, paid",
+   "elig": "Penultimate-year students; citizens and permanent residents",
+   "last": "Perth intake ran in 2025/26 (closed 22 Jul 2025). UBS lists only Melbourne (14 Jul) and Sydney (28 Jul) for 2026-27",
+   "windows": [],
+   "tbc": true,
+   "url": "https://www.ubs.com/microsites/ubs-investment-banking-challenge/en/grow-with-us.html",
+   "note": "No Perth intake in 2026-27, so dates are TBC. Melbourne and Sydney deadlines run mid to late July if you can relocate.",
+   "teamsList": [
+    "Global Banking \u2013 M&A",
+    "Capital Markets"
+   ],
+   "brand": 5,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "ubschallenge",
+   "firm": "UBS",
+   "color": "#b91c1c",
+   "sector": "Investment banking",
+   "program": "IB Development Challenge",
+   "season": [
+    "Pathway"
+   ],
+   "teams": "Fast-track into the summer internship",
+   "duration": "Team case challenge, April to May",
+   "elig": "Penultimate-year students across Australia",
+   "last": "Closed 4 May 2026",
+   "windows": [
+    {
+     "o": "2027-03-30",
+     "c": "2027-05-03",
+     "est": true,
+     "label": "Applications"
+    }
+   ],
+   "url": "https://www.ubs.com/auschallenge",
+   "note": "Strong performers get an accelerated interview for the summer internship.",
+   "teamsList": [
+    "Investment Banking (fast-track)"
+   ],
+   "brand": 5,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "macquarie",
+   "firm": "Macquarie",
+   "color": "#111827",
+   "sector": "Banking",
+   "program": "Summer Internship (Melbourne and Perth)",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Corporate finance, M&A, funds management, credit (business, accounting and STEM streams)",
+   "duration": "December to February",
+   "elig": "Second-last year, any degree",
+   "last": "Posted 5 May 2026; closed 21 Jul 2026",
+   "windows": [
+    {
+     "o": "2027-05-04",
+     "c": "2027-07-20",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://recruitment.macquarie.com/en_US/careers/JobDetail/2026-2027-Macquarie-Summer-Internship-Melbourne-and-Perth/22003",
+   "note": "No prior finance experience required.",
+   "teamsList": [
+    "Corporate Finance / M&A",
+    "Funds Management",
+    "Credit"
+   ],
+   "brand": 5,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "cba",
+   "firm": "CommBank / Bankwest",
+   "color": "#d4a106",
+   "sector": "Banking",
+   "program": "Summer Intern Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Commercial Banking (Perth), Finance & Accounting, Risk",
+   "duration": "10 weeks (2026/27: 23 Nov to 29 Jan)",
+   "elig": "Penultimate year, undergraduate or postgraduate",
+   "last": "Open 12 Aug to 8 Sep 2026",
+   "windows": [
+    {
+     "o": "2027-08-11",
+     "c": "2027-09-07",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://www.commbank.com.au/about-us/careers/graduate-recruitment-program.html",
+   "note": "Choose a stream that offers Perth when applications open; locations vary by stream.",
+   "teamsList": [
+    "Commercial Banking",
+    "Finance & Accounting",
+    "Risk"
+   ],
+   "brand": 4,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "woodside",
+   "firm": "Woodside",
+   "color": "#0e7490",
+   "sector": "Resources & energy",
+   "program": "Summer Vacation Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Finance, Marketing & Trading, Contracting & Procurement",
+   "duration": "12 weeks, paid",
+   "elig": "Penultimate or final year at an Australian university",
+   "last": "Open 1 to 31 Aug 2026",
+   "windows": [
+    {
+     "o": "2027-08-01",
+     "c": "2027-08-31",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://www.woodside.com/careers/graduates-and-students",
+   "note": "Accepts accounting, commerce, finance and economics degrees.",
+   "teamsList": [
+    "Finance",
+    "Marketing & Trading",
+    "Contracting & Procurement",
+    "Mechanical Engineering",
+    "Process Engineering",
+    "Instrumentation & Controls",
+    "Subsea & Pipelines",
+    "Materials & Corrosion",
+    "Data & AI",
+    "Environment"
+   ],
+   "finalYear": true,
+   "brand": 4,
+   "fields": [
+    "Finance",
+    "Engineering"
+   ]
+  },
+  {
+   "id": "bhp",
+   "firm": "BHP",
+   "color": "#e65100",
+   "sector": "Resources & energy",
+   "program": "Intern Program (Business, Engineering, Technology, Mining)",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Business, engineering (all disciplines), technology and mining streams",
+   "duration": "10 to 12 weeks summer; 8 weeks winter",
+   "elig": "Second year through penultimate year",
+   "last": "2026 intake closed 6 Apr 2026. BHP's expression-of-interest page says applications will open in March 2027, exact date TBC",
+   "windows": [
+    {
+     "o": "2027-03-01",
+     "c": "2027-04-05",
+     "est": true,
+     "label": "Opens March 2027 (month confirmed)"
+    }
+   ],
+   "url": "https://www.bhp.com/careers",
+   "note": "Opening month is confirmed by BHP; the close date is based on last year.",
+   "teamsList": [
+    "Finance",
+    "Accounting",
+    "Supply Chain",
+    "Mechanical & Mechatronic Engineering",
+    "Electrical Engineering",
+    "Civil & Geotechnical Engineering",
+    "Metallurgy & Minerals Processing",
+    "Mining Engineering",
+    "Data Science & Technology"
+   ],
+   "brand": 4,
+   "fields": [
+    "Finance",
+    "Engineering"
+   ]
+  },
+  {
+   "id": "rio",
+   "firm": "Rio Tinto",
+   "color": "#cc0000",
+   "sector": "Resources & energy",
+   "program": "Intern Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Finance and commercial roles alongside technical streams",
+   "duration": "12 weeks, summer",
+   "elig": "Penultimate-year or 2nd/3rd-year students",
+   "last": "2026/27 intern roles closed around 17 Apr 2026",
+   "windows": [
+    {
+     "o": "2027-03-10",
+     "c": "2027-04-16",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://www.riotinto.com/en/careers",
+   "note": "2026/27 WA listings we found were technical (geoscience, engineering); business roles were in Brisbane. Check for a Perth finance stream.",
+   "teamsList": [
+    "Finance",
+    "Commercial",
+    "Mechanical Engineering",
+    "Electrical & Control Systems",
+    "Process Engineering",
+    "Geotechnical Engineering",
+    "Hydrology & Hydrogeology",
+    "Geoscience",
+    "Environment"
+   ],
+   "brand": 4,
+   "fields": [
+    "Finance",
+    "Engineering"
+   ]
+  },
+  {
+   "id": "wescef",
+   "firm": "Wesfarmers (WesCEF)",
+   "color": "#4d7c0f",
+   "sector": "Resources & energy",
+   "program": "Vacation Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Commercial: business, finance, economics",
+   "duration": "12 weeks, Kwinana",
+   "elig": "University students; cadetship pathway possible",
+   "last": "Posted 30 Jun 2026, closed 31 Jul 2026",
+   "windows": [
+    {
+     "o": "2027-06-29",
+     "c": "2027-07-30",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://careers.wescef.com.au/",
+   "note": "The 2026/27 commercial stream was advertised under Aboriginal Opportunities; check whether a general commercial stream runs.",
+   "teamsList": [
+    "Commercial Finance",
+    "Economics",
+    "Chemical & Process Engineering",
+    "Mechanical Engineering",
+    "Electrical & Instrumentation"
+   ],
+   "fields": [
+    "Finance",
+    "Engineering"
+   ]
+  },
+  {
+   "id": "treasury",
+   "firm": "WA Treasury and Finance",
+   "color": "#1d4f73",
+   "sector": "Government",
+   "program": "Vacation Internship Program",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Economic and fiscal policy, budget",
+   "duration": "8 weeks summer plus 5 weeks winter",
+   "elig": "Penultimate or final year; accounting, finance, commerce, economics and related",
+   "last": "Most recent confirmed cycle: 2025 intake, open 1 to 31 Oct 2024. No vacation cycle found since the Treasury and Finance merger",
+   "windows": [],
+   "tbc": true,
+   "url": "https://www.wa.gov.au/government/multi-step-guides/place-of-opportunity/cadetship-internship-and-vacation-programs/department-of-treasury-vacation-internship-program",
+   "note": "Email graduates@dtf.wa.gov.au to ask whether the vacation program still runs. The DTF graduate program is listed separately.",
+   "teamsList": [
+    "Economic Policy",
+    "Fiscal Policy & Budget"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "goldman",
+   "firm": "Goldman Sachs",
+   "color": "#6b8fb5",
+   "sector": "Investment banking",
+   "program": "Corporate Advisory Summer Analyst / New Analyst (Perth)",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Corporate Advisory: M&A, financing, risk management",
+   "duration": "9 to 10 weeks",
+   "elig": "Penultimate year of a bachelor's, master's (not MBA) or JD",
+   "last": "Perth Corporate Advisory hired summer analysts for 2026; for 2027 only Sydney and Melbourne summer roles were found. A Perth New Analyst (graduate) role was advertised for 2026",
+   "windows": [],
+   "tbc": true,
+   "url": "https://www.goldmansachs.com/careers/students/programs/asia-pacific/corporate-analyst-development-program.html",
+   "note": "Perth roles appear in some years but not others. The New Analyst program suits final-year students. Sydney and Melbourne 2027 summer roles were posted in June 2026.",
+   "teamsList": [
+    "Corporate Advisory \u2013 M&A",
+    "Financing"
+   ],
+   "brand": 5,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "barrenjoey",
+   "firm": "Barrenjoey",
+   "color": "#0b3d2e",
+   "sector": "Investment banking",
+   "program": "Corporate Finance Summer Internship (Perth)",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Advisory, ECM, DCM deal teams",
+   "duration": "10 weeks",
+   "elig": "Any discipline; strong academics; citizens and permanent residents",
+   "last": "2026-27 Perth program closed 20 Apr 2026; the ad now says the position has been filled",
+   "windows": [
+    {
+     "o": "2027-03-16",
+     "c": "2027-04-20",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://careers.barrenjoey.com/job/Soansville-Corporate-Finance-Summer-Internship-Program-2026-27-Perth-WA/1359260866",
+   "note": "One of the earliest IB deadlines in Perth. Opening date was not published; attach your transcript.",
+   "teamsList": [
+    "Advisory",
+    "ECM",
+    "DCM"
+   ],
+   "brand": 5,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "am",
+   "firm": "Alvarez & Marsal",
+   "color": "#1f2937",
+   "sector": "Boutique & advisory",
+   "program": "Management Consulting Intern Program (Perth)",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Corporate advisory, turnaround, private equity value creation",
+   "duration": "About 4 weeks, winter and summer intakes",
+   "elig": "University students; cover letter, CV and transcript",
+   "last": "2026 Perth winter/summer program posted 2 Mar 2026",
+   "windows": [
+    {
+     "o": "2027-03-01",
+     "c": "2027-04-30",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://www.alvarezandmarsal.com/careers",
+   "note": "Close date not published in our sources; treat the end of the bar as a guess.",
+   "teamsList": [
+    "Corporate Advisory",
+    "Turnaround",
+    "Private Equity Value Creation"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "canaccord",
+   "firm": "Canaccord Genuity",
+   "color": "#00467f",
+   "sector": "Boutique & advisory",
+   "program": "Internships (general applications)",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Capital Markets (corporate finance, research, sales), Wealth Management",
+   "duration": "Varies",
+   "elig": "Students; Perth is one of three Australian offices",
+   "last": "No fixed Australian cycle published",
+   "windows": [],
+   "adhoc": true,
+   "url": "https://canaccordgenuity.com/global-careers/australia-opportunities",
+   "note": "Send a general application to cgau.hr@cgf.com and name the Perth office.",
+   "teamsList": [
+    "Corporate Finance",
+    "Equity Research",
+    "Institutional Sales",
+    "Wealth Management"
+   ],
+   "brand": 4,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "morgans",
+   "firm": "Morgans",
+   "color": "#0f3b5f",
+   "sector": "Boutique & advisory",
+   "program": "Corporate Internship (West Perth)",
+   "season": [
+    "Part-time"
+   ],
+   "teams": "Equity capital markets: IPOs, placements, hybrids",
+   "duration": "12 months, December to December",
+   "elig": "Second- to third-year students in commerce, law, engineering or similar",
+   "last": "Opens in September with interviews in October; one West Perth position. The 2026 Sydney ad closed 18 Sep 2026",
+   "windows": [
+    {
+     "o": "2027-09-01",
+     "c": "2027-09-30",
+     "est": true,
+     "label": "Main round (September)"
+    }
+   ],
+   "url": "https://morgans.com.au/who-we-are/careers",
+   "note": "Applications go through SEEK. The September timing comes from Morgans' careers page; exact dates are estimates.",
+   "teamsList": [
+    "Equity Capital Markets"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "pitcher",
+   "firm": "Pitcher Partners Perth",
+   "color": "#00843d",
+   "sector": "Mid-tier accounting",
+   "program": "Graduate Program (Perth)",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "Tax Consulting, Business Advisory & Assurance, Private Business & Family Advisory",
+   "duration": "Permanent full-time role from November 2026 or early 2027",
+   "elig": "Graduated in the last six months or graduating at the end of 2026",
+   "last": "Pitcher Perth currently lists no vacation program. Its graduate program says applications are open, with no close date",
+   "windows": [
+    {
+     "o": "2026-03-17",
+     "c": "2026-12-31",
+     "est": true,
+     "label": "Graduate applications open",
+     "rolling": true
+    }
+   ],
+   "url": "https://www.pitcher.com.au/careers/locations/perth/perth-vacation-program",
+   "note": "Aimed at students graduating in 2026; check again in 2027 for the next intake. The end date shown is our estimate.",
+   "teamsList": [
+    "Tax Consulting",
+    "Business Advisory & Assurance",
+    "Private Business Advisory"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "hlb",
+   "firm": "HLB Mann Judd (WA)",
+   "color": "#00539b",
+   "sector": "Mid-tier accounting",
+   "program": "Vacation Programs (WA)",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Business Advisory, Corporate & Audit Services",
+   "duration": "2 to 3 weeks paid, summer and mid-year winter breaks",
+   "elig": "Penultimate-year commerce students with an accounting major",
+   "last": "2026 summer and winter programs advertised from March, closed 31 May 2026",
+   "windows": [
+    {
+     "o": "2027-03-15",
+     "c": "2027-05-31",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://hlb.com.au/careers/graduates-students/",
+   "note": "HLB says applications usually open mid-year; the 2026 ad closed 31 May. Perth's 10th-largest accounting firm, locally owned.",
+   "teamsList": [
+    "Business Advisory",
+    "Corporate & Audit Services"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "hallchadwick",
+   "firm": "Hall Chadwick WA",
+   "color": "#7a1f2b",
+   "sector": "Mid-tier accounting",
+   "program": "Vacation Work Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Tax & Accounting, Business Advisory, Consulting",
+   "duration": "2 to 4 weeks",
+   "elig": "Accounting students",
+   "last": "Summer 2026/27 intake closed 23 Oct 2026",
+   "windows": [
+    {
+     "o": "2027-08-01",
+     "c": "2027-10-22",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://hcwa.prod01.sydney.platformos.com/vacation-work-program",
+   "note": "Opening date not published; the October close is from the firm's own page.",
+   "teamsList": [
+    "Tax & Accounting",
+    "Business Advisory",
+    "Consulting"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "moore",
+   "firm": "Moore Australia (WA)",
+   "color": "#00a3ad",
+   "sector": "Mid-tier accounting",
+   "program": "Internship Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Audit, Business Advisory, Tax",
+   "duration": "Paid, over the summer break",
+   "elig": "Penultimate-year commerce students",
+   "last": "2025 program closed 25 Apr 2024 (most recent dates we found)",
+   "windows": [
+    {
+     "o": "2027-03-01",
+     "c": "2027-04-25",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://au.gradconnection.com/employers/moore-australia/",
+   "note": "Recruits early, about seven months before the program. Pathway to the graduate program.",
+   "teamsList": [
+    "Business Advisory",
+    "Audit",
+    "Tax"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "williambuck",
+   "firm": "William Buck",
+   "color": "#c4122f",
+   "sector": "Mid-tier accounting",
+   "program": "Vacationer Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Business Advisory, Audit, Tax, Wealth Advisory, Restructuring",
+   "duration": "5+ weeks from January",
+   "elig": "Final year or final 18 months of study",
+   "last": "2027 program opened late July 2026; streams closed 4 to 24 Sep 2026",
+   "windows": [
+    {
+     "o": "2027-07-27",
+     "c": "2027-09-24",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://au.gradconnection.com/employers/william-buck/",
+   "note": "2026/27 listings we found were for Melbourne. Check that the WA office is taking vacationers.",
+   "teamsList": [
+    "Business Advisory",
+    "Restructuring",
+    "Wealth Advisory",
+    "Audit",
+    "Tax"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "knightfrank",
+   "firm": "Knight Frank",
+   "color": "#cc0033",
+   "sector": "Property & real estate",
+   "program": "Student Program",
+   "season": [
+    "Part-time"
+   ],
+   "teams": "Rotations across commercial property: leasing, capital markets, valuations, asset management",
+   "duration": "36 weeks paid, February to October, part-time while you study",
+   "elig": "Students in their final year of study next year",
+   "last": "2027 program closed 31 Aug 2026; offers in October",
+   "windows": [
+    {
+     "o": "2027-07-15",
+     "c": "2027-08-31",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://www.knightfrank.com.au/careers/student-program",
+   "note": "Opening date not published. 2026/27 listings named Melbourne, so check Perth availability.",
+   "teamsList": [
+    "Capital Markets",
+    "Valuations",
+    "Asset Management",
+    "Leasing"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "cbre",
+   "firm": "CBRE",
+   "color": "#006a4d",
+   "sector": "Property & real estate",
+   "program": "Property Graduate Program (WA)",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "Advisory, Capital Markets, Property Management, Valuations",
+   "duration": "12-month paid program from February",
+   "elig": "Final-year students and recent graduates",
+   "last": "2026 program opened late May, closed late June 2025",
+   "windows": [
+    {
+     "o": "2027-05-25",
+     "c": "2027-06-28",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://www.cbre.com.au/careers/students-and-graduates/students-and-graduates-opportunities",
+   "note": "CBRE also runs a rolling Assistant Valuer intake in Perth for property students working 4 to 5 days a week.",
+   "teamsList": [
+    "Capital Markets",
+    "Valuations",
+    "Advisory",
+    "Property Management"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "centuria",
+   "firm": "Centuria",
+   "color": "#2b2a6b",
+   "sector": "Property & real estate",
+   "program": "Internship Program (Perth)",
+   "season": [
+    "Part-time"
+   ],
+   "teams": "Funds management, valuations, transactions, property development",
+   "duration": "Internship",
+   "elig": "University students",
+   "last": "Sydney 2027 intake opened mid-2026; Perth intake was 'not yet open'",
+   "windows": [],
+   "tbc": true,
+   "url": "https://centuria.com.au/centuria-capital/working-with-us/internship-program/",
+   "note": "Watch the page: Perth opens separately from Sydney.",
+   "teamsList": [
+    "Funds Management",
+    "Transactions",
+    "Valuations",
+    "Property Development"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "mirvac",
+   "firm": "Mirvac",
+   "color": "#4a4a4a",
+   "sector": "Property & real estate",
+   "program": "Internship Program",
+   "season": [
+    "Part-time"
+   ],
+   "teams": "Asset management, development, funds management, investment",
+   "duration": "11 months paid, part-time around your final year",
+   "elig": "Apply in penultimate year; citizens and permanent residents",
+   "last": "Dates not published in our sources",
+   "windows": [],
+   "tbc": true,
+   "url": "https://www.mirvac.com/careers/internship",
+   "note": "Runs in Sydney, Melbourne and Perth.",
+   "teamsList": [
+    "Investment",
+    "Funds Management",
+    "Asset Management",
+    "Development"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "htw",
+   "firm": "Herron Todd White",
+   "color": "#00558c",
+   "sector": "Property & real estate",
+   "program": "HTW Academy Graduate Program",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "Property valuation and advisory",
+   "duration": "Structured graduate program",
+   "elig": "Property and valuation graduates",
+   "last": "Launched and opened 26 May 2026",
+   "windows": [
+    {
+     "o": "2027-05-26",
+     "c": "2027-07-31",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://htw.com.au/herron-todd-white-launches-australias-largest-graduate-program-for-property-valuers/",
+   "note": "New in 2026 and national, including WA. Close date is a guess.",
+   "teamsList": [
+    "Property Valuation",
+    "Property Advisory"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "nab",
+   "firm": "NAB",
+   "color": "#c20000",
+   "sector": "Banking",
+   "program": "Summer Intern Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Business banking relationship stream offered in Perth",
+   "duration": "8 weeks paid (23 Nov to 29 Jan)",
+   "elig": "Second-last year; citizens and permanent residents",
+   "last": "2026 cycle open 6 Jul to 9 Aug 2026; only the Business Banking stream is offered in Perth",
+   "windows": [
+    {
+     "o": "2027-07-05",
+     "c": "2027-08-08",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://www.nab.com.au/about-us/careers/graduate-careers/nab-summer-intern-program",
+   "note": "Most streams are Melbourne/Sydney; pick the one that lists Perth.",
+   "teamsList": [
+    "Business Banking"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "anz",
+   "firm": "ANZ",
+   "color": "#007dba",
+   "sector": "Banking",
+   "program": "Summer Intern Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Business & Private Bank, Retail, Finance, Institutional",
+   "duration": "8 weeks paid from November",
+   "elig": "Penultimate-year students",
+   "last": "2027/28 expression of interest is open now; formal applications open June/July 2027",
+   "windows": [
+    {
+     "o": "2026-11-01",
+     "c": "2027-06-15",
+     "est": false,
+     "label": "Register interest",
+     "rolling": true
+    },
+    {
+     "o": "2027-06-22",
+     "c": "2027-07-31",
+     "est": true,
+     "label": "Applications"
+    }
+   ],
+   "url": "https://au.gradconnection.com/employers/anz/jobs/anz-202627-anz-australia-summer-intern-program-expression-of-interest-2-2/",
+   "note": "Registering interest is not an application, but ANZ will contact you when applications open. Perth is listed as a location.",
+   "teamsList": [
+    "Business & Private Bank",
+    "Institutional",
+    "Finance",
+    "Retail"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "westpac",
+   "firm": "Westpac",
+   "color": "#da1710",
+   "sector": "Banking",
+   "program": "Summer Intern Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Selected programs in WA",
+   "duration": "10 weeks from late Nov/Dec",
+   "elig": "Penultimate year; citizens and permanent residents",
+   "last": "Opens July, closes August each year (2026 streams closed by early August)",
+   "windows": [
+    {
+     "o": "2027-07-13",
+     "c": "2027-08-14",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://www.westpac.com.au/about-westpac/careers/graduate-program/",
+   "note": "Most roles are in Sydney; only some programs have WA positions.",
+   "teamsList": [
+    "Banking (selected programs)"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "australiansuper",
+   "firm": "AustralianSuper",
+   "color": "#ffb81c",
+   "sector": "Funds & super",
+   "program": "Intern Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Investments, finance, member services",
+   "duration": "From November; $60k to $70k pro rata",
+   "elig": "University students",
+   "last": "2026/27 program advertised mid-2026 for Brisbane, Melbourne, Perth and Sydney",
+   "windows": [],
+   "tbc": true,
+   "url": "https://au.gradconnection.com/internships/funds-management/melbourne/",
+   "note": "Exact dates were not published in our sources.",
+   "teamsList": [
+    "Investments",
+    "Finance",
+    "Member Services"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "fortescue",
+   "firm": "Fortescue",
+   "color": "#e87722",
+   "sector": "Resources & energy",
+   "program": "Vacation Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Business stream: commerce, finance, law",
+   "duration": "12 weeks from November",
+   "elig": "2nd year to penultimate year",
+   "last": "2025/26 cycle advertised for Perth; dates not published in our sources",
+   "windows": [],
+   "tbc": true,
+   "url": "https://careers.fortescue.com/go/Graduate%2C-Vacation-and-Apprenticeship-Programs/7868510/",
+   "note": "Dates not published in our sources. Fortescue may close early once it has enough candidates.",
+   "teamsList": [
+    "Finance",
+    "Commercial",
+    "Law",
+    "Electrical & Process Control",
+    "Mechanical & Mechatronic",
+    "Process & Metallurgy",
+    "Mining Engineering",
+    "Civil Engineering",
+    "Technology & Autonomy",
+    "Hydrogeology & Geology",
+    "Environment"
+   ],
+   "fields": [
+    "Finance",
+    "Engineering"
+   ]
+  },
+  {
+   "id": "minres",
+   "firm": "Mineral Resources",
+   "color": "#002f6c",
+   "sector": "Resources & energy",
+   "program": "Vacation Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Accounting and Finance, Law",
+   "duration": "12 weeks over summer",
+   "elig": "Students entering their final year",
+   "last": "2025/26 applications closed 7 Sep 2025",
+   "windows": [
+    {
+     "o": "2027-08-01",
+     "c": "2027-09-07",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://mineralresources.com.au/careers/early-career-pathways/vacation-program",
+   "note": "For students entering their final year, credit average or above. Its current page lists engineering intakes; check that a finance stream is offered.",
+   "teamsList": [
+    "Accounting & Finance",
+    "Law",
+    "Mining Engineering",
+    "Mechanical Engineering",
+    "Electrical Engineering",
+    "Civil Engineering"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance",
+    "Engineering"
+   ]
+  },
+  {
+   "id": "synergy",
+   "firm": "Synergy",
+   "color": "#00a19a",
+   "sector": "Resources & energy",
+   "program": "Commercial / Energy Trading Vacation Student",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Commercial analysis, energy trading, energy markets",
+   "duration": "12 weeks (Nov to Feb), paid",
+   "elig": "Business/commerce students who have finished at least two years",
+   "last": "Closed 14 Jul 2026",
+   "windows": [
+    {
+     "o": "2027-06-15",
+     "c": "2027-07-14",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://www.synergy.net.au/About-us/Careers/Early-Career-Programs",
+   "note": "State-owned energy retailer. Energy trading is rare in Perth, so this one is worth watching.",
+   "teamsList": [
+    "Commercial Analysis",
+    "Energy Trading",
+    "Energy Markets"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "macqwinter",
+   "firm": "Macquarie",
+   "color": "#111827",
+   "sector": "Banking",
+   "program": "Winter Development Program",
+   "season": [
+    "Winter"
+   ],
+   "teams": "Rotations across Macquarie businesses",
+   "duration": "3 weeks (2026: 29 Jun to 17 Jul)",
+   "elig": "STEM students, or women from any discipline, in their second-last year; citizens and permanent residents",
+   "last": "Posted 3 Feb 2026, closed 10 Mar 2026",
+   "windows": [
+    {
+     "o": "2027-02-02",
+     "c": "2027-03-09",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://recruitment.macquarie.com/en_US/careers/JobDetail/2026-Winter-Development-Program/20432",
+   "note": "Check eligibility first: it is limited to STEM students and to women from any discipline.",
+   "teamsList": [
+    "Rotations across Macquarie"
+   ],
+   "brand": 4,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "inpex",
+   "firm": "INPEX",
+   "color": "#00843d",
+   "sector": "Resources & energy",
+   "program": "Finance & Accounting Vacation Student",
+   "season": [
+    "Summer"
+   ],
+   "teams": "INPEX Finance team, Perth",
+   "duration": "12 weeks paid (2026/27: 23 Nov to 12 Feb)",
+   "elig": "Penultimate-year students",
+   "last": "Perth vacation roles posted early March 2026; engineering roles closed 7 Apr",
+   "windows": [
+    {
+     "o": "2027-03-02",
+     "c": "2027-04-07",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://careers.inpex.com.au/",
+   "note": "Successful students are offered a place in the INPEX Early Talent Program.",
+   "teamsList": [
+    "Finance",
+    "Process Engineering",
+    "Mechanical Engineering",
+    "Electrical & Instrumentation",
+    "Subsurface"
+   ],
+   "fields": [
+    "Finance",
+    "Engineering"
+   ]
+  },
+  {
+   "id": "chevron",
+   "firm": "Chevron Australia",
+   "color": "#0054a4",
+   "sector": "Resources & energy",
+   "program": "Intern Program (Strategy, Planning & Commercial)",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Strategy, planning and commercial; suits economics or finance with a quantitative major",
+   "duration": "12 weeks paid (2026/27: 23 Nov to 19 Feb)",
+   "elig": "Penultimate or final year; must be able to live and work in Australia permanently",
+   "last": "2026-27 Intern Program open 8 Jun to 8 Jul 2026",
+   "windows": [
+    {
+     "o": "2027-06-07",
+     "c": "2027-07-08",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://careers.chevron.com/job/perth/strategy-planning-and-commercial-chevron-intern-program/38138/80587349216",
+   "note": "Resume and transcript only, no cover letter. Accepts final-year students.",
+   "teamsList": [
+    "Strategy & Planning",
+    "Commercial"
+   ],
+   "finalYear": true,
+   "brand": 4,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "alcoa",
+   "firm": "Alcoa",
+   "color": "#1f3a68",
+   "sector": "Resources & energy",
+   "program": "Finance Vacation Student (WA)",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Finance, based at Pinjarra refinery and Perth corporate office",
+   "duration": "12 weeks full-time, summer",
+   "elig": "Ideally penultimate year, but all year groups accepted",
+   "last": "2025/26 finance role advertised mid-2025; exact dates not found",
+   "windows": [],
+   "tbc": true,
+   "url": "https://www.alcoa.com/au/graduateopps",
+   "note": "Alcoa advertises intakes periodically through the year; no dates published. Register for job alerts.",
+   "teamsList": [
+    "Finance"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "wesbd",
+   "firm": "Wesfarmers",
+   "color": "#2e7d32",
+   "sector": "Resources & energy",
+   "program": "Graduate Analyst, Business Development",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "M&A origination and execution, corporate planning, strategic projects",
+   "duration": "Full-time graduate role from January",
+   "elig": "Final-year students and recent graduates; WAM of 70%+ expected",
+   "last": "Open 23 Feb to 20 Mar 2026; interviews in March, offers in April, start January 2027",
+   "windows": [
+    {
+     "o": "2027-02-22",
+     "c": "2027-03-19",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://www.wesfarmers.com.au/careers",
+   "note": "A Perth corporate M&A team; very competitive. Interviews may start before the close.",
+   "teamsList": [
+    "M&A Origination & Execution",
+    "Corporate Planning",
+    "Strategic Projects"
+   ],
+   "finalYear": true,
+   "brand": 5,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "westernpower",
+   "firm": "Western Power",
+   "color": "#f5a800",
+   "sector": "Resources & energy",
+   "program": "Vacation Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Business and finance streams alongside engineering, IT and data",
+   "duration": "12 weeks paid, late Nov to mid-Feb",
+   "elig": "University students",
+   "last": "Runs a rolling expression-of-interest process",
+   "windows": [],
+   "tbc": true,
+   "url": "https://www.westernpower.com.au/about/careers/early-careers/students-and-trainees/",
+   "note": "Register interest. Its graduate program has a business stream covering finance and accounting.",
+   "teamsList": [
+    "Finance",
+    "Business",
+    "Data",
+    "Engineering",
+    "Electrical Engineering",
+    "Power Systems",
+    "Asset Management"
+   ],
+   "fields": [
+    "Finance",
+    "Engineering"
+   ]
+  },
+  {
+   "id": "oag",
+   "firm": "WA Auditor General",
+   "color": "#5b4b8a",
+   "sector": "Government",
+   "program": "Cadet Program",
+   "season": [
+    "Part-time"
+   ],
+   "teams": "Financial and performance audit across 300+ state entities",
+   "duration": "Paid, alongside your final year of study",
+   "elig": "Students entering the final year of an undergraduate degree",
+   "last": "Applications normally open around June/July each year",
+   "windows": [
+    {
+     "o": "2027-06-01",
+     "c": "2027-07-31",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://www.wa.gov.au/government/multi-step-guides/place-of-opportunity/cadetship-internship-and-vacation-programs/office-of-the-auditor-general-cadet-program",
+   "note": "Built for final-year students, and leads into the OAG graduate program.",
+   "teamsList": [
+    "Financial Audit",
+    "Performance Audit"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "icwa",
+   "firm": "Insurance Commission of WA",
+   "color": "#00788a",
+   "sector": "Government",
+   "program": "Graduate Program",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "Corporate services including Finance and Investments",
+   "duration": "Graduate program",
+   "elig": "Recent graduates; streams vary by year",
+   "last": "Dates not published in our sources",
+   "windows": [],
+   "tbc": true,
+   "url": "https://www.wa.gov.au/government/multi-step-guides/place-of-opportunity/opportunities/graduates/insurance-commission-of-western-australia-graduate-program",
+   "note": "Manages the WA Government's investment and insurance funds. Check which streams are open each year.",
+   "teamsList": [
+    "Investments",
+    "Finance"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "hesperia",
+   "firm": "Hesperia",
+   "color": "#7a5c3e",
+   "sector": "Property & real estate",
+   "program": "Internship and Graduate Program (finance and property)",
+   "season": [
+    "Summer",
+    "Graduate"
+   ],
+   "teams": "Due diligence, equity and debt financing, acquisitions, asset management",
+   "duration": "Graduates rotate through Industrial, Commercial, Built Form and Finance & Investment",
+   "elig": "Finance and property students",
+   "last": "Dates not published in our sources",
+   "windows": [],
+   "tbc": true,
+   "url": "https://au.prosple.com/graduate-employers/hesperia",
+   "note": "Subiaco-based developer founded by Ben Lisle and Adrian Fini; a small team, so applications get read.",
+   "teamsList": [
+    "Acquisitions",
+    "Equity & Debt Financing",
+    "Due Diligence",
+    "Asset Management"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "stockland",
+   "firm": "Stockland",
+   "color": "#00a3a1",
+   "sector": "Property & real estate",
+   "program": "Development Graduate (Perth)",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "Property development",
+   "duration": "Graduate program from February",
+   "elig": "Property, business and related graduates",
+   "last": "Perth role closed 27 Aug 2026",
+   "windows": [
+    {
+     "o": "2027-07-20",
+     "c": "2027-08-27",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://au.gradconnection.com/employers/stockland/",
+   "note": "Register interest to be told when applications open.",
+   "teamsList": [
+    "Property Development"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "savills",
+   "firm": "Savills",
+   "color": "#ffdd00",
+   "sector": "Property & real estate",
+   "program": "Graduate Program (WA)",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "Commercial real estate",
+   "duration": "Full-time graduate program",
+   "elig": "Studies completed in 2026 or 2027, or within the past two years",
+   "last": "2027 WA program advertised in 2026",
+   "windows": [],
+   "tbc": true,
+   "url": "https://careers.savills.com.au/en/job/493700/2027-graduate-program-wa",
+   "note": "Perth-based role. Check the listing for the close date.",
+   "teamsList": [
+    "Commercial Real Estate"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "devwa",
+   "firm": "DevelopmentWA",
+   "color": "#c8102e",
+   "sector": "Government",
+   "program": "Graduate Program and Student Placements",
+   "season": [
+    "Graduate",
+    "Part-time"
+   ],
+   "teams": "Business development, corporate services, planning, operations",
+   "duration": "Graduate rotations; ad hoc student placements",
+   "elig": "Recent graduates; students for placements",
+   "last": "Up to 2 graduates taken for the 2026 intake",
+   "windows": [],
+   "tbc": true,
+   "url": "https://developmentwa.com.au/about/careers/student-pathways",
+   "note": "The State's land development agency (Subi East, Ocean Reef Marina). Ask about student placements directly.",
+   "teamsList": [
+    "Business Development",
+    "Corporate Services",
+    "Planning"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "dtfgrad",
+   "firm": "WA Treasury and Finance",
+   "color": "#1d4f73",
+   "sector": "Government",
+   "program": "Graduate Program",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "Economic, fiscal and financial policy; six-month rotations",
+   "duration": "18 months, starting mid-January",
+   "elig": "Final-year students and recent graduates; citizens and permanent residents",
+   "last": "2027 program open 23 Mar to 29 Apr 2026",
+   "windows": [
+    {
+     "o": "2027-03-22",
+     "c": "2027-04-28",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://www.wa.gov.au/government/multi-step-guides/place-of-opportunity/graduate-programs/department-of-treasury-graduate-program",
+   "note": "Late or incomplete applications are not accepted.",
+   "teamsList": [
+    "Economic Policy",
+    "Financial Policy",
+    "Fiscal Policy"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "fti",
+   "firm": "FTI Consulting",
+   "color": "#003a70",
+   "sector": "Boutique & advisory",
+   "program": "Winter Internship, Restructuring & Insolvency (WA)",
+   "season": [
+    "Winter"
+   ],
+   "teams": "Corporate Finance & Restructuring",
+   "duration": "Winter internship",
+   "elig": "Accounting, business and commerce students; transcript required",
+   "last": "2026 Perth winter internship closed 12 Mar 2026",
+   "windows": [
+    {
+     "o": "2027-02-01",
+     "c": "2027-03-11",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://www.fticonsulting.com/australia/students",
+   "note": "Applications without a transcript are not considered. The opening date is an estimate.",
+   "teamsList": [
+    "Corporate Finance",
+    "Restructuring"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "rsmcf",
+   "firm": "RSM",
+   "color": "#0a7ea4",
+   "sector": "Mid-tier accounting",
+   "program": "Corporate Finance Graduate Program (Perth)",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "Corporate finance and deal advisory",
+   "duration": "Permanent role from February",
+   "elig": "Commerce, accounting, law or related degrees",
+   "last": "2027 intake closed 22 Mar 2026",
+   "windows": [
+    {
+     "o": "2027-02-15",
+     "c": "2027-03-22",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://careers.rsm.com.au/en/listing/",
+   "note": "Early deadline for a graduate role; the opening date is an estimate.",
+   "teamsList": [
+    "Corporate Finance",
+    "Deal Advisory"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "azure",
+   "firm": "Azure Capital",
+   "color": "#1565c0",
+   "sector": "Boutique & advisory",
+   "program": "Summer Internship Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Corporate advisory: M&A, capital raising (resources, technology, industrials)",
+   "duration": "Summer, works like a full-time Associate role",
+   "elig": "University students with strong academics",
+   "last": "2026/27 internship closed; 2027/28 recruitment expected to start mid-2027. Historically closed in late July",
+   "windows": [
+    {
+     "o": "2027-06-15",
+     "c": "2027-07-31",
+     "est": true,
+     "label": "Expected mid-2027"
+    }
+   ],
+   "url": "https://au.prosple.com/graduate-employers/azure-capital",
+   "note": "Perth's best-known independent corporate adviser. 'Mid-2027' is the firm's own guidance; exact dates are estimates.",
+   "teamsList": [
+    "Corporate Advisory \u2013 M&A",
+    "Capital Raising"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "azuregrad",
+   "firm": "Azure Capital",
+   "color": "#1565c0",
+   "sector": "Boutique & advisory",
+   "program": "Graduate Program",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "Corporate advisory transactions across sectors",
+   "duration": "Full-time graduate role",
+   "elig": "Final-year students and recent graduates",
+   "last": "2027 graduate intake closed; next recruitment expected to start in early 2027",
+   "windows": [
+    {
+     "o": "2027-02-15",
+     "c": "2027-04-10",
+     "est": true,
+     "label": "Expected early 2027"
+    }
+   ],
+   "url": "https://au.prosple.com/graduate-employers/azure-capital",
+   "note": "Older cycles closed in early April. Dates are estimates.",
+   "teamsList": [
+    "Corporate Advisory"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "poynton",
+   "firm": "Poynton Stavrianou",
+   "color": "#4a3b2a",
+   "sector": "Boutique & advisory",
+   "program": "Summer Analyst and Graduate Programs",
+   "season": [
+    "Summer",
+    "Graduate"
+   ],
+   "teams": "M&A involving WA companies",
+   "duration": "Summer analyst; graduate role",
+   "elig": "University students; graduates",
+   "last": "Runs graduate and summer analyst programs; held a UWA recruitment event in May (2023). No dates published",
+   "windows": [],
+   "tbc": true,
+   "url": "https://www.businessnews.com.au/Company/Poynton-Stavrianou",
+   "note": "Independent Perth M&A adviser led by John Poynton AO. Watch for campus events around May.",
+   "teamsList": [
+    "M&A Advisory"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "mcgrathnicol",
+   "firm": "McGrathNicol",
+   "color": "#00205b",
+   "sector": "Boutique & advisory",
+   "program": "Restructuring & Advisory Summer Vacation Program (Perth)",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Restructuring, forensic, deals advisory",
+   "duration": "4 weeks (Nov or Jan) or 8 weeks (Nov); $37/hr",
+   "elig": "Penultimate-year business/commerce students majoring in accounting, economics or finance",
+   "last": "Applications opened 24 Feb 2025 for the 2025/26 cycle; 2024/25 Perth role closed 5 Mar 2024",
+   "windows": [
+    {
+     "o": "2027-02-22",
+     "c": "2027-03-08",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://mcgrathnicol.com/students",
+   "note": "Short, early window: have documents ready in February.",
+   "teamsList": [
+    "Restructuring",
+    "Deals Advisory",
+    "Forensic"
+   ],
+   "brand": 4,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "gresham",
+   "firm": "Gresham",
+   "color": "#5d4037",
+   "sector": "Investment banking",
+   "program": "Analyst roles (direct approach)",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "M&A and corporate advisory",
+   "duration": "Varies",
+   "elig": "Strong academic record",
+   "last": "No Perth student program published in our sources",
+   "windows": [],
+   "adhoc": true,
+   "url": "https://www.gresham.com.au/",
+   "note": "Independent advisory and funds management firm. Approach through a contact.",
+   "teamsList": [
+    "M&A Advisory",
+    "Corporate Advisory"
+   ],
+   "finalYear": true,
+   "brand": 5,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "cavari",
+   "firm": "Cavari",
+   "color": "#263238",
+   "sector": "Boutique & advisory",
+   "program": "Analyst / intern (direct approach)",
+   "season": [
+    "Part-time"
+   ],
+   "teams": "Corporate finance: M&A, capital raising; ventures",
+   "duration": "Varies",
+   "elig": "Students and graduates",
+   "last": "Perth-headquartered firm founded 2025; no published program",
+   "windows": [],
+   "adhoc": true,
+   "url": "https://village.ai/company/cavari-australia",
+   "note": "New and growing, which often means flexible intern hiring.",
+   "teamsList": [
+    "Corporate Finance \u2013 M&A",
+    "Capital Raising",
+    "Ventures"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "auxilium",
+   "firm": "Auxilium Partners",
+   "color": "#6a1b9a",
+   "sector": "Boutique & advisory",
+   "program": "Junior analyst (direct approach)",
+   "season": [
+    "Part-time"
+   ],
+   "teams": "Insolvency, forensic accounting, mining advisory",
+   "duration": "Varies",
+   "elig": "Accounting/commerce students",
+   "last": "West Perth firm; no published program",
+   "windows": [],
+   "adhoc": true,
+   "url": "https://insolvencynewsonline.com.au/acadp_listings/auxilium-partners/",
+   "note": "Small WA-owned team; hires students part-time.",
+   "teamsList": [
+    "Insolvency",
+    "Forensic Accounting",
+    "Mining Advisory"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "discovery",
+   "firm": "Discovery Capital Partners",
+   "color": "#00695c",
+   "sector": "Boutique & advisory",
+   "program": "Analyst (direct approach)",
+   "season": [
+    "Part-time"
+   ],
+   "teams": "Independent corporate advisory for growth companies",
+   "duration": "Varies",
+   "elig": "Students and graduates",
+   "last": "West Perth adviser; no published program",
+   "windows": [],
+   "adhoc": true,
+   "url": "https://app.mergerlinks.com/service-providers/discovery-capital-partners/ranked-teams",
+   "note": "Approach directly with CV and transcript.",
+   "teamsList": [
+    "Corporate Advisory"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "cooper",
+   "firm": "Cooper Partners",
+   "color": "#37474f",
+   "sector": "Boutique & advisory",
+   "program": "Graduate / intern (direct approach)",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "Corporate advisory and consulting",
+   "duration": "Varies",
+   "elig": "Students and graduates",
+   "last": "No published program found",
+   "windows": [],
+   "adhoc": true,
+   "url": "https://www.linkedin.com/search/results/companies/?keywords=Cooper%20Partners%20Perth",
+   "note": "Ask your contact how they were hired.",
+   "teamsList": [
+    "Corporate Advisory",
+    "Consulting"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "cordis",
+   "firm": "Cor Cordis",
+   "color": "#b71c1c",
+   "sector": "Boutique & advisory",
+   "program": "Graduate Program, Restructuring & Advisory (Perth)",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "Restructuring and advisory",
+   "duration": "Graduate role",
+   "elig": "Final-year students and recent graduates",
+   "last": "Perth graduate role advertised; dates not found",
+   "windows": [],
+   "tbc": true,
+   "url": "https://joblink.bond.edu.au/campaign/cor-cordis-graduates-restructuring-advisory-cor-cordis-perth",
+   "note": "Restructuring specialist with a Perth office.",
+   "teamsList": [
+    "Restructuring",
+    "Advisory"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "pkfperth",
+   "firm": "PKF Perth",
+   "color": "#0071bc",
+   "sector": "Mid-tier accounting",
+   "program": "Graduate and student roles",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "Corporate finance, audit, business advisory",
+   "duration": "Varies",
+   "elig": "Accounting/finance students and graduates",
+   "last": "Perth graduate roles advertised (e.g. apply by 31 Mar 2025); the summer vacationer program we found is Melbourne-only",
+   "windows": [],
+   "tbc": true,
+   "url": "https://www.pkf.com.au/locations/perth/corporate-finance/",
+   "note": "PKF Perth runs its own recruiting; ask about vacation work.",
+   "teamsList": [
+    "Corporate Finance",
+    "Business Advisory",
+    "Audit"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "swperth",
+   "firm": "SW Accountants & Advisors",
+   "color": "#e65100",
+   "sector": "Mid-tier accounting",
+   "program": "Audit and Advisory Graduate Program",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "Audit and advisory",
+   "duration": "Graduate role from March",
+   "elig": "Final-year students or recent graduates with an accounting major",
+   "last": "2027 program (Brisbane, Melbourne, Perth) closed 25 Oct 2026",
+   "windows": [
+    {
+     "o": "2027-08-01",
+     "c": "2027-10-24",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://au.gradconnection.com/employers/sw-australia/",
+   "note": "Requires an accounting major.",
+   "teamsList": [
+    "Advisory",
+    "Audit"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "hlbgrad",
+   "firm": "HLB Mann Judd (WA)",
+   "color": "#00539b",
+   "sector": "Mid-tier accounting",
+   "program": "Graduate Program (WA)",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "Business Advisory, Corporate & Audit Services",
+   "duration": "Graduate role",
+   "elig": "Final-year accounting students",
+   "last": "2027 program posted 2 Apr 2026, closed 1 Jun 2026",
+   "windows": [
+    {
+     "o": "2027-04-01",
+     "c": "2027-05-31",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://hlb.com.au/positions-available/2027-graduate-program-wa/",
+   "note": "Agency referrals not accepted.",
+   "teamsList": [
+    "Business Advisory",
+    "Corporate & Audit Services"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "argograd",
+   "firm": "Argonaut",
+   "color": "#0f766e",
+   "sector": "Boutique & advisory",
+   "program": "Graduate Program",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "Investment banking, stockbroking, research",
+   "duration": "Starts December to February",
+   "elig": "Recent graduates or students graduating that year",
+   "last": "Open year-round; 2027 intake closed 15 Apr 2026",
+   "windows": [
+    {
+     "o": "2026-04-16",
+     "c": "2027-04-15",
+     "est": false,
+     "label": "Year-round, closes 15 Apr",
+     "rolling": true
+    }
+   ],
+   "url": "https://www.argonaut.com/internship-program",
+   "note": "For the 2028 intake, apply by 15 April 2027. Interviews May/June.",
+   "teamsList": [
+    "Investment Banking",
+    "Stockbroking",
+    "Equity Research"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "ubsgrad",
+   "firm": "UBS",
+   "color": "#b91c1c",
+   "sector": "Investment banking",
+   "program": "Graduate Talent Program, Global Banking (Perth)",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "Metals and Mining team",
+   "duration": "Graduate role",
+   "elig": "Final-year students; citizens and permanent residents",
+   "last": "2027 Perth graduate role closed around August 2026",
+   "windows": [
+    {
+     "o": "2027-06-15",
+     "c": "2027-08-10",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://au.gradconnection.com/employers/ubs/",
+   "note": "Unlike the summer internship, UBS does hire Perth graduates.",
+   "teamsList": [
+    "Investment Banking \u2013 Metals & Mining"
+   ],
+   "finalYear": true,
+   "brand": 5,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "jarra",
+   "firm": "Jarra",
+   "color": "#8d6e63",
+   "sector": "Property & real estate",
+   "program": "Analyst (direct approach)",
+   "season": [
+    "Part-time"
+   ],
+   "teams": "Property funds: social infrastructure and commercial property",
+   "duration": "Varies",
+   "elig": "Property/finance students",
+   "last": "No published program",
+   "windows": [],
+   "adhoc": true,
+   "url": "https://www.linkedin.com/search/results/companies/?keywords=Jarra%20property",
+   "note": "Fund manager and property developer; fits a Finance + Property major.",
+   "teamsList": [
+    "Property Funds Management"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "seefeld",
+   "firm": "Seefeld Investments",
+   "color": "#455a64",
+   "sector": "Funds & super",
+   "program": "Investment analyst (direct approach)",
+   "season": [
+    "Part-time"
+   ],
+   "teams": "Investments",
+   "duration": "Varies",
+   "elig": "Finance students",
+   "last": "No published program",
+   "windows": [],
+   "adhoc": true,
+   "url": "https://www.linkedin.com/search/results/companies/?keywords=Seefeld%20Investments",
+   "note": "Perth investment firm. Ask your contact about student roles.",
+   "teamsList": [
+    "Investments"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "lighthouse",
+   "firm": "Lighthouse Capital",
+   "color": "#546e7a",
+   "sector": "Funds & super",
+   "program": "Investment support (direct approach)",
+   "season": [
+    "Part-time"
+   ],
+   "teams": "Investment support",
+   "duration": "Varies",
+   "elig": "Finance/law students and graduates",
+   "last": "No published program",
+   "windows": [],
+   "adhoc": true,
+   "url": "https://www.linkedin.com/search/results/companies/?keywords=Lighthouse%20Capital%20Perth",
+   "note": "Approach directly.",
+   "teamsList": [
+    "Investment Support"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "lgt",
+   "firm": "LGT Wealth Management",
+   "color": "#00205b",
+   "sector": "Funds & super",
+   "program": "Associate / student roles (direct approach)",
+   "season": [
+    "Part-time"
+   ],
+   "teams": "Private wealth management",
+   "duration": "Varies",
+   "elig": "Finance/economics students",
+   "last": "No published Perth program",
+   "windows": [],
+   "adhoc": true,
+   "url": "https://www.lgtwm.com.au/",
+   "note": "Formerly Crestone. Wealth roles suit your Banking major.",
+   "teamsList": [
+    "Private Wealth Management"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "fundwa",
+   "firm": "Fund WA",
+   "color": "#2e7d32",
+   "sector": "Funds & super",
+   "program": "Venture capital analyst (direct approach)",
+   "season": [
+    "Part-time"
+   ],
+   "teams": "Early-stage venture investment",
+   "duration": "Varies",
+   "elig": "Students",
+   "last": "No published program",
+   "windows": [],
+   "adhoc": true,
+   "url": "https://fundwa.squarespace.com/startups",
+   "note": "WA venture fund that hires student analysts.",
+   "teamsList": [
+    "Venture Capital"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "tattarang",
+   "firm": "Tattarang",
+   "color": "#3e2723",
+   "sector": "Funds & super",
+   "program": "Investment Internship",
+   "season": [
+    "Part-time"
+   ],
+   "teams": "Investments across agri-food, energy, resources, property",
+   "duration": "Internship",
+   "elig": "Students",
+   "last": "Perth investment intern role advertised early 2025",
+   "windows": [],
+   "tbc": true,
+   "url": "https://builtin.com/job/investment-internship/4552577",
+   "note": "The Forrest family's private investment group. Roles appear irregularly.",
+   "teamsList": [
+    "Investments"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "mitsuiiod",
+   "firm": "Mitsui Iron Ore Development",
+   "color": "#01579b",
+   "sector": "Resources & energy",
+   "program": "Finance roles (direct approach)",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "Accounting and finance",
+   "duration": "Varies",
+   "elig": "Accounting/finance students and graduates",
+   "last": "No published student program",
+   "windows": [],
+   "adhoc": true,
+   "url": "https://www.linkedin.com/search/results/companies/?keywords=Mitsui%20Iron%20Ore%20Development",
+   "note": "Perth-based iron ore joint-venture partner.",
+   "teamsList": [
+    "Accounting & Finance"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "cbh",
+   "firm": "CBH Group",
+   "color": "#f9a825",
+   "sector": "Resources & energy",
+   "program": "Graduate Program",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "Two-year rotations including finance and trading",
+   "duration": "2-year rotational program",
+   "elig": "Final-year students and recent graduates",
+   "last": "2026 intake: posted 12 Aug 2025, closed 26 Aug 2025",
+   "windows": [
+    {
+     "o": "2027-08-10",
+     "c": "2027-08-25",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "http://careers.cbh.com.au",
+   "note": "WA grain co-operative; its structured products team is commodity finance.",
+   "teamsList": [
+    "Finance",
+    "Trading"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "hancock",
+   "firm": "Hancock Iron Ore",
+   "color": "#c62828",
+   "sector": "Resources & energy",
+   "program": "Summer Internship Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Accounting and corporate roles (Perth) plus FIFO roles",
+   "duration": "12 weeks paid from November",
+   "elig": "Current undergraduate and postgraduate students, any year",
+   "last": "2026 program posted 12 Mar 2026",
+   "windows": [
+    {
+     "o": "2027-03-12",
+     "c": "2027-04-15",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://careers.hancockironore.com.au/job/Hancock-Iron-Ore-Summer-Internship-Program/75179-en_GB",
+   "note": "Roy Hill and Atlas Iron combined. Open to any year, with direct entry to the graduate program. The close date is an estimate.",
+   "teamsList": [
+    "Accounting",
+    "Corporate",
+    "Mining Engineering",
+    "Mechanical Engineering",
+    "Electrical Engineering",
+    "Geology"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance",
+    "Engineering"
+   ]
+  },
+  {
+   "id": "sternship",
+   "firm": "Sternship Advisers",
+   "color": "#1a237e",
+   "sector": "Boutique & advisory",
+   "program": "Analyst, M&A and ECM (ad hoc)",
+   "season": [
+    "Graduate",
+    "Part-time"
+   ],
+   "teams": "M&A, equity capital markets",
+   "duration": "Ongoing role",
+   "elig": "Finance/commerce students and graduates",
+   "last": "Analyst/Associate role advertised 16 March 2026",
+   "windows": [],
+   "adhoc": true,
+   "url": "https://www.sternship.com.au",
+   "note": "West Perth boutique founded in 2017 by the former UBS Perth team. No set program, so approach them directly.",
+   "teamsList": [
+    "M&A",
+    "Equity Capital Markets"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "pcf",
+   "firm": "PCF Capital Group",
+   "color": "#37474f",
+   "sector": "Boutique & advisory",
+   "program": "Corporate finance analyst (direct approach)",
+   "season": [
+    "Part-time"
+   ],
+   "teams": "M&A, capital raising, debt advisory",
+   "duration": "Varies",
+   "elig": "Finance students",
+   "last": "No published program found",
+   "windows": [],
+   "adhoc": true,
+   "url": "https://www.linkedin.com/search/results/companies/?keywords=PCF%20Capital%20Group",
+   "note": "Perth corporate finance boutique. No student program was found, so contact them directly.",
+   "teamsList": [
+    "M&A",
+    "Capital Raising",
+    "Debt Advisory"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "stateone",
+   "firm": "State One Equities",
+   "color": "#263238",
+   "sector": "Investment banking",
+   "program": "Stockbroking / corporate (direct approach)",
+   "season": [
+    "Part-time"
+   ],
+   "teams": "Broking, corporate finance",
+   "duration": "Varies",
+   "elig": "Finance students",
+   "last": "No published program found",
+   "windows": [],
+   "adhoc": true,
+   "url": "https://www.linkedin.com/search/results/companies/?keywords=State%20One%20Equities",
+   "note": "Perth broker. Contact them directly.",
+   "teamsList": [
+    "Stockbroking",
+    "Corporate Finance"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "ordminnett",
+   "firm": "Ord Minnett",
+   "color": "#002855",
+   "sector": "Investment banking",
+   "program": "Graduate Program / Associate Adviser Program",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "Private wealth, broking",
+   "duration": "6-month paid full-time graduate program",
+   "elig": "Graduates",
+   "last": "Graduate and Associate Adviser programs listed on the careers page",
+   "windows": [],
+   "tbc": true,
+   "url": "https://www.ords.com.au/about/careers",
+   "note": "Perth intake is not confirmed and no dates are published.",
+   "teamsList": [
+    "Private Wealth",
+    "Broking"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "shaw",
+   "firm": "Shaw and Partners",
+   "color": "#0d47a1",
+   "sector": "Investment banking",
+   "program": "Student roles (direct approach)",
+   "season": [
+    "Part-time"
+   ],
+   "teams": "Wealth, corporate finance",
+   "duration": "Varies",
+   "elig": "Students",
+   "last": "No Perth program found",
+   "windows": [],
+   "adhoc": true,
+   "url": "https://afecanu.prosple.com/graduate-employers/shaw-and-partners",
+   "note": "Has a Perth office. Contact them directly.",
+   "teamsList": [
+    "Wealth",
+    "Corporate Finance"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "wilsons",
+   "firm": "Wilsons Advisory",
+   "color": "#003b5c",
+   "sector": "Investment banking",
+   "program": "Student roles (direct approach)",
+   "season": [
+    "Part-time"
+   ],
+   "teams": "Corporate finance, wealth",
+   "duration": "Varies",
+   "elig": "Students",
+   "last": "Perth office opened in 2025; no program found",
+   "windows": [],
+   "adhoc": true,
+   "url": "https://www.wilsonsadvisory.com.au/careers",
+   "note": "New Perth office, so it may be open to approaches.",
+   "teamsList": [
+    "Corporate Finance",
+    "Wealth"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "fordham",
+   "firm": "Fordham (Perpetual)",
+   "color": "#5d4037",
+   "sector": "Mid-tier accounting",
+   "program": "Vacationer Program (Perth)",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Private business advisory, tax",
+   "duration": "4 weeks; $250/day",
+   "elig": "Penultimate-year students",
+   "last": "2026 round closed 9 Aug 2026; 2025 round closed 10 Aug 2025",
+   "windows": [
+    {
+     "o": "2027-07-01",
+     "c": "2027-08-09",
+     "est": true,
+     "label": "Vacationer round"
+    }
+   ],
+   "url": "https://au.gradconnection.com/employers/fordham/jobs/",
+   "note": "Leads into graduate offers. The graduate EOI closed 16 Feb 2026 for a Feb 2027 start. The opening date here is an estimate.",
+   "teamsList": [
+    "Private Business Advisory",
+    "Tax"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "findex",
+   "firm": "Findex / Crowe",
+   "color": "#00594f",
+   "sector": "Mid-tier accounting",
+   "program": "Graduate Program (Business Advisory, External Audit)",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "Accounting & business advisory, audit",
+   "duration": "Ongoing graduate role",
+   "elig": "Final-year students",
+   "last": "2027 graduate roles incl. Perth posted ~8\u201315 Mar 2026, closing ~6 Jun 2026",
+   "windows": [
+    {
+     "o": "2027-03-08",
+     "c": "2027-06-06",
+     "est": true,
+     "label": "Graduate round"
+    }
+   ],
+   "url": "https://www.findex.com.au/careers",
+   "note": "Estimated from the 2026 cycle.",
+   "teamsList": [
+    "Business Advisory",
+    "External Audit"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "dfk",
+   "firm": "DFK Gooding Partners",
+   "color": "#1b5e20",
+   "sector": "Mid-tier accounting",
+   "program": "Vacation positions + Graduate Program",
+   "season": [
+    "Summer",
+    "Winter",
+    "Graduate"
+   ],
+   "teams": "Audit, tax, business services",
+   "duration": "Paid vacation work during the year",
+   "elig": "Current students; final-year for graduate",
+   "last": "Paid vacation positions offered throughout the year",
+   "windows": [],
+   "adhoc": true,
+   "url": "https://dfkgoodingpartners.com.au/?p=1096",
+   "note": "Perth-owned mid-tier. Applications are assessed as they arrive, so apply any time, including for winter.",
+   "teamsList": [
+    "Audit",
+    "Tax",
+    "Business Services"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "nexia",
+   "firm": "Nexia Perth",
+   "color": "#6a1b9a",
+   "sector": "Mid-tier accounting",
+   "program": "Student / graduate roles (direct approach)",
+   "season": [
+    "Part-time",
+    "Graduate"
+   ],
+   "teams": "Audit, tax, corporate advisory",
+   "duration": "Varies",
+   "elig": "Students",
+   "last": "No published program found",
+   "windows": [],
+   "adhoc": true,
+   "url": "https://wa.nexia.com.au",
+   "note": "Has a corporate advisory team in Perth. Contact them directly.",
+   "teamsList": [
+    "Corporate Advisory",
+    "Audit",
+    "Tax"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "bentleys",
+   "firm": "Bentleys",
+   "color": "#00838f",
+   "sector": "Mid-tier accounting",
+   "program": "Graduate / undergraduate roles",
+   "season": [
+    "Graduate",
+    "Part-time"
+   ],
+   "teams": "Audit, accounting",
+   "duration": "Varies",
+   "elig": "Students and graduates",
+   "last": "Program advertised for other states; no Perth listing found",
+   "windows": [],
+   "adhoc": true,
+   "url": "https://www.bentleys.com.au/careers",
+   "note": "Check the careers page for Perth roles.",
+   "teamsList": [
+    "Audit",
+    "Accounting"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "stantons",
+   "firm": "Stantons",
+   "color": "#455a64",
+   "sector": "Mid-tier accounting",
+   "program": "Student / graduate roles (direct approach)",
+   "season": [
+    "Graduate",
+    "Part-time"
+   ],
+   "teams": "Audit (ASX small caps), corporate",
+   "duration": "Varies",
+   "elig": "Students",
+   "last": "No published program found",
+   "windows": [],
+   "adhoc": true,
+   "url": "https://www.linkedin.com/search/results/companies/?keywords=Stantons",
+   "note": "Perth audit firm. Contact them directly.",
+   "teamsList": [
+    "Audit",
+    "Corporate"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "visagio",
+   "firm": "Visagio",
+   "color": "#e65100",
+   "sector": "Consulting",
+   "program": "Talent Internship Program (Management stream)",
+   "season": [
+    "Winter",
+    "Part-time"
+   ],
+   "teams": "Management consulting, technology",
+   "duration": "Ongoing paid part-time; starts late Jun/early Jul",
+   "elig": "Penultimate or final-year students",
+   "last": "2026 round open 2 Feb \u2013 23 Mar 2026; Perth assessment centre 1 May",
+   "windows": [
+    {
+     "o": "2027-02-01",
+     "c": "2027-03-22",
+     "est": true,
+     "label": "Internship round"
+    }
+   ],
+   "url": "https://www.visagiotalent.com",
+   "note": "Starts at winter break and is Perth-based, so it fits your winter 2027 goal. Final-year students apply to either this or the graduate program, not both.",
+   "teamsList": [
+    "Management Consulting",
+    "Technology Consulting"
+   ],
+   "finalYear": true,
+   "brand": 4,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "hatch",
+   "firm": "Hatch",
+   "color": "#c62828",
+   "sector": "Consulting",
+   "program": "Graduate Analyst \u2013 Advisory (Perth)",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "Advisory: financial models, investment decisions",
+   "duration": "Graduate role",
+   "elig": "Final-year Commerce/Econ/Eng",
+   "last": "Previous cycle posted 27 Mar 2025, closed 26 Jun 2025",
+   "windows": [
+    {
+     "o": "2027-03-25",
+     "c": "2027-06-25",
+     "est": true,
+     "label": "Graduate round"
+    }
+   ],
+   "url": "https://www.hatch.com/en/Careers",
+   "note": "Estimated from the previous cycle.",
+   "teamsList": [
+    "Advisory \u2013 Financial Modelling"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "kroll",
+   "firm": "Kroll",
+   "color": "#14234b",
+   "sector": "Consulting",
+   "program": "Valuation intern",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Valuation, restructuring",
+   "duration": "Internship",
+   "elig": "Finance students",
+   "last": "Intern roles advertised in Sydney; none found for Perth",
+   "windows": [],
+   "tbc": true,
+   "url": "https://careers.kroll.com",
+   "note": "A Perth intake is not confirmed.",
+   "teamsList": [
+    "Valuation",
+    "Restructuring"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "arup",
+   "firm": "Arup",
+   "color": "#000000",
+   "sector": "Engineering consulting",
+   "program": "Summer Vacation Programme",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Structural, civil, electrical, mechanical, fire, transport; business & project management",
+   "duration": "12 weeks, paid",
+   "elig": "Penultimate-year students",
+   "last": "2026/27 roles posted ~30 Jul 2026, closing ~16 Aug 2026; program 23 Nov 2026 \u2013 12 Feb 2027",
+   "windows": [
+    {
+     "o": "2027-07-30",
+     "c": "2027-08-16",
+     "est": true,
+     "label": "Vacation round"
+    }
+   ],
+   "url": "https://www.arup.com/careers",
+   "note": "Penultimate year preferred. Roles can close early if volume is high. Opening date is an estimate.",
+   "teamsList": [
+    "Structural Engineering",
+    "Civil Engineering",
+    "Electrical Engineering",
+    "Mechanical Engineering",
+    "Fire Engineering",
+    "Transport Planning",
+    "Business & Project Management",
+    "Advisory"
+   ],
+   "fields": [
+    "Engineering",
+    "Finance"
+   ]
+  },
+  {
+   "id": "suncorp",
+   "firm": "Suncorp",
+   "color": "#007a78",
+   "sector": "Insurance",
+   "program": "Summer Intern Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Insurance, finance, technology",
+   "duration": "~12 weeks, Nov\u2013Feb",
+   "elig": "Penultimate-year students",
+   "last": "Applications open each August; 2026/27 closed 17 Aug 2026",
+   "windows": [
+    {
+     "o": "2027-08-02",
+     "c": "2027-08-16",
+     "est": true,
+     "label": "Intern round"
+    }
+   ],
+   "url": "https://www.suncorpgroup.com.au/careers/graduates",
+   "note": "The 2026 graduate cohort includes Perth, but Perth intern places are not confirmed.",
+   "teamsList": [
+    "Finance",
+    "Insurance",
+    "Technology"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "hbf",
+   "firm": "HBF",
+   "color": "#00a9e0",
+   "sector": "Insurance",
+   "program": "Finance Systems Graduate / Actuarial Intern (ad hoc)",
+   "season": [
+    "Graduate",
+    "Part-time"
+   ],
+   "teams": "Finance, actuarial",
+   "duration": "Varies",
+   "elig": "Students and graduates",
+   "last": "Finance Systems Graduate EOI and Actuarial Intern roles advertised",
+   "windows": [],
+   "adhoc": true,
+   "url": "https://careers.hbf.com.au",
+   "note": "Perth head office. Roles are posted individually.",
+   "teamsList": [
+    "Finance Systems",
+    "Actuarial"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "rac",
+   "firm": "RAC WA",
+   "color": "#ffcd00",
+   "sector": "Insurance",
+   "program": "Student / graduate roles",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "Insurance, finance",
+   "duration": "Varies",
+   "elig": "Students",
+   "last": "No program found",
+   "windows": [],
+   "adhoc": true,
+   "url": "https://rac.com.au/about-rac/careers",
+   "note": "Check the careers page.",
+   "teamsList": [
+    "Finance",
+    "Insurance"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "bendigo",
+   "firm": "Bendigo Bank",
+   "color": "#9e1b32",
+   "sector": "Banking",
+   "program": "Graduate / intern programs",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "Banking",
+   "duration": "Varies",
+   "elig": "Students",
+   "last": "Perth intake not checked",
+   "windows": [],
+   "tbc": true,
+   "url": "https://www.bendigoadelaide.com.au/careers",
+   "note": "Perth availability is unconfirmed.",
+   "teamsList": [
+    "Banking"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "gesb",
+   "firm": "GESB",
+   "color": "#00467f",
+   "sector": "Funds & super",
+   "program": "Student roles (direct approach)",
+   "season": [
+    "Part-time"
+   ],
+   "teams": "Super, investments",
+   "duration": "Varies",
+   "elig": "Students",
+   "last": "No program found",
+   "windows": [],
+   "adhoc": true,
+   "url": "https://gesb.wa.gov.au",
+   "note": "WA government super fund. Roles are listed on jobs.wa.gov.au.",
+   "teamsList": [
+    "Investments",
+    "Super Operations"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "watc",
+   "firm": "WA Treasury Corporation",
+   "color": "#002f5f",
+   "sector": "Government",
+   "program": "Rotation via DTF Graduate Program",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "Funding, treasury markets",
+   "duration": "Graduate rotation",
+   "elig": "DTF graduates",
+   "last": "No standalone student program found",
+   "windows": [],
+   "adhoc": true,
+   "url": "https://www.watc.wa.gov.au",
+   "note": "The main route in is the DTF graduate program, which offers rotations to WATC.",
+   "teamsList": [
+    "Funding & Treasury Markets"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "perthmint",
+   "firm": "Perth Mint",
+   "color": "#b8860b",
+   "sector": "Government",
+   "program": "Student roles (direct approach)",
+   "season": [
+    "Part-time"
+   ],
+   "teams": "Treasury, finance",
+   "duration": "Varies",
+   "elig": "Students",
+   "last": "No program found",
+   "windows": [],
+   "adhoc": true,
+   "url": "https://www.perthmint.com/careers",
+   "note": "Roles are listed on jobs.wa.gov.au.",
+   "teamsList": [
+    "Treasury",
+    "Finance"
+   ],
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "capitalpartners",
+   "firm": "Capital Partners",
+   "color": "#1565c0",
+   "sector": "Funds & super",
+   "program": "Financial Planning Graduate Program",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "Private wealth / financial planning",
+   "duration": "Graduate program, West Perth",
+   "elig": "Final-year / graduates",
+   "last": "Applications for the August 2026 intake opened in July",
+   "windows": [
+    {
+     "o": "2027-07-01",
+     "c": "2027-07-31",
+     "est": true,
+     "label": "August intake"
+    }
+   ],
+   "url": "https://capital-partners.com.au/join-us/graduate-program/",
+   "note": "The closing date is an estimate.",
+   "teamsList": [
+    "Financial Planning"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "igo",
+   "firm": "IGO",
+   "color": "#00a19a",
+   "sector": "Resources & energy",
+   "program": "Vacation Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Corporate roles at South Perth head office; operations",
+   "duration": "12 weeks, paid",
+   "elig": "Penultimate-year students",
+   "last": "2026/27 applications opened July 2026 (past cycles opened in March)",
+   "windows": [
+    {
+     "o": "2027-07-01",
+     "c": "2027-08-15",
+     "est": true,
+     "label": "Vacation round"
+    }
+   ],
+   "url": "https://careers.igo.com.au/graduates-and-students",
+   "note": "Timing has moved between years. Finance streams vary by year.",
+   "teamsList": [
+    "Corporate (Head Office)",
+    "Operations",
+    "Mining Engineering",
+    "Metallurgy",
+    "Geotechnical Engineering",
+    "Geology"
+   ],
+   "fields": [
+    "Finance",
+    "Engineering"
+   ]
+  },
+  {
+   "id": "northernstar",
+   "firm": "Northern Star",
+   "color": "#ffb300",
+   "sector": "Resources & energy",
+   "program": "Summer Vacation Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Mostly technical streams",
+   "duration": "Summer",
+   "elig": "University students",
+   "last": "2026/27 roles (Subiaco HQ) closed 30 Sep 2026",
+   "windows": [
+    {
+     "o": "2027-08-15",
+     "c": "2027-09-30",
+     "est": true,
+     "label": "Vacation round"
+    }
+   ],
+   "url": "https://careers.nsrltd.com",
+   "note": "12 weeks; leads to graduate roles. The opening date is an estimate.",
+   "teamsList": [
+    "Technical Streams",
+    "Mining Engineering",
+    "Geotechnical Engineering",
+    "Geology",
+    "Metallurgy",
+    "Mechanical Engineering"
+   ],
+   "fields": [
+    "Finance",
+    "Engineering"
+   ]
+  },
+  {
+   "id": "south32",
+   "firm": "South32",
+   "color": "#ff6f00",
+   "sector": "Resources & energy",
+   "program": "Vacation Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Operations; some commercial",
+   "duration": "Summer",
+   "elig": "University students",
+   "last": "Run at operations",
+   "windows": [],
+   "tbc": true,
+   "url": "https://www.south32.net/careers",
+   "note": "Perth finance places are unconfirmed.",
+   "teamsList": [
+    "Commercial",
+    "Operations",
+    "Mechanical Engineering",
+    "Electrical Engineering",
+    "Chemical & Process Engineering",
+    "Mining Engineering",
+    "Environment"
+   ],
+   "fields": [
+    "Finance",
+    "Engineering"
+   ]
+  },
+  {
+   "id": "anglogold",
+   "firm": "AngloGold Ashanti Australia",
+   "color": "#c9a227",
+   "sector": "Resources & energy",
+   "program": "Vacation Programme (Finance, Perth)",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Finance, accounting, payroll",
+   "duration": "12 weeks, Nov\u2013Feb",
+   "elig": "University students",
+   "last": "Finance roles based in the Perth office",
+   "windows": [],
+   "tbc": true,
+   "url": "https://www.anglogoldashanti.com/careers/",
+   "note": "Gives first access to graduate roles. Dates are not published.",
+   "teamsList": [
+    "Finance",
+    "Accounting",
+    "Payroll",
+    "Mining Engineering",
+    "Geotechnical Engineering",
+    "Metallurgy",
+    "Surveying",
+    "Environment"
+   ],
+   "fields": [
+    "Finance",
+    "Engineering"
+   ]
+  },
+  {
+   "id": "shell",
+   "firm": "Shell",
+   "color": "#dd1d21",
+   "sector": "Resources & energy",
+   "program": "Assessed Summer Internship",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Commercial, finance, engineering",
+   "duration": "Summer; ~$70k pro rata",
+   "elig": "Second-to-final-year students",
+   "last": "Brisbane & Perth, 8\u201316 places",
+   "windows": [],
+   "tbc": true,
+   "url": "https://www.shell.com.au/careers",
+   "note": "Accepts commerce/finance students. Dates are not published.",
+   "teamsList": [
+    "Commercial",
+    "Finance",
+    "Engineering",
+    "Process Engineering",
+    "Mechanical Engineering",
+    "Electrical Engineering"
+   ],
+   "brand": 4,
+   "fields": [
+    "Finance",
+    "Engineering"
+   ]
+  },
+  {
+   "id": "santos",
+   "firm": "Santos",
+   "color": "#00843d",
+   "sector": "Resources & energy",
+   "program": "Vacation Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Corporate (finance) stream is in Adelaide; technical in Perth",
+   "duration": "12 weeks",
+   "elig": "Penultimate-year students",
+   "last": "Applications open in April",
+   "windows": [
+    {
+     "o": "2027-04-01",
+     "c": "2027-04-30",
+     "est": true,
+     "label": "Vacation round"
+    }
+   ],
+   "url": "https://www.santos.com/careers/early-career-pathways/",
+   "note": "The finance stream is based in Adelaide. The closing date is an estimate.",
+   "teamsList": [
+    "Corporate Finance (Adelaide)",
+    "Technical (Perth)",
+    "Petroleum & Reservoir Engineering",
+    "Mechanical Engineering",
+    "Process Engineering",
+    "Geoscience"
+   ],
+   "fields": [
+    "Finance",
+    "Engineering"
+   ]
+  },
+  {
+   "id": "alinta",
+   "firm": "Alinta Energy",
+   "color": "#f57c00",
+   "sector": "Resources & energy",
+   "program": "Graduate Commercial Analyst (Trading & Portfolio) \u2013 Perth",
+   "season": [
+    "Graduate"
+   ],
+   "teams": "Trading, portfolio management, commercial",
+   "duration": "2-year graduate program",
+   "elig": "Final-year students",
+   "last": "2027 intake closed 26 Jul 2026",
+   "windows": [
+    {
+     "o": "2027-06-15",
+     "c": "2027-07-26",
+     "est": true,
+     "label": "Graduate round"
+    }
+   ],
+   "url": "https://au.gradconnection.com/employers/alinta-energy/",
+   "note": "A summer internship has also run in Perth. The opening date is an estimate.",
+   "teamsList": [
+    "Trading & Portfolio Management",
+    "Commercial"
+   ],
+   "finalYear": true,
+   "fields": [
+    "Finance"
+   ]
+  },
+  {
+   "id": "watercorp",
+   "firm": "Water Corporation",
+   "color": "#0077c8",
+   "sector": "Resources & energy",
+   "program": "Vacation Student Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Civil, chemical/process, electrical, environmental, mechanical engineering; data science",
+   "duration": "12 weeks, late Nov\u2013mid Feb",
+   "elig": "Penultimate-year students",
+   "last": "2026/27 applications closed 28 Jun 2026",
+   "windows": [
+    {
+     "o": "2027-05-15",
+     "c": "2027-06-28",
+     "est": true,
+     "label": "Vacation round"
+    }
+   ],
+   "url": "https://watercorporation.com.au/About-us/Careers/Career-pathways/Vacation-student-program",
+   "note": "Paid 12 weeks, late Nov to mid Feb, Perth and regional WA. The opening date is an estimate.",
+   "teamsList": [
+    "Commercial",
+    "Engineering",
+    "Civil Engineering",
+    "Chemical & Process Engineering",
+    "Electrical Engineering",
+    "Mechanical Engineering",
+    "Environmental Engineering",
+    "Data Science"
+   ],
+   "fields": [
+    "Finance",
+    "Engineering"
+   ]
+  },
+  {
+   "id": "ghd",
+   "firm": "GHD",
+   "color": "#00843d",
+   "sector": "Engineering consulting",
+   "program": "Summer Internship Program (Perth)",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Civil, structural, water, environmental, electrical, mechanical, project management",
+   "teamsList": [
+    "Civil & Structural Engineering",
+    "Water Engineering",
+    "Environmental Engineering",
+    "Electrical Engineering",
+    "Mechanical Engineering",
+    "Project Management"
+   ],
+   "duration": "3 months, Nov to mid/late Feb",
+   "elig": "Penultimate or pre-penultimate year",
+   "last": "2026/27 Perth role posted ~25 May 2026; other regions closed 9\u201331 Aug 2026",
+   "windows": [
+    {
+     "o": "2027-05-25",
+     "c": "2027-08-09",
+     "est": true,
+     "label": "Internship round"
+    }
+   ],
+   "url": "https://www.ghd.com/en-au/careers/graduates-and-students",
+   "note": "Applications are screened mostly after closing. Closing date is estimated from other regions.",
+   "fields": [
+    "Engineering"
+   ]
+  },
+  {
+   "id": "aurecon",
+   "firm": "Aurecon",
+   "color": "#e4002b",
+   "sector": "Engineering consulting",
+   "program": "Summer Internship Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Civil/structural, electrical, mechanical, chemical/process, environmental, software, advisory",
+   "teamsList": [
+    "Civil & Structural Engineering",
+    "Electrical Engineering",
+    "Mechanical Engineering",
+    "Chemical & Process Engineering",
+    "Environmental Engineering",
+    "Software Engineering",
+    "Infrastructure & Energy Advisory",
+    "Project Management"
+   ],
+   "duration": "12 weeks, paid, mid-Nov to Feb",
+   "elig": "Ideally second-to-last year",
+   "last": "2026/27 roles closed 6 Aug 2026",
+   "windows": [
+    {
+     "o": "2027-07-15",
+     "c": "2027-08-05",
+     "est": true,
+     "label": "Internship round"
+    }
+   ],
+   "url": "https://www.aurecongroup.com/careers/graduates-and-interns",
+   "note": "Check the Perth listing; locations vary by team. Opening date is an estimate.",
+   "fields": [
+    "Engineering"
+   ]
+  },
+  {
+   "id": "aecom",
+   "firm": "AECOM",
+   "color": "#008768",
+   "sector": "Engineering consulting",
+   "program": "Summer Internship Program",
+   "season": [
+    "Summer",
+    "Graduate"
+   ],
+   "teams": "Perth: civil (transport/highways), electrical (energy), structural",
+   "teamsList": [
+    "Civil Engineering (Transport)",
+    "Electrical Engineering (Energy)",
+    "Structural Engineering"
+   ],
+   "duration": "Nov to Feb",
+   "elig": "University students",
+   "last": "Internship applications open and close in July; graduate applications open in March",
+   "windows": [
+    {
+     "o": "2027-07-01",
+     "c": "2027-07-31",
+     "est": true,
+     "label": "Internship round"
+    }
+   ],
+   "url": "https://aecom.com/careers/graduates-and-early-careers/australia-new-zealand/",
+   "note": "A 2027 graduate civil role in Perth stayed open until 3 Oct 2026.",
+   "fields": [
+    "Engineering"
+   ]
+  },
+  {
+   "id": "wsp",
+   "firm": "WSP",
+   "color": "#ff3f2f",
+   "sector": "Engineering consulting",
+   "program": "Summer Vacation Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Civil, structural, transport, environmental, electrical",
+   "teamsList": [
+    "Civil Engineering",
+    "Structural Engineering",
+    "Transport Engineering",
+    "Environmental Engineering",
+    "Electrical Engineering"
+   ],
+   "duration": "Summer",
+   "elig": "University students",
+   "last": "Perth dates not found",
+   "tbc": true,
+   "url": "https://www.wsp.com/en-au/careers/graduates-and-students",
+   "note": "Check the careers page from June.",
+   "fields": [
+    "Engineering"
+   ],
+   "windows": []
+  },
+  {
+   "id": "jacobs",
+   "firm": "Jacobs",
+   "color": "#000000",
+   "sector": "Engineering consulting",
+   "program": "Intern program (Perth)",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Civil (water) and other engineering",
+   "teamsList": [
+    "Civil Engineering (Water)",
+    "Electrical Engineering",
+    "Mechanical Engineering"
+   ],
+   "duration": "Summer",
+   "elig": "University students",
+   "last": "Perth Intern Civil Engineer (Water) role advertised",
+   "tbc": true,
+   "url": "https://jacobs.com/careers",
+   "note": "Dates not published in our sources.",
+   "fields": [
+    "Engineering"
+   ],
+   "windows": []
+  },
+  {
+   "id": "worley",
+   "firm": "Worley",
+   "color": "#00205b",
+   "sector": "Engineering consulting",
+   "program": "Summer Internship (Perth)",
+   "season": [
+    "Summer",
+    "Graduate"
+   ],
+   "teams": "Civil, mechanical, structural, piping, process",
+   "teamsList": [
+    "Civil Engineering",
+    "Mechanical Engineering",
+    "Structural Engineering",
+    "Piping Engineering",
+    "Process Engineering"
+   ],
+   "duration": "12 weeks, paid, Nov to Feb",
+   "elig": "University students",
+   "last": "2025/26 Perth internship advertised; graduate roles closed 27 Apr 2025",
+   "tbc": true,
+   "url": "https://www.worley.com/careers",
+   "note": "Energy, chemicals and resources consultancy.",
+   "fields": [
+    "Engineering"
+   ],
+   "windows": []
+  },
+  {
+   "id": "lycopodium",
+   "firm": "Lycopodium",
+   "color": "#5b8f22",
+   "sector": "Engineering consulting",
+   "program": "Summer Vacation Program (Perth HQ)",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Mechanical, civil/structural, metallurgical/chemical, electrical, construction management",
+   "teamsList": [
+    "Mechanical Engineering",
+    "Civil & Structural Engineering",
+    "Metallurgical & Chemical Engineering",
+    "Electrical Engineering",
+    "Construction Management"
+   ],
+   "duration": "About 12 weeks, late Nov to Feb",
+   "elig": "Penultimate year",
+   "last": "2025/26 round posted ~17 Jul 2025, closed 10 Aug 2025; 2026/27 round also run",
+   "windows": [
+    {
+     "o": "2027-07-15",
+     "c": "2027-08-09",
+     "est": true,
+     "label": "Vacation round"
+    }
+   ],
+   "url": "https://www.lycopodium.com/careers",
+   "note": "Global head office in Perth; leads to the graduate program.",
+   "fields": [
+    "Engineering"
+   ]
+  },
+  {
+   "id": "fluor",
+   "firm": "Fluor",
+   "color": "#002e6d",
+   "sector": "Engineering consulting",
+   "program": "Summer Vacation Program (Perth)",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Mechanical, electrical, control systems, structural, civil, process, project controls",
+   "teamsList": [
+    "Mechanical Engineering",
+    "Electrical Engineering",
+    "Control Systems Engineering",
+    "Structural Engineering",
+    "Civil Engineering",
+    "Process Engineering",
+    "Project Controls & Estimating"
+   ],
+   "duration": "12 weeks",
+   "elig": "Undergraduates",
+   "last": "2026/27 program advertised for Perth",
+   "tbc": true,
+   "url": "https://thrivecareers.fluor.com",
+   "note": "Dates not published in our sources.",
+   "fields": [
+    "Engineering"
+   ],
+   "windows": []
+  },
+  {
+   "id": "dof",
+   "firm": "DOF",
+   "color": "#003a70",
+   "sector": "Engineering consulting",
+   "program": "Engineering Vacation Student Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Subsea engineering: ocean, mechanical, naval architecture, civil/structural",
+   "teamsList": [
+    "Ocean & Subsea Engineering",
+    "Mechanical Engineering",
+    "Naval Architecture",
+    "Civil & Structural Engineering"
+   ],
+   "duration": "16 Nov 2026 \u2013 12 Feb 2027, Perth CBD",
+   "elig": "Engineers Australia-recognised degrees",
+   "last": "Posted 23 Jun 2026, closed 21 Jul 2026",
+   "windows": [
+    {
+     "o": "2027-06-22",
+     "c": "2027-07-20",
+     "est": true,
+     "label": "Vacation round"
+    }
+   ],
+   "url": "https://www.dof.com/vacancies",
+   "note": "Small intake.",
+   "fields": [
+    "Engineering"
+   ]
+  },
+  {
+   "id": "fugro",
+   "firm": "Fugro",
+   "color": "#f7a600",
+   "sector": "Engineering consulting",
+   "program": "Vacation Program (West Perth)",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Design/structural and project engineering",
+   "teamsList": [
+    "Structural & Design Engineering",
+    "Project Engineering"
+   ],
+   "duration": "12 weeks, Nov to Feb",
+   "elig": "University students",
+   "last": "2026/27 roles advertised",
+   "tbc": true,
+   "url": "https://www.fugro.com/careers",
+   "note": "Dates not published in our sources.",
+   "fields": [
+    "Engineering"
+   ],
+   "windows": []
+  },
+  {
+   "id": "amog",
+   "firm": "AMOG",
+   "color": "#1d3557",
+   "sector": "Engineering consulting",
+   "program": "Engineering Summer Vacation (Perth)",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Offshore and structural engineering",
+   "teamsList": [
+    "Mechanical Engineering",
+    "Structural Engineering",
+    "Ocean Engineering"
+   ],
+   "duration": "Summer",
+   "elig": "BE (Hons) students",
+   "last": "2026/27 Perth placements advertised",
+   "tbc": true,
+   "url": "https://applynow.amog.consulting",
+   "note": "Small consultancy.",
+   "fields": [
+    "Engineering"
+   ],
+   "windows": []
+  },
+  {
+   "id": "orway",
+   "firm": "Orway Mineral Consulting",
+   "color": "#6d4c41",
+   "sector": "Engineering consulting",
+   "program": "Summer Vacation Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Chemical/process engineering",
+   "teamsList": [
+    "Chemical & Process Engineering",
+    "Metallurgy"
+   ],
+   "duration": "Summer",
+   "elig": "Chemical/process students",
+   "last": "2026/27 program advertised",
+   "tbc": true,
+   "url": "https://www.orway.com.au",
+   "note": "Minerals processing specialist.",
+   "fields": [
+    "Engineering"
+   ],
+   "windows": []
+  },
+  {
+   "id": "monadelphous",
+   "firm": "Monadelphous",
+   "color": "#00539b",
+   "sector": "Construction & contracting",
+   "program": "Engineering Summer Vacation Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Mechanical, civil & structural, mechatronic, chemical, electrical; construction management; contracts",
+   "teamsList": [
+    "Mechanical Engineering",
+    "Civil & Structural Engineering",
+    "Mechatronic Engineering",
+    "Chemical Engineering",
+    "Electrical Engineering",
+    "Construction Management",
+    "Contracts"
+   ],
+   "duration": "12 weeks",
+   "elig": "Undergraduates in engineering or construction management",
+   "last": "Contracts round posted 31 Mar 2026; engineering round posted Aug 2026",
+   "windows": [
+    {
+     "o": "2027-03-31",
+     "c": "2027-04-30",
+     "est": true,
+     "label": "Contracts round"
+    },
+    {
+     "o": "2027-08-01",
+     "c": "2027-08-31",
+     "est": true,
+     "label": "Engineering round"
+    }
+   ],
+   "url": "https://jobs.monadelphous.com.au",
+   "note": "Two rounds; closing dates are estimates.",
+   "fields": [
+    "Engineering"
+   ]
+  },
+  {
+   "id": "civmec",
+   "firm": "Civmec",
+   "color": "#c8102e",
+   "sector": "Construction & contracting",
+   "program": "Summer Vacation Program / Graduate Program",
+   "season": [
+    "Summer",
+    "Graduate"
+   ],
+   "teams": "Civil, electrical, manufacturing, mechanical",
+   "teamsList": [
+    "Civil Engineering",
+    "Electrical Engineering",
+    "Mechanical Engineering",
+    "Manufacturing Engineering"
+   ],
+   "duration": "Summer; 2-year graduate program",
+   "elig": "University students",
+   "last": "2027 graduate program closed 11 Sep 2026",
+   "windows": [
+    {
+     "o": "2027-08-10",
+     "c": "2027-09-11",
+     "est": true,
+     "label": "Graduate round"
+    }
+   ],
+   "url": "https://careers.civmec.com.au",
+   "note": "Henderson-based heavy engineering. Vacation dates not published.",
+   "fields": [
+    "Engineering"
+   ],
+   "finalYear": true
+  },
+  {
+   "id": "thiess",
+   "firm": "Thiess",
+   "color": "#ffc72c",
+   "sector": "Construction & contracting",
+   "program": "Summer and Winter Vacation Programs",
+   "season": [
+    "Summer",
+    "Winter"
+   ],
+   "teams": "Mining, mechanical, mechatronic, surveying, geology/geotech, environment",
+   "teamsList": [
+    "Mining Engineering",
+    "Mechanical Engineering",
+    "Mechatronic Engineering",
+    "Surveying",
+    "Geology & Geotechnical",
+    "Environment"
+   ],
+   "duration": "Site-based; 2nd and 3rd year students",
+   "elig": "2nd or 3rd year",
+   "last": "Winter 2026 round posted ~18 Apr, closed 5 May 2026; summer round closed 10 Aug 2026",
+   "windows": [
+    {
+     "o": "2027-04-18",
+     "c": "2027-05-05",
+     "est": true,
+     "label": "Winter round"
+    },
+    {
+     "o": "2027-07-15",
+     "c": "2027-08-10",
+     "est": true,
+     "label": "Summer round"
+    }
+   ],
+   "url": "https://thiess.com/careers/graduates-and-students/vacation-students",
+   "note": "Mining contractor with WA sites. Has a winter intake.",
+   "fields": [
+    "Engineering"
+   ]
+  },
+  {
+   "id": "newmont",
+   "firm": "Newmont",
+   "color": "#b48c2d",
+   "sector": "Resources & energy",
+   "program": "Vacation Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Mining, geotechnical, mechanical, environmental and more",
+   "teamsList": [
+    "Mining Engineering",
+    "Geotechnical Engineering",
+    "Mechanical Engineering",
+    "Environmental",
+    "Metallurgy"
+   ],
+   "duration": "12 weeks from 23 Nov 2026; sites incl. Boddington WA",
+   "elig": "University students with full work rights",
+   "last": "2026 roles closed 5 Aug 2026",
+   "windows": [
+    {
+     "o": "2027-07-10",
+     "c": "2027-08-05",
+     "est": true,
+     "label": "Vacation round"
+    }
+   ],
+   "url": "https://www.newmont.com/careers",
+   "note": "Pathway into the graduate program. Opening date is an estimate.",
+   "fields": [
+    "Engineering"
+   ]
+  },
+  {
+   "id": "goldfields",
+   "firm": "Gold Fields",
+   "color": "#d4a017",
+   "sector": "Resources & energy",
+   "program": "Vacation Student Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Mining, mechanical, mechatronics, metallurgy, geology, environmental",
+   "teamsList": [
+    "Mining Engineering",
+    "Mechanical Engineering",
+    "Mechatronic Engineering",
+    "Metallurgy",
+    "Geology",
+    "Environmental"
+   ],
+   "duration": "Dec to Feb, site rosters",
+   "elig": "University students",
+   "last": "2025 roles posted 4 Aug, closed 17 Aug 2025; some 2026 roles open to 11 Sep 2026",
+   "windows": [
+    {
+     "o": "2027-08-03",
+     "c": "2027-08-17",
+     "est": true,
+     "label": "Vacation round"
+    }
+   ],
+   "url": "https://careers.goldfields.com/Australia",
+   "note": "Four WA mine sites.",
+   "fields": [
+    "Engineering"
+   ]
+  },
+  {
+   "id": "glencoremmo",
+   "firm": "Glencore Murrin Murrin",
+   "color": "#00a3e0",
+   "sector": "Resources & energy",
+   "program": "Vacation Students",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Electrical, mechanical, geospatial and more",
+   "teamsList": [
+    "Electrical Engineering",
+    "Mechanical Engineering",
+    "Chemical & Process Engineering",
+    "Geospatial Science"
+   ],
+   "duration": "Nov 2026 \u2013 Feb 2027, FIFO",
+   "elig": "University students",
+   "last": "Geospatial role closed 6 Aug 2026",
+   "windows": [
+    {
+     "o": "2027-07-10",
+     "c": "2027-08-06",
+     "est": true,
+     "label": "Vacation round"
+    }
+   ],
+   "url": "https://www.glencore.com/careers",
+   "note": "Nickel-cobalt operation in the northern Goldfields. Opening date is an estimate.",
+   "fields": [
+    "Engineering"
+   ]
+  },
+  {
+   "id": "alcoaeng",
+   "firm": "Alcoa",
+   "color": "#00447c",
+   "sector": "Resources & energy",
+   "program": "Vacation Student Program (Engineering) / Graduate Program",
+   "season": [
+    "Summer",
+    "Graduate"
+   ],
+   "teams": "Chemical, mechanical, electrical, civil, mining, environmental",
+   "teamsList": [
+    "Chemical Engineering",
+    "Mechanical Engineering",
+    "Electrical Engineering",
+    "Civil Engineering",
+    "Mining Engineering",
+    "Environmental Engineering"
+   ],
+   "duration": "12 weeks at Kwinana, Pinjarra or Wagerup; 24 roles in 2026",
+   "elig": "Penultimate year preferred (all years accepted)",
+   "last": "2026 vacation roles posted ~12 Jun, closed 6 Jul 2026; 2027 graduate program open 12\u201329 Mar 2026",
+   "windows": [
+    {
+     "o": "2027-03-12",
+     "c": "2027-03-29",
+     "est": true,
+     "label": "Graduate round"
+    },
+    {
+     "o": "2027-06-10",
+     "c": "2027-07-06",
+     "est": true,
+     "label": "Vacation round"
+    }
+   ],
+   "url": "https://www.alcoa.com/australia/en/careers",
+   "note": "Interviews can start before the closing date, so apply early.",
+   "fields": [
+    "Engineering"
+   ],
+   "finalYear": true
+  },
+  {
+   "id": "chevroneng",
+   "firm": "Chevron Australia",
+   "color": "#0054a4",
+   "sector": "Resources & energy",
+   "program": "Intern Program (Engineering)",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Petroleum, mechanical, electrical & instrumentation, civil & structural, process, wells",
+   "teamsList": [
+    "Petroleum Engineering",
+    "Mechanical Engineering",
+    "Electrical & Instrumentation",
+    "Civil & Structural Engineering",
+    "Process Engineering",
+    "Wells Engineering"
+   ],
+   "duration": "12 weeks, Nov to Feb, Perth",
+   "elig": "Engineering students (any year in some streams)",
+   "last": "2026-27 Intern Program open 8 Jun to 8 Jul 2026",
+   "windows": [
+    {
+     "o": "2027-06-07",
+     "c": "2027-07-08",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://careers.chevron.com",
+   "note": "Same intern program as the finance streams.",
+   "fields": [
+    "Engineering"
+   ]
+  },
+  {
+   "id": "bhptech",
+   "firm": "BHP",
+   "color": "#e65400",
+   "sector": "Resources & energy",
+   "program": "Technology Intern Program (Winter and Summer)",
+   "season": [
+    "Winter",
+    "Summer"
+   ],
+   "teams": "Software, data, cyber, electrical, mechatronics, automation, process control",
+   "teamsList": [
+    "Software Engineering",
+    "Data Science",
+    "Cyber Security",
+    "Electrical Engineering",
+    "Mechatronics & Automation",
+    "Process Control"
+   ],
+   "duration": "Winter: 8 weeks from late June; Summer: 10\u201312 weeks from mid-Nov",
+   "elig": "Second to penultimate year",
+   "last": "2026 round closed 26 Feb 2026 (winter start 29 Jun 2026)",
+   "windows": [
+    {
+     "o": "2027-02-01",
+     "c": "2027-02-26",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://www.bhp.com/careers/graduates-and-interns",
+   "note": "One of the few winter engineering/tech internships. Opening date is an estimate.",
+   "fields": [
+    "Engineering"
+   ]
+  },
+  {
+   "id": "pta",
+   "firm": "Public Transport Authority",
+   "color": "#005f86",
+   "sector": "Government",
+   "program": "Vacation Student Program",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Rail civil, mechanical, mechatronics, electrical engineering",
+   "teamsList": [
+    "Rail Civil Engineering",
+    "Mechanical Engineering",
+    "Mechatronic Engineering",
+    "Electrical Engineering"
+   ],
+   "duration": "12 weeks, 23 Nov 2026 \u2013 12 Feb 2027; part-time extensions possible",
+   "elig": "Current university students",
+   "last": "Open 22 Jun \u2013 3 Jul 2026",
+   "windows": [
+    {
+     "o": "2027-06-21",
+     "c": "2027-07-02",
+     "est": true,
+     "label": "Vacation round"
+    }
+   ],
+   "url": "https://www.pta.wa.gov.au/vacation-student-program",
+   "note": "Very short window; register interest to be emailed when it opens.",
+   "fields": [
+    "Engineering"
+   ]
+  },
+  {
+   "id": "mainroads",
+   "firm": "Main Roads WA",
+   "color": "#0b6e4f",
+   "sector": "Government",
+   "program": "Engineering Cadetship / Graduate Program",
+   "season": [
+    "Part-time",
+    "Graduate"
+   ],
+   "teams": "Civil, electrical; spatial science; network operations",
+   "teamsList": [
+    "Civil Engineering",
+    "Electrical Engineering",
+    "Spatial Science & Surveying",
+    "Network Operations"
+   ],
+   "duration": "Cadetship: paid study, tuition and vacation work; graduate rotations",
+   "elig": "University students (cadetship); final-year (graduate)",
+   "last": "2026 cadetship and 2027 graduate program closed 7 Apr 2026",
+   "windows": [
+    {
+     "o": "2027-03-09",
+     "c": "2027-04-06",
+     "est": true,
+     "label": "Main round"
+    }
+   ],
+   "url": "https://www.mainroads.wa.gov.au/about-main-roads/working-with-us/students-and-graduates/",
+   "note": "Cadetship includes paid vacation work. Opening date is an estimate.",
+   "fields": [
+    "Engineering"
+   ],
+   "finalYear": true
+  },
+  {
+   "id": "horizonpower",
+   "firm": "Horizon Power",
+   "color": "#f39200",
+   "sector": "Resources & energy",
+   "program": "Engineering Vacation Student",
+   "season": [
+    "Summer"
+   ],
+   "teams": "Power systems, control, asset management",
+   "teamsList": [
+    "Power Systems Engineering",
+    "Control Engineering",
+    "Asset Management"
+   ],
+   "duration": "17 Nov 2026 \u2013 5 Feb 2027, Bentley",
+   "elig": "Engineering students",
+   "last": "2026/27 role advertised",
+   "tbc": true,
+   "url": "https://www.horizonpower.com.au/about-us/careers/",
+   "note": "Regional WA power provider.",
+   "fields": [
+    "Engineering"
+   ],
+   "windows": []
+  }
+ ]
+}

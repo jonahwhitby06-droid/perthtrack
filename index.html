@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-AU" data-static="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PerthTrack: every finance and engineering internship in Perth, the moment it opens</title>
+<meta name="description" content="Track every finance and engineering internship, vacation program and graduate role in Perth, and get an email the moment applications open.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='3' y='3' width='10' height='10' rx='2' transform='rotate(45 8 8)' fill='%23b8501a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<div id="hdr"></div>
+<main>
+
+<div class="wrap">
+  <div class="hero home">
+    <div>
+      <h1>Every <span id="fieldWord">finance and engineering</span> internship in Perth, <em>the moment it opens</em>.</h1>
+      <p>Vacation programs, internships and graduate roles across the Big 4, mid-tier firms, Perth boutiques and brokers, the banks, engineering consultancies, contractors, WA's mining and energy companies and the state government. We check their careers pages every night so you apply first, not last.</p>
+      <form class="search" id="searchForm" role="search">
+        <label for="q" style="position:absolute;left:-9999px">Search a firm, program or team</label>
+        <input id="q" type="search" placeholder="Search a firm, program or team (e.g. corporate finance)" autocomplete="off">
+        <button class="btn" type="submit">Search</button>
+      </form>
+      <div class="quick" id="quick"></div>
+    </div>
+    <div class="next-card" id="nextCard" aria-live="polite"></div>
+  </div>
+  <div class="stats" id="stats"></div>
+</div>
+<div class="ticker" aria-label="Upcoming opening windows"><div class="ticker-track" id="ticker"></div></div>
+<div class="wrap">
+  <section class="block">
+    <div class="sec-head"><div><h2 id="feedTitle">Open right now</h2><p>Click any item for the details and the firm's teams.</p></div><a class="btn ghost small" href="tracker.html?status=open">See all open</a></div>
+    <div class="feed" id="feed"></div>
+  </section>
+  <section class="block">
+    <div class="sec-head"><div><h2>How a program reaches your inbox</h2></div></div>
+    <ol class="steps">
+      <li><h3>We read every careers page</h3><p>Each night at 2am Perth time, we check every firm's public careers page.</p></li>
+      <li><h3>We spot the change</h3><p>New wording like “applications now open”, or a page that changed, is flagged.</p></li>
+      <li><h3>You get one email</h3><p>At 7am, your alerts send only what matches your sectors, intakes and keywords.</p></li>
+      <li><h3>You apply on day one</h3><p>Early applicants get read first, and many Perth programs close once places fill.</p></li>
+    </ol>
+  </section>
+  <section class="block">
+    <div class="sec-head"><div><h2>Before and after</h2></div></div>
+    <div class="ba">
+      <div class="card"><h3>Before</h3><ul><li>Twenty bookmarked careers pages, checked when you remember</li><li>Hearing a program opened from a friend, after it closed</li><li>Applications tracked in a notes app</li><li>No idea which teams fewer people apply to</li></ul></div>
+      <div class="card after"><h3>With PerthTrack</h3><ul><li>One table of every Perth program, sorted by when it opens</li><li>An email the morning a program you follow opens</li><li>A pipeline from interested to offer, with notes per application</li><li>Best bets ranks teams by fit and estimated competition</li></ul></div>
+    </div>
+  </section>
+  <section class="block">
+    <div class="sec-head"><div><h2>See who you know at every firm</h2><p>Connect your LinkedIn and each firm shows which of your connections work there, and in which team.</p></div>
+      <button class="btn li-btn" type="button" data-connect-li><span class="in">in</span> Connect LinkedIn</button></div>
+    <ol class="steps">
+      <li><h3>Click Connect LinkedIn</h3><p>It's at the top of every page.</p></li>
+      <li><h3>Open your connections</h3><p>Use the button to open your LinkedIn connections page, then scroll to the bottom.</p></li>
+      <li><h3>Copy and paste</h3><p>Select all and copy on LinkedIn, then paste into PerthTrack and click Connect.</p></li>
+      <li><h3>See your network</h3><p>Every firm shows who you know and their team. It stays on your device. <a href="network.html">Full guide</a></p></li>
+    </ol>
+  </section>
+  <section class="block">
+    <div class="sec-head"><div><h2>Browse by sector</h2></div></div>
+    <div class="tax" id="taxSector"></div>
+    <div class="sec-head" style="margin-top:24px"><div><h2>Browse by intake</h2></div></div>
+    <div class="tax" id="taxSeason"></div>
+  </section>
+  <section class="block faq">
+    <div class="sec-head"><div><h2>Questions</h2></div><a class="btn ghost small" href="faq.html">All questions</a></div>
+    <details><summary>Is PerthTrack free?</summary><p>Yes. Tracking, alerts, the calendar and the application pipeline are all free.</p></details><details><summary>Where do the dates come from?</summary><p>Each program shows the dates its last cycle opened and closed, taken from the firm's own careers page or its listing on a graduate jobs board, with a link to the source. Most Perth firms reuse the same window each year, so the next window is projected from that and marked “est.” until the firm confirms it.</p></details><details><summary>How do you know when a program opens?</summary><p>Every night at 2am Perth time we read each firm's public careers page. If the page changes, or starts saying applications are open, it shows up in the live feed and in the alert emails of anyone following that firm.</p></details><details><summary>What does “Apply any time” mean?</summary><p>The firm has no advertised program, but hires students when the right person approaches them. These are often Perth boutiques. A short, specific email to someone in the team usually works better than the generic inbox.</p></details>
+  </section>
+  <section class="block">
+    <div class="cta"><div><h2>Apply first, not last.</h2><p>Follow the firms you care about and get an email when their window opens.</p></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn" id="ctaBtn" href="alerts.html">Set up an alert</a><a class="btn ghost" style="color:var(--paper);border-color:#ffffff55" href="tracker.html">Open the tracker</a></div></div>
+  </section>
+</div>
+</main>
+<div id="ftr"></div>
+<script src="assets/shared.js"></script>
+<script src="assets/core.js"></script>
+<script src="assets/network.js"></script>
+<script src="assets/home.js"></script>
+</body>
+</html>

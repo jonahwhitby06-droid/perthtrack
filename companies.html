@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-AU" data-static="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Companies · PerthTrack</title>
+<meta name="description" content="Browse every Perth finance firm and follow the ones you want alerts for.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='3' y='3' width='10' height='10' rx='2' transform='rotate(45 8 8)' fill='%23b8501a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<div id="hdr"></div>
+<main>
+<div class="wrap"><div class="page-head"><h1>Companies</h1><p>Follow a firm to put all of its programs on your watchlist and include it in your alerts.</p></div></div>
+<div class="wrap">
+  <div class="filters">
+    <input id="q" type="search" placeholder="Search firms or teams" aria-label="Search firms" style="flex:1;min-width:220px;font:inherit;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)">
+    <label for="sector" class="sector">Sector</label><select id="sector"></select>
+    <button class="chip" id="following" aria-pressed="false">★ Following</button>
+    <button class="chip" id="netF" aria-pressed="false">👥 Where I know someone</button>
+    <span class="sector" id="count"></span>
+  </div>
+  <div class="cos" id="cos"></div>
+</div>
+</main>
+<div id="ftr"></div>
+<script src="assets/shared.js"></script>
+<script src="assets/core.js"></script>
+<script src="assets/network.js"></script>
+<script src="assets/companies.js"></script>
+</body>
+</html>

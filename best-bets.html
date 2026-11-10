@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-AU" data-static="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Best bets · PerthTrack</title>
+<meta name="description" content="Every team at every Perth finance firm, ranked by fit and estimated competition.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='3' y='3' width='10' height='10' rx='2' transform='rotate(45 8 8)' fill='%23b8501a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<div id="hdr"></div>
+<main>
+<div class="wrap"><div class="page-head"><h1>Best bets: every team, ranked</h1><p>Each team at each firm is scored on how well it fits what you want to do, and how few people are likely to apply per place. Pick your interests and the weighting; click a row to see that firm.</p></div></div>
+<div class="wrap">
+  <div class="card" style="margin-bottom:16px">
+    <div class="sector" style="font-weight:600;margin-bottom:8px">What do you want to do? Your first two picks count most.</div>
+    <div class="checks" id="interests"></div>
+  </div>
+  <div class="bb-controls">
+    <label class="bb-w" for="fitW">Weighting: <b id="fitWLabel"></b></label>
+    <input type="range" id="fitW" min="0" max="100" step="10">
+    <label for="bbSeason" class="sector">Intake</label>
+    <select id="bbSeason"><option value="all">All</option><option value="Winter">Winter</option><option value="Summer">Summer</option><option value="Graduate">Graduate program</option><option value="Part-time">Part-time during semester</option></select>
+    <button class="chip" id="bbFinal" aria-pressed="false">Final-year eligible only</button>
+    <button class="chip" id="bbNoAdhoc" aria-pressed="false">Hide firms with no advertised program</button>
+    <button class="chip" id="bbHideLow" aria-pressed="true">Hide poor-fit teams</button>
+    <button class="chip" id="bbNet" aria-pressed="false">👥 Only firms where I know someone</button>
+  </div>
+  <div class="table-wrap"><table class="bb-table">
+    <thead><tr><th scope="col">#</th><th scope="col">Team</th><th scope="col">Firm</th><th scope="col">Fit</th><th scope="col">Competition (est.)</th><th scope="col">Score</th><th scope="col">Next window</th></tr></thead>
+    <tbody id="bbBody"></tbody>
+  </table></div>
+  <div style="margin-top:12px"><button class="btn" id="bbMore"></button></div>
+  <p class="method"><b>How the scores work.</b> No firm publishes how many people apply, so competition is an estimate on a 1–5 scale built from three things: the firm's brand pull with students (Goldman, UBS, Macquarie, the Big 4 and the big resources companies draw the most), the usual intake size (mid-tier firms and insurers take more people per applicant), and how popular the team is (M&amp;A and corporate finance push it up; audit and tax push it down because intakes are large). Firms with no advertised program score one point lower, because few students know to approach them, but there may be no role until you ask. Fit is 5 for your first two interests, 4 for the rest you pick, 3 for closely related work, 2 for other work in the same field and 1 for teams in a field you didn't pick. Score = weighting × fit + (1 − weighting) × low competition, out of 100. Use it to shortlist, then check each careers page.</p>
+</div>
+</main>
+<div id="ftr"></div>
+<script src="assets/shared.js"></script>
+<script src="assets/core.js"></script>
+<script src="assets/network.js"></script>
+<script src="assets/bestbets.js"></script>
+</body>
+</html>

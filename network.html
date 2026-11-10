@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-AU" data-static="1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My network · PerthTrack</title>
+<meta name="description" content="See which of your LinkedIn connections work at each Perth firm, and in which team.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='3' y='3' width='10' height='10' rx='2' transform='rotate(45 8 8)' fill='%23b8501a'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<div id="hdr"></div>
+<main>
+<div class="wrap"><div class="page-head"><h1>My network</h1><p>See who you know at each firm and which team they work in, using your own LinkedIn connections. It works across finance and engineering.</p></div></div>
+<div class="wrap">
+  <p class="notice"><b>Private by design.</b> Your file is read in this browser and kept only on this device. It's never uploaded to PerthTrack, and email addresses in the file are ignored. You can remove it at any time.</p>
+  <div class="card" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+    <div><h3 style="font-size:18px;margin-bottom:4px">Connect LinkedIn</h3><p class="sector" style="margin:0">Paste your connections page (30 seconds) or drop LinkedIn's data download (most accurate). Either way, it stays on this device.</p></div>
+    <button class="btn li-btn" id="connectBtn" type="button" style="font-size:15px"><span class="in">in</span> Connect LinkedIn</button>
+  </div>
+  <label class="dropzone" id="drop" for="file" style="display:block;margin-top:12px">
+    <b>Already have LinkedIn's download?</b> Drop the zip file or Connections.csv here, or click to choose it.
+    <input type="file" id="file" accept=".zip,.csv,application/zip,text/csv" style="position:absolute;left:-9999px">
+  </label>
+  <section class="block" style="padding-bottom:8px"><div class="sec-head"><div><h2>How to connect LinkedIn, step by step</h2><p>Choose either option. Both take you to the same result, and your connections stay on this device.</p></div></div>
+  <div class="grid2 howto">
+    <div class="card">
+      <div class="howto-h"><span class="pillnum">Option 1</span><h3>Paste your connections</h3><span class="sector">About 30 seconds</span></div>
+      <ol class="bigsteps">
+        <li><b>Click Connect LinkedIn</b> at the top of any page.</li>
+        <li><b>Click Open my LinkedIn connections ↗.</b> Your LinkedIn connections page opens in a new tab. Sign in to LinkedIn if it asks.</li>
+        <li><b>Scroll to the bottom</b> of that page until all your connections have loaded. LinkedIn loads them as you scroll.</li>
+        <li><b>Select and copy everything:</b> <kbd>⌘ Cmd</kbd>+<kbd>A</kbd> then <kbd>⌘ Cmd</kbd>+<kbd>C</kbd> on a Mac, or <kbd>Ctrl</kbd>+<kbd>A</kbd> then <kbd>Ctrl</kbd>+<kbd>C</kbd> on Windows.</li>
+        <li><b>Come back to PerthTrack,</b> paste into the box (<kbd>⌘ Cmd</kbd>+<kbd>V</kbd> or <kbd>Ctrl</kbd>+<kbd>V</kbd>) and click <b>Connect</b>.</li>
+      </ol>
+      <p class="sector">The firm is worked out from each person's LinkedIn headline, so people whose headline doesn't name their employer won't be matched.</p>
+    </div>
+    <div class="card">
+      <div class="howto-h"><span class="pillnum">Option 2</span><h3>Upload LinkedIn's download</h3><span class="sector">Most accurate · about 10 minutes</span></div>
+      <ol class="bigsteps">
+        <li><b>Click Connect LinkedIn</b>, then choose <b>Upload LinkedIn's download</b>.</li>
+        <li><b>Click Open LinkedIn's data download ↗.</b> This is in LinkedIn under <i>Me → Settings &amp; Privacy → Data privacy → Get a copy of your data</i>.</li>
+        <li><b>Choose “Want something in particular?”</b>, tick only <b>Connections</b>, and click <b>Request archive</b>. LinkedIn may ask for your password.</li>
+        <li><b>Check your email.</b> LinkedIn sends a download link, usually within about 10 minutes. Download the zip file.</li>
+        <li><b>Drop the zip file</b> into the box on PerthTrack. There's no need to unzip it.</li>
+      </ol>
+      <p class="sector">This includes each person's actual company and job title, so it matches more people and more teams.</p>
+    </div>
+  </div>
+  <div class="card" style="margin-top:16px"><h3 style="font-size:17px;margin-bottom:6px">What you'll see after connecting</h3>
+    <ul class="sector" style="margin:0;padding-left:18px;display:grid;gap:4px">
+      <li><b>Tracker:</b> click any firm to see “👥 You know 2 people here”, grouped by team, with each person's name and role.</li>
+      <li><b>Team tiles:</b> a “👥 1 connection here” badge on the team they work in.</li>
+      <li><b>Companies and Best bets:</b> a “👥 Where I know someone” filter.</li>
+      <li><b>2nd-degree:</b> every firm has a link to LinkedIn's own search of people at that firm who are connected to someone you know.</li>
+    </ul></div>
+  </section>
+  <section class="block" id="emptyState"><p class="sector">No connections added yet. Once you add them, each firm in the tracker and on the companies page shows who you know there and which team they're in.</p></section>
+  <section class="block" id="loaded" hidden>
+    <div class="sec-head"><div><h2>Where you know someone</h2><p>Matched on each connection's current company. Teams are matched from their job title; check before you reach out.</p></div>
+      <button class="btn small ghost" id="clearNet">Remove my connections</button></div>
+    <div class="netstats" id="netStats"></div>
+    <div class="filters"><input id="netQ" type="search" placeholder="Search a firm, name or role" aria-label="Search your network" style="flex:1;min-width:220px;font:inherit;padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)"></div>
+    <div class="cos" id="netList"></div>
+  </section>
+  <section class="block">
+    <div class="card"><h3 style="font-size:17px;margin-bottom:6px">What about 2nd-degree connections?</h3>
+    <p class="sector" style="margin:0">LinkedIn's download only includes your direct connections. On every firm in the tracker and companies page there's a <b>2nd-degree on LinkedIn ↗</b> link that opens LinkedIn's own search, filtered to people at that firm who are connected to someone you know. LinkedIn shows the count and the mutual connection, and from there you can ask for an introduction.</p></div>
+  </section>
+</div>
+</main>
+<div id="ftr"></div>
+<script src="assets/shared.js"></script>
+<script src="assets/core.js"></script>
+<script src="assets/network.js"></script>
+<script src="assets/network-page.js"></script>
+</body>
+</html>
