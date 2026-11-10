@@ -32,8 +32,8 @@
   const HEADINGS = [
     ["summary", /^(professional |career |personal )?(summary|profile|objective|about me|overview)$|^career objective$/],
     ["education", /^(education|academic (background|qualifications|history|record)|qualifications|education (and|&) (training|qualifications))$/],
-    ["experience", /^((relevant |professional |work |employment |industry |career )?(experience|history)|employment|work history|internships?( experience)?|(relevant |professional )?work experience|work|jobs|employment experience)$/],
-    ["skills", /^((key |technical |core |relevant |professional )?(skills|competencies|capabilities)( (and|&) (interests|certifications|tools|languages))?|technical proficiencies|tools( (and|&) technologies)?|software)$/],
+    ["experience", /^((relevant |professional |work |employment |industry |career |other |additional |part-time |practical )?(experience|history)|employment|work history|internships?( experience)?|(relevant |professional )?work experience|work|jobs|employment experience)$/],
+    ["skills", /^((key |technical |core |relevant |professional |notable |other |additional |transferable |computer |it )?(skills|competencies|capabilities)( (and|&) (interests|certifications|tools|languages))?|technical proficiencies|tools( (and|&) technologies)?|software)$/],
     ["projects", /^((academic |personal |key |university |engineering |selected )?projects)$/],
     ["certifications", /^(certifications?|licen[cs]es( (and|&) certifications)?|certifications (and|&) licen[cs]es|courses|professional development|training)$/],
     ["achievements", /^(achievements|awards( (and|&) (achievements|scholarships|honours))?|honours( (and|&) awards)?|scholarships( (and|&) awards)?|awards (and|&) recognition)$/],
@@ -45,7 +45,7 @@
   const EXP_TYPES = new Set(["experience", "projects", "leadership"]);
   const BULLET_RE = /^\s*([•●▪◦‣∙·‧■□►➢➤✓✔\-–—*]|o(?=\s)|\d{1,2}[.)](?=\s))\s*/;
   const MONTH = "(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\\.?";
-  const DATE_RE = new RegExp(`\\b${MONTH}\\s+(?:19|20)\\d{2}\\b|\\b(?:0?[1-9]|1[0-2])\\/(?:19|20)\\d{2}\\b|\\b(?:19|20)\\d{2}\\b`, "gi");
+  const DATE_RE = new RegExp(`\\b${MONTH}\\s+(?:19|20)\\d{2}\\b|\\b(?:19|20)\\d{2}\\s+${MONTH}(?![a-z])|\\b(?:0?[1-9]|1[0-2])\\/(?:19|20)\\d{2}\\b|\\b(?:19|20)\\d{2}\\b`, "gi");
   const CURRENT_RE = /\b(present|current|now|ongoing|to date)\b/i;
 
   function normHeading(line) {
@@ -53,12 +53,14 @@
   }
   function headingType(line, seenKnown) {
     const t = line.trim();
-    if (!t || t.length > 48 || /[.@]\s*$/.test(t) || /@|https?:|www\./i.test(t)) return null;
+    if (!t || t.length > 120 || /[.@]\s*$/.test(t) || /@|https?:|www\./i.test(t)) return null;
     const n = normHeading(t);
     for (const [type, re] of HEADINGS) if (re.test(n)) return type;
-    if (/\|/.test(t)) { const first = normHeading(t.split("|")[0]); for (const [type, re] of HEADINGS) if (re.test(first)) return type; }
+    const segs = t.split(/\s{2,}|\t|\|/).map(x => x.trim()).filter(Boolean);
+    if (segs.length > 1) { const first = normHeading(segs[0]); for (const [type, re] of HEADINGS) if (re.test(first)) return type; }
     const words = n.split(" ").filter(Boolean);
     const letters = t.replace(/[^A-Za-z]/g, "");
+    if (t.length > 48) return null;
     if (seenKnown && letters.length >= 4 && letters === letters.toUpperCase() && words.length <= 4 && !DATE_RE.test(t)) { DATE_RE.lastIndex = 0; return "other"; }
     DATE_RE.lastIndex = 0;
     return null;
@@ -87,7 +89,7 @@
       const ht = headingType(line, seenKnown);
       if (ht) {
         if (ht !== "other") seenKnown = true;
-        cur = { id: nid("s"), title: line.replace(/[:\s]+$/, ""), type: ht, items: [] };
+        cur = { id: nid("s"), title: line.split(/\s{2,}|\t|\|/)[0].replace(/[:\s]+$/, "").trim(), type: ht, items: [] };
         doc.sections.push(cur); lastEntryCurrent = false;
         continue;
       }
@@ -377,10 +379,11 @@
   }
   function dateFormats(text) {
     const kinds = new Set();
-    const re = new RegExp(`\\b(${MONTH})\\s+(?:19|20)\\d{2}\\b|\\b(?:0?[1-9]|1[0-2])\\/(?:19|20)\\d{2}\\b`, "gi");
+    const re = new RegExp(`\\b(${MONTH})\\s+(?:19|20)\\d{2}\\b|\\b(?:19|20)\\d{2}\\s+(${MONTH})(?![a-z])|\\b(?:0?[1-9]|1[0-2])\\/(?:19|20)\\d{2}\\b`, "gi");
     let m;
     while ((m = re.exec(text))) {
-      if (m[1]) kinds.add(m[1].replace(/\.$/, "").length <= 4 && !/^(may|june|july)$/i.test(m[1]) ? "Mon YYYY" : "Month YYYY");
+      if (m[2]) kinds.add("YYYY Mon");
+      else if (m[1]) kinds.add(m[1].replace(/\.$/, "").length <= 4 && !/^(may|june|july)$/i.test(m[1]) ? "Mon YYYY" : "Month YYYY");
       else kinds.add("MM/YYYY");
     }
     return kinds;
@@ -575,8 +578,8 @@
     const lines = fullText.split("\n");
     const odd = (fullText.match(/[�\u0000-\u0008]|\(cid:\d+\)/g) || []).length;
     const pipes = (fullText.match(/\|/g) || []).length;
-    const columnish = lines.filter(l => /\S {3,}\S/.test(l) && !/(?:19|20)\d{2}\s*$/.test(l.trim())).length;
-    const art = odd + (pipes > 6 ? 1 : 0) + (columnish / Math.max(1, lines.length) > 0.15 ? 1 : 0);
+    const columnish = items.filter(x => x.item.kind !== "entry" && /\S {3,}\S/.test(x.item.text) && !/(?:19|20)\d{2}|present|current/i.test(x.item.text)).length;
+    const art = odd + (pipes > 6 ? 1 : 0) + (columnish / Math.max(1, items.length) > 0.15 ? 1 : 0);
     add("ats", clamp(3 - art, 0, 3), art ? "Some text came out jumbled or in columns, which suggests tables, text boxes or unusual fonts." : "Text extracted cleanly (no table or column artefacts).", art ? -1 : 1);
     if (art) finding({ category: "ats", severity: "Medium", kind: "objective", impact: art, title: "Layout may confuse ATS software", location: "Whole CV", original: (lines.find(l => /\S {3,}\S|\||�|\(cid:/.test(l)) || "").trim().slice(0, 120),
       why: "Tables, columns, text boxes and icons are often read out of order or dropped by applicant tracking systems.", recommendation: "Use a single-column layout with plain text headings and standard bullet points. The templates on the Download tab are ATS-friendly.", example: "", needsFacts: false });
@@ -644,6 +647,16 @@
     if (personal) finding({ category: "professionalism", severity: "Low", kind: "subjective", impact: 0, title: "Personal details you can leave out", location: loc(personal), original: personal.item.text, itemId: personal.item.id,
       why: "Australian CVs don't usually include date of birth, age, marital status or a photo, and employers shouldn't use them. This doesn't affect your score.", recommendation: "Consider removing it.", example: "", needsFacts: false });
     if (!linkedin && contactOk) finding({ category: "professionalism", severity: "Low", kind: "subjective", impact: 0, title: "No LinkedIn URL", location: "Header / contact details", original: "", why: "Perth recruiters often check LinkedIn. This doesn't affect your score.", recommendation: "Add your LinkedIn profile URL (linkedin.com/in/yourname) to your contact line.", example: "", needsFacts: true, question: "What's your LinkedIn URL?" });
+
+    const ph = items.filter(x => /\[[^\]]{0,60}\]|\bX{1,3}\b(?=\s*(?:prospective|properties|people|customers|clients|staff|per|%))/.test(x.item.text));
+    if (ph.length) {
+      cats.professionalism.score -= Math.min(4, ph.length);
+      cats.professionalism.reasons.push({ sign: -1, text: `${ph.length} line${ph.length > 1 ? "s" : ""} still contain placeholders like "${(ph[0].item.text.match(/\[[^\]]{0,60}\]/) || ["[X]"])[0]}".` });
+      finding({ category: "professionalism", severity: "High", kind: "objective", impact: Math.min(4, ph.length) + 2, title: "Unfinished placeholders left in", location: `${loc(ph[0])}${ph.length > 1 ? ` (and ${ph.length - 1} more)` : ""}`,
+        original: ph[0].item.text, itemId: ph[0].item.id, why: "Brackets like [X] or [client/sector] tell a recruiter the CV wasn't finished. This is one of the quickest ways to be screened out.",
+        recommendation: "Replace each placeholder with the real detail, or delete it. Don't guess a figure you can't back up in an interview.", example: "", needsFacts: true,
+        question: "What should go in the brackets? If you don't know, remove that part of the sentence.", placeholder: true });
+    }
 
     /* ===== totals ===== */
     const categories = CATEGORIES.map(c => { const x = cats[c.key]; return { key: c.key, name: c.name, max: c.max, score: Math.round(clamp(x.score, 0, c.max)), reasons: x.reasons }; });
