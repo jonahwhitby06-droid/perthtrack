@@ -22,14 +22,7 @@
   }
   function writeLocal(s) { try { localStorage.setItem(LS_KEY, JSON.stringify(s)); } catch (e) {} }
 
-  async function api(method, url, body) {
-    const opt = { method, headers: { "content-type": "application/json" }, credentials: "same-origin" };
-    if (method !== "GET") opt.body = JSON.stringify(body || {});
-    const r = await fetch(url, opt);
-    const data = await r.json().catch(() => ({}));
-    if (!r.ok) throw new Error(data.error || `Request failed (${r.status})`);
-    return data;
-  }
+  async function api() { throw new Error("Accounts aren't available on this version of the site."); }
 
   const Store = {
     mode: "local", programs: [], byId: {}, updated: null, user: null,
@@ -37,13 +30,8 @@
 
     async init() {
       const isStatic = document.documentElement.dataset.static === "1";
-      if (!isStatic) try {
-        const h = await fetch("/api/health", { credentials: "same-origin" });
-        const j = h.ok ? await h.json() : null;
-        if (j && j.mode === "server") this.mode = "server";
-      } catch (e) {}
       if (this.mode === "server") {
-        const [pd, me, ev] = await Promise.all([api("GET", "/api/programs"), api("GET", "/api/me"), api("GET", "/api/events").catch(() => ({ events: [] }))]);
+        const [pd, me, ev] = await Promise.all([api(), api(), api().catch(() => ({ events: [] }))]);
         this.programs = pd.programs; this.updated = pd.updated; this.events = ev.events || []; this.lastRun = ev.lastRun;
         if (me.user) {
           this.user = me.user; this.prefs = { ...PT.DEFAULT_PREFS, ...me.user.prefs };
@@ -84,40 +72,40 @@
       const set = this[kind];
       const on = !set.has(id);
       on ? set.add(id) : set.delete(id);
-      if (this.signedIn) await api("PUT", `/api/me/${kind}/${id}`, { on });
+      if (this.signedIn) await api();
       else { const s = readLocal(); s[kind] = [...set]; writeLocal(s); }
       return on;
     },
     async setPrefs(p) {
       this.prefs = { ...this.prefs, ...p };
-      if (this.signedIn) await api("PUT", "/api/me/prefs", this.prefs);
+      if (this.signedIn) await api();
       else { const s = readLocal(); s.prefs = this.prefs; writeLocal(s); }
     },
     apps: {
-      async list() { return Store.signedIn ? (await api("GET", "/api/me/applications")).applications : readLocal().applications; },
+      async list() { return Store.signedIn ? (await api()).applications : readLocal().applications; },
       async add(a) {
-        if (Store.signedIn) return api("POST", "/api/me/applications", a);
+        if (Store.signedIn) return api();
         const s = readLocal(); const row = { id: s.nextId++, status: "Interested", team: "", notes: "", applied_on: null, ...a, updated: new Date().toISOString() };
         s.applications.unshift(row); writeLocal(s); return row;
       },
       async update(id, patch) {
-        if (Store.signedIn) return api("PUT", `/api/me/applications/${id}`, patch);
+        if (Store.signedIn) return api();
         const s = readLocal(); const row = s.applications.find(x => x.id === id);
         Object.assign(row, patch, { updated: new Date().toISOString() }); writeLocal(s); return row;
       },
       async remove(id) {
-        if (Store.signedIn) return api("DELETE", `/api/me/applications/${id}`);
+        if (Store.signedIn) return api();
         const s = readLocal(); s.applications = s.applications.filter(x => x.id !== id); writeLocal(s);
       }
     },
     alerts: {
-      async list() { return Store.signedIn ? (await api("GET", "/api/me/alerts")).alerts : readLocal().alerts; },
+      async list() { return Store.signedIn ? (await api()).alerts : readLocal().alerts; },
       async add(a) {
-        if (Store.signedIn) return api("POST", "/api/me/alerts", a);
+        if (Store.signedIn) return api();
         const s = readLocal(); s.alerts.push({ id: s.nextId++, ...a }); writeLocal(s);
       },
       async remove(id) {
-        if (Store.signedIn) return api("DELETE", `/api/me/alerts/${id}`);
+        if (Store.signedIn) return api();
         const s = readLocal(); s.alerts = s.alerts.filter(x => x.id !== id); writeLocal(s);
       }
     },

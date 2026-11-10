@@ -2,6 +2,8 @@
 <html lang="en-AU" data-static="1">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CV Score: is your CV good enough? · PerthTrack</title>
 <meta name="description" content="Upload your CV, get a score out of 100, see what is holding it back and exactly how to improve it. Free, private, built for Perth students.">
@@ -61,9 +63,9 @@
         <label class="lbl" for="cvVariant">Spelling</label>
         <select id="cvVariant"><option value="en-AU">Australian English</option><option value="en-GB">British English</option><option value="en-US">US English</option></select>
         <label class="lbl" for="cvEngine">Analysis</label>
-        <select id="cvEngine"><option value="rules">Rule-based check — free, stays in your browser</option><option value="ai">AI analysis</option></select>
-        <p class="sector" id="aiNote"></p>
-        <label class="consent" id="consentRow" hidden><input type="checkbox" id="consent"> I agree to my CV text (and any job ad I paste) being sent to the AI provider, Anthropic, for this analysis. PerthTrack doesn't store it. <a href="privacy.html">Privacy</a></label>
+        <select id="cvEngine"><option value="rules">Rule-based check — free, stays in your browser</option></select>
+        <p class="sector" id="aiNote">Free rule-based check. Your CV is read and scored in your browser and is never sent anywhere.</p>
+        
       </div>
     </div>
   </section>

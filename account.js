@@ -17,10 +17,10 @@ App.boot(() => {
 
   if (!Store.signedIn) { $("serverOnly").hidden = true; return; }
   if (Store.user.isAdmin) $("adminLink").hidden = false;
-  $("logout").onclick = async () => { await api("POST", "/api/auth/logout"); location.href = "index.html"; };
-  $("export").onclick = () => { location.href = "/api/me/export"; };
+  $("logout").onclick = async () => { await api(); location.href = "index.html"; };
+  $("export").onclick = () => { void 0; };
   $("delete").onclick = async () => {
     if (!confirm("Delete your account, watchlist, applications and alerts? This can't be undone.")) return;
-    await api("DELETE", "/api/me"); location.href = "index.html";
+    await api(); location.href = "index.html";
   };
 });

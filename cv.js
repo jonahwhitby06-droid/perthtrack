@@ -14,17 +14,7 @@ App.boot(async () => {
   const base = () => S.history[0] || null;
 
   /* ---------- AI availability ---------- */
-  if (!isStatic) {
-    try { const r = await fetch("api/cv/status"); if (r.ok) { const j = await r.json(); S.ai = !!j.ai; S.aiModel = j.model; } } catch (e) {}
-  }
   const engineSel = $("cvEngine");
-  if (!S.ai) {
-    engineSel.querySelector('option[value="ai"]').disabled = true;
-    $("aiNote").innerHTML = isStatic
-      ? "AI analysis needs the server version of PerthTrack, so this free version uses the rule-based check. It still scores every category and suggests safe rewrites."
-      : "AI analysis isn't set up on this server yet (the site owner needs to add an AI API key). The rule-based check works now.";
-  } else $("aiNote").textContent = `AI analysis uses ${S.aiModel}. Your CV text is sent to Anthropic only if you tick the box below.`;
-  engineSel.onchange = () => { S.settings.engine = engineSel.value; $("consentRow").hidden = engineSel.value !== "ai"; };
   $("cvMode").onchange = e => { S.settings.mode = e.target.value; };
   $("cvVariant").onchange = e => { S.settings.variant = e.target.value; };
 
@@ -51,7 +41,6 @@ App.boot(async () => {
 
   async function start(file, pasted) {
     $("uploadErr").hidden = true;
-    if (S.settings.engine === "ai" && !$("consent").checked) return uploadError("Tick the box to agree to your CV text being sent to the AI provider, or switch to the rule-based check.");
     if (S.dirty && !confirm("Start again with a new CV? Your current edits will be lost.")) return;
     try {
       progress("read", file ? `Reading ${file.name}…` : "Reading pasted text…");
@@ -77,18 +66,8 @@ App.boot(async () => {
   }
 
   async function analyse(kind) {
-    let a;
-    if (S.settings.engine === "ai") {
-      try {
-        const r = await fetch("api/cv/analyse", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ doc: S.doc, mode: S.settings.mode, variant: S.settings.variant, consent: true }) });
-        const j = await r.json().catch(() => ({}));
-        if (!r.ok) throw new Error(j.error || `AI analysis failed (${r.status}).`);
-        a = j.analysis;
-      } catch (e) {
-        if (!confirm(`${e.message}\n\nRun the rule-based check instead? (It's clearly labelled and doesn't use AI.)`)) throw e;
-        a = CVE.analyse(S.doc, S.settings);
-      }
-    } else a = CVE.analyse(S.doc, S.settings);
+    let a = null;
+    if (!a) a = CVE.analyse(S.doc, S.settings);
     a.kind = kind;
     a.snapshot = CVE.toText(S.doc);
     S.history.push(a);
@@ -285,11 +264,6 @@ App.boot(async () => {
       renderImprove(); toast("Changes applied. Reanalyse to update your score.");
     };
     const up = $("useProfile"); if (up) up.onclick = () => { addProfile($("profileDraft").value.trim()); renderImprove(); };
-    const ap = $("aiProfile"); if (ap) ap.onclick = async () => {
-      ap.disabled = true; ap.textContent = "Writing…";
-      try { const r = await aiRewrite({ action: "summary", doc: S.doc, target: S.jdTitle, jobDescription: S.jd }); if (r.suggestion) $("profileDraft").value = r.suggestion; if (r.explanation) toast(r.explanation); }
-      catch (e) { alert(e.message); } finally { ap.disabled = false; ap.textContent = "Write with AI"; }
-    };
     el.querySelectorAll("[data-sug]").forEach(card => {
       const id = card.dataset.sug, s = a.suggestions.find(x => x.id === id);
       const ta = card.querySelector("textarea"), dv = card.querySelector(".diff");
@@ -436,14 +410,6 @@ App.boot(async () => {
     const x = itemOf(S.selected); if (!x || !x.item.text.trim()) return;
     const id = x.item.id, text = x.item.text;
     const show = () => { const el = document.querySelector(".ed-right"); if (el && S.selected === id) { el.innerHTML = sidePanel(); bindSide(); } };
-    if (S.ai && S.settings.engine === "ai") {
-      S.action = { id, loading: true }; show();
-      try {
-        const r = await aiRewrite({ action: kind, text, section: x.section ? x.section.title : "Header", current: !!x.item.current, jobDescription: S.jd });
-        S.action = { id, text: r.suggestion || text, unchanged: !r.suggestion || r.suggestion.trim() === text.trim(), note: r.explanation, question: r.needsFacts ? r.question : "" };
-      } catch (e) { S.action = { id, error: e.message }; }
-      return show();
-    }
     if (kind === "tailor") {
       const k = CVE.jobKeywords(S.jd); const low = text.toLowerCase();
       const used = [...k.skills, ...k.terms].filter(t => low.includes(t));
@@ -453,12 +419,6 @@ App.boot(async () => {
     const r = CVE.rewrite(text, kind, { variant: S.settings.variant, current: !!x.item.current });
     S.action = { id, text: r.text, unchanged: !r.changed, note: r.changed ? "Same facts — only the wording changed." : "", question: x.section && ["experience", "projects", "leadership"].includes(x.section.type) && !/\d/.test(text) ? CVE.metricQuestion(text) : "" };
     show();
-  }
-  async function aiRewrite(body) {
-    const r = await fetch("api/cv/rewrite", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ ...body, variant: S.settings.variant, mode: S.settings.mode, consent: true }) });
-    const j = await r.json().catch(() => ({}));
-    if (!r.ok) throw new Error(j.error || "The AI rewrite failed.");
-    return j;
   }
 
   /* ---------- JOB MATCH ---------- */
@@ -509,13 +469,9 @@ App.boot(async () => {
       if (S.jd.trim().length < 80) { err.hidden = false; err.textContent = "Paste the full job ad (at least a few lines)."; return; }
       const btn = $("matchBtn"); btn.disabled = true; btn.textContent = "Comparing…";
       try {
-        if (S.ai && S.settings.engine === "ai") {
-          const r = await fetch("api/cv/match", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ doc: S.doc, jobDescription: S.jd, variant: S.settings.variant, consent: true }) });
-          const j = await r.json().catch(() => ({}));
-          if (!r.ok) throw new Error(j.error || "Job match failed.");
-          S.match = j.match;
-        } else S.match = CVE.jobMatch(S.doc, S.jd);
-        S.match.snapshot = CVE.toText(S.doc);
+        S.match = null;
+        if (!S.match) S.match = CVE.jobMatch(S.doc, S.jd);
+        S.match.snapshot = CVE.toText(S.doc); S.targetPlan = null;
         renderMatch();
         document.querySelector(".match-out") && document.querySelector(".match-out").scrollIntoView({ behavior: "smooth", block: "start" });
       } catch (e) { err.hidden = false; err.textContent = e.message; }
@@ -540,16 +496,55 @@ App.boot(async () => {
       </div>
       ${(m.tips || []).length ? `<h3>How to present your existing experience</h3><ul class="tips">${m.tips.map(t => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}
       ${(m.rewrites || []).length ? `<h3>Tailored wording</h3>${m.rewrites.map((w, i) => `<div class="sug"><div class="diff">${diffHtml(w.original, w.revised)}</div><p class="why">${esc(w.why)}</p><div class="factions"><button class="btn small" data-mrw="${i}">Accept</button></div></div>`).join("")}` : ""}
-      <div class="card inner"><h3>Targeted version</h3><p>Moves the ad's matching skills to the front of your Skills list and ${S.doc.sections.some(s => s.type === "summary") ? "keeps your profile" : "adds a profile that names this role"} — using only what's already in your CV. You can undo it.</p><button class="btn small" id="targetBtn">Create targeted version</button></div>
+      <div class="card inner" id="targetCard">${targetCard()}</div>
     </div>`;
   }
   function bindMatch() {
     document.querySelectorAll("[data-mrw]").forEach(b => b.onclick = () => { const w = S.match.rewrites[+b.dataset.mrw]; const x = itemOf(w.itemId); if (!x) return; commit(() => { x.item.text = w.revised; }); b.disabled = true; b.textContent = "Accepted"; });
-    $("targetBtn").onclick = () => {
-      const t = CVE.targetedVersion(S.doc, S.jd, S.jdTitle, S.settings);
-      if (CVE.toText(t.doc) === CVE.toText(S.doc)) return alert("Nothing to change: your skills list already leads with the ad's terms, and you already have a profile.");
-      commit(() => { S.doc = t.doc; });
-      toast("Targeted version created. Review it in the Editor, then reanalyse.");
+    bindTarget();
+  }
+  /* Targeted version: preview each proposed change, tick the ones to keep, then apply (one undo step). */
+  function targetCard() {
+    const plan = S.targetPlan;
+    if (!plan) return `<h3>Targeted version</h3>
+      <p>Tailors your CV to this ad using only what's already in it: adds skills your experience already shows, moves your most relevant bullet points to the top of each role, and names the role in your profile. You'll see every change before it's applied, and you can undo it.</p>
+      <label class="lbl" for="tgtRole">Role you're applying for</label><input id="tgtRole" class="tgt-role" value="${esc(S.jdTitle || "")}" placeholder="e.g. Corporate Finance Analyst">
+      <div class="factions"><button class="btn small" id="targetBtn">Preview targeted version</button></div>`;
+    const missing = (S.match && S.match.requirements || []).filter(r => r.status === "missing");
+    if (!plan.changes.length) return `<h3>Targeted version</h3>
+      <p class="notice">Your CV is already arranged for this ad: your skills lead with its terms, your most relevant bullet points come first, and your profile names the role.</p>
+      ${missing.length ? `<p>The rest is wording, and only you can add new facts. The ad asks for things your CV doesn't clearly show yet:</p><ul class="tips">${missing.map(r => `<li>${esc(r.requirement)}: if you've done this, add a bullet point about it (Editor tab). If you haven't, leave it out.</li>`).join("")}</ul>` : ""}
+      <div class="factions"><button class="btn small ghost" id="targetBack">Back</button><button class="btn small ghost" data-goto-editor>Open the Editor</button></div>`;
+    return `<h3>Targeted version: ${plan.changes.length} suggested change${plan.changes.length > 1 ? "s" : ""}</h3>
+      <p class="sector">Untick anything you don't want. No new facts, numbers or skills you haven't shown are added.</p>
+      ${plan.changes.map(c => `<label class="tgt"><input type="checkbox" data-tgt="${c.id}" checked><div><b>${esc(c.label)}</b><p class="why">${esc(c.why)}</p>
+        ${Array.isArray(c.after) ? `<div class="ba"><div><span class="lbl">Current order</span><ol>${c.before.map(t => `<li>${esc(t)}</li>`).join("")}</ol></div><div><span class="lbl">New order</span><ol>${c.after.map(t => `<li>${esc(t)}</li>`).join("")}</ol></div></div>`
+        : c.kind === "skills" ? `<div class="diff"><span class="lbl">New skills line</span><br>${skillsHtml(c)}</div>`
+        : `<div class="diff">${c.before ? diffHtml(c.before, c.after) : `<ins>${esc(c.after)}</ins>`}</div>`}</div></label>`).join("")}
+      ${missing.length ? `<p class="sector">Still not shown (only add these if they're true): ${missing.map(r => esc(r.requirement)).join("; ")}.</p>` : ""}
+      <div class="factions"><button class="btn small" id="targetApply">Apply selected changes</button><button class="btn small ghost" id="targetBack">Cancel</button></div>`;
+  }
+  function skillsHtml(c) {
+    const lab = (c.after.match(/^([A-Za-z &/-]{2,30}):\s*/) || [""])[0];
+    const added = new Set((c.added || []).map(x => x.toLowerCase()));
+    return esc(lab) + c.after.slice(lab.length).split(/,\s*/).map(t => added.has(t.toLowerCase()) ? `<ins>${esc(t)}</ins>` : esc(t)).join(", ");
+  }
+  function bindTarget() {
+    const card = $("targetCard"); if (!card) return;
+    const rerender = () => { card.innerHTML = targetCard(); bindTarget(); };
+    const tb = $("targetBtn"); if (tb) tb.onclick = () => {
+      const role = $("tgtRole").value.trim(); if (role) S.jdTitle = role;
+      S.targetPlan = CVE.planTargeted(S.doc, S.jd, S.jdTitle, S.settings); rerender();
+    };
+    const back = $("targetBack"); if (back) back.onclick = () => { S.targetPlan = null; rerender(); };
+    card.querySelectorAll("[data-goto-editor]").forEach(b => b.onclick = () => showTab("editor"));
+    const ap = $("targetApply"); if (ap) ap.onclick = () => {
+      const pick = new Set([...card.querySelectorAll("[data-tgt]:checked")].map(x => x.dataset.tgt));
+      if (!pick.size) { S.targetPlan = null; return rerender(); }
+      const next = CVE.applyTargeted(S.doc, S.targetPlan.changes, pick);
+      commit(() => { S.doc = next; });
+      S.targetPlan = null;
+      toast(`Applied ${pick.size} change${pick.size > 1 ? "s" : ""}. Use Undo if you change your mind, then reanalyse.`);
       showTab("editor");
     };
   }

@@ -756,7 +756,14 @@
     const hard = [...new Set(hits(skillText, HARD_SKILLS))].filter(k => !["accounting", "research", "sales"].includes(k)).slice(0, 4).map(orig);
     if (!deg && !roles.length && !hard.length) return "";
     let s = `${deg ? cap(deg) : "University"} ${current ? "student" : "graduate"}${uni ? ` at ${/^the\s/i.test(uni) || /^university of/i.test(uni) ? "the " + uni.replace(/^the\s+/i, "") : uni}` : ""}`;
-    if (roles.length) s += ` with experience as ${roles.map(r => (/^[aeiou]/i.test(r) ? "an " : "a ") + r).join(" and ")}`;
+    if (roles.length) {
+      const TITLE = /\b(analyst|assistant|intern|associate|engineer|clerk|consultant|officer|manager|tutor|treasurer|president|volunteer|accountant|cadet|graduate|coordinator|representative|barista|supervisor|lead|developer|researcher|paralegal|advisor|adviser|director|secretary|captain|mentor|technician)\b/i;
+      const asTitle = roles.filter(r => TITLE.test(r)), atFirm = roles.filter(r => !TITLE.test(r)).map(r => r.replace(/\s*\((?:(?:part|full)[- ]time|casual|internship)\)\s*$/i, "").trim());
+      const bits = [];
+      if (asTitle.length) bits.push("as " + asTitle.map(r => (/^[aeiou]/i.test(r) ? "an " : "a ") + r).join(" and "));
+      if (atFirm.length) bits.push("at " + atFirm.join(" and "));
+      s += ` with experience ${bits.join(" and ")}`;
+    }
     s += ".";
     if (hard.length) s += ` Skilled in ${hard.join(", ").replace(/, ([^,]*)$/, " and $1")}.`;
     if (o.target) s += ` Seeking ${o.target}.`;
@@ -794,7 +801,7 @@
     const transferable = k.softs.map(t => { const syn = SYN[t] || [t]; let ev = null; for (const s of doc.sections.filter(x => x.type !== "summary" && x.type !== "skills")) for (const i of s.items) if (!ev && syn.some(w => i.text.toLowerCase().includes(w))) ev = { section: s.title, itemId: i.id, text: i.text }; return { term: t, found: ev }; });
     const reqs = k.reqLines.map(line => {
       const ws = (line.toLowerCase().match(/[a-z][a-z+#&-]{3,}/g) || []).filter(w => !STOP.has(w));
-      const got = ws.filter(w => cvText.includes(w.slice(0, Math.max(5, w.length - 2))) || (SYN[w] || []).some(x => cvText.includes(x)));
+      const got = ws.filter(w => cvText.includes(stem(w)) || (SYN[w] || []).some(x => cvText.includes(x)));
       const ratio = ws.length ? got.length / ws.length : 0;
       return { requirement: line, status: ratio >= 0.6 ? "evidenced" : ratio >= 0.3 ? "partial" : "missing", matched: got.slice(0, 6) };
     });
@@ -810,21 +817,102 @@
       note: "Keyword and requirement overlap only. It doesn't predict ATS results or interviews, and it can't tell if you have a skill you haven't written down." };
   }
   /* Targeted version: same facts, with the job's matched skills moved to the front of the skills list and a profile line that names the role. */
-  function targetedVersion(doc, jd, title, o = {}) {
-    const d = clone(doc);
+  /* Targeted version: a list of proposed changes that use only facts already in the CV.
+     - skills: add skills the ad wants that the CV already shows elsewhere, then lead with the ad's terms
+     - bullets: within each role, move the bullet points that match the ad to the top
+     - profile: name the target role */
+  const stem = w => w.toLowerCase().slice(0, Math.max(4, Math.min(6, w.length - 2)));
+  function adWords(jd) {
     const k = jobKeywords(jd);
-    const want = [...k.skills, ...k.terms];
-    for (const s of d.sections.filter(s => s.type === "skills")) for (const it of s.items) {
-      const parts = it.text.split(/\s*[,;|]\s*/);
-      if (parts.length < 3) continue;
-      const score = p => want.some(w => p.toLowerCase().includes(w)) ? 0 : 1;
-      it.text = parts.map((p, i) => [p, i]).sort((a, b) => score(a[0]) - score(b[0]) || a[1] - b[1]).map(x => x[0]).join(", ");
+    const words = new Set();
+    for (const line of [...k.reqLines, ...k.terms, ...k.skills]) for (const w of (line.toLowerCase().match(/[a-z][a-z&+#-]{3,}/g) || [])) if (!STOP.has(w)) words.add(stem(w));
+    return { k, words };
+  }
+  const matchScore = (text, words) => { let n = 0; for (const w of new Set((text.toLowerCase().match(/[a-z][a-z&+#-]{3,}/g) || []).map(stem))) if (words.has(w)) n++; return n; };
+  function guessTitle(jd) {
+    const first = String(jd).split("\n").map(l => l.trim()).find(l => l && l.length < 80 && !/[.!?]$/.test(l)) || "";
+    return first.replace(/\s*[-–—|].*$/, "").replace(/^(job title|role|position)\s*:\s*/i, "").trim();
+  }
+  function planTargeted(doc, jd, title, o = {}) {
+    const { k, words } = adWords(jd);
+    const changes = [];
+    const role = (title || guessTitle(jd)).replace(/\b(role|position)\b\.?$/i, "").trim();
+    // 1. skills
+    const body = doc.sections.filter(s => s.type !== "skills").flatMap(s => s.items.map(i => i.text)).join(" ");
+    const skillSec = doc.sections.find(s => s.type === "skills");
+    const listed = skillSec ? skillSec.items.map(i => i.text).join(", ").toLowerCase() : "";
+    const wanted = [...new Set([...k.skills, ...hits(String(jd).toLowerCase(), HARD_SKILLS)])];
+    const evidenced = wanted.filter(t => !listed.includes(t) && hits(body, [t]).length && !["sales", "accounting"].includes(t)).slice(0, 6);
+    const cased = t => { const m = body.match(new RegExp(t.replace(/[+#.]/g, "\\$&"), "i")); const v = m ? m[0] : t; return v[0].toUpperCase() + v.slice(1); };
+    if (skillSec && skillSec.items.length) {
+      const items = skillSec.items.filter(i => i.text.trim());
+      const it = items.slice().sort((a, b) => hits(b.text, HARD_SKILLS).length - hits(a.text, HARD_SKILLS).length)[0] || skillSec.items[0];
+      const lab = (it.text.match(/^([A-Za-z &/-]{2,30}):\s*/) || ["", ""]);
+      const parts = it.text.slice(lab[0].length).split(/\s*[,;|]\s*/).filter(Boolean);
+      const all = [...evidenced.map(cased), ...parts];
+      const sc = p => matchScore(p, words) > 0 || wanted.some(w => p.toLowerCase().includes(w)) ? 0 : 1;
+      const after = lab[0] + all.map((p, i) => [p, i]).sort((a, b) => sc(a[0]) - sc(b[0]) || a[1] - b[1]).map(x => x[0]).join(", ");
+      if (after !== it.text) changes.push({ id: "skills", kind: "skills", itemId: it.id, label: evidenced.length ? `Add ${evidenced.length} skill${evidenced.length > 1 ? "s" : ""} your experience already shows, and lead with the ad's terms` : "Lead your skills list with the ad's terms",
+        why: evidenced.length ? `Your experience already shows ${evidenced.map(cased).join(", ")}, and the ad asks for ${evidenced.length > 1 ? "them" : "it"}. Moved up: the skills that match the ad.` : "Recruiters skim the first few skills.", before: it.text, after, added: evidenced.map(cased) });
+    } else if (evidenced.length) {
+      changes.push({ id: "skills", kind: "skills-new", label: "Add a Skills section with skills your experience already shows", why: `Your CV mentions ${evidenced.join(", ")}, and the ad asks for them.`, before: "", after: evidenced.map(cased).join(", ") });
     }
-    const target = title ? `a ${title.trim()} role` : "";
-    const draft = summaryDraft(d, { target, mode: o.mode });
-    let sum = d.sections.find(s => s.type === "summary");
-    if (draft && !sum) { sum = { id: nid("s"), title: "Profile", type: "summary", items: [{ id: nid("i"), text: draft, bullet: false, kind: "line" }] }; d.sections.unshift(sum); }
-    return { doc: d, profile: draft };
+    // 2. bullet order within each role
+    for (const s of doc.sections.filter(s => EXP_TYPES.has(s.type))) {
+      let group = [], head = null;
+      const flush = () => {
+        if (group.length >= 2) {
+          // only clearly relevant bullet points (2+ of the ad's words) move up; the rest keep their order
+          const ranked = group.map((it, i) => { const n = matchScore(it.text, words); return { it, i, n: n >= 2 ? n : 0 }; }).sort((a, b) => b.n - a.n || a.i - b.i);
+          if (ranked.some((r, i) => r.i !== i))
+            changes.push({ id: "order-" + group[0].id, kind: "order", sectionId: s.id, ids: ranked.map(r => r.it.id), label: `Reorder bullet points under “${short(head ? head.text.replace(/\s{2,}.*/, "") : s.title, 60)}”`,
+              why: "Puts the experience most relevant to this ad first.", before: group.map(g => g.text), after: ranked.map(r => r.it.text) });
+        }
+        group = [];
+      };
+      for (const it of s.items) { if (it.kind === "entry") { flush(); head = it; } else if (it.bullet || it.kind === "statement") group.push(it); }
+      flush();
+    }
+    // 3. profile names the role
+    const sum = doc.sections.find(s => s.type === "summary" && s.items.length);
+    if (role) {
+      const line = `Seeking ${/^(a|an|the)\s/i.test(role) ? role : (/^[aeiou]/i.test(role) ? "an " : "a ") + role} role.`;
+      if (sum) {
+        const it = sum.items[0];
+        if (!it.text.toLowerCase().includes(role.toLowerCase())) {
+          const sentences = it.text.match(/[^.!?]+[.!?]*/g) || [it.text];
+          const idx = sentences.findIndex(x => /^\s*(seeking|looking for|aspiring|interested in|hoping to|eager to secure)/i.test(x));
+          const after = idx >= 0 ? sentences.map((x, i) => i === idx ? " " + line : x).join("").trim() : `${it.text.replace(/\s+$/, "")}${/[.!?]$/.test(it.text.trim()) ? "" : "."} ${line}`;
+          changes.push({ id: "profile", kind: "profile", itemId: it.id, label: "Name this role in your profile", why: "Shows the reader straight away that the CV is written for this job.", before: it.text, after });
+        }
+      } else {
+        const draft = summaryDraft(doc, { target: line.replace(/^Seeking /, "").replace(/\.$/, ""), mode: o.mode });
+        if (draft) changes.push({ id: "profile", kind: "profile-new", label: "Add a profile that names this role", why: "Built only from your degree, roles and skills.", before: "", after: draft });
+      }
+    }
+    return { changes, role };
+  }
+  function applyTargeted(doc, changes, pick) {
+    const d = clone(doc);
+    const find = id => { for (const s of d.sections) { const i = s.items.find(x => x.id === id); if (i) return i; } return null; };
+    for (const c of changes) {
+      if (pick && !pick.has(c.id)) continue;
+      if (c.kind === "skills" || c.kind === "profile") { const it = find(c.itemId); if (it) it.text = c.after; }
+      if (c.kind === "skills-new") d.sections.push({ id: nid("s"), title: "Skills", type: "skills", items: [{ id: nid("i"), text: c.after, bullet: false, kind: "line" }] });
+      if (c.kind === "profile-new") d.sections.unshift({ id: nid("s"), title: "Profile", type: "summary", items: [{ id: nid("i"), text: c.after, bullet: false, kind: "line" }] });
+      if (c.kind === "order") {
+        const s = d.sections.find(x => x.id === c.sectionId); if (!s) continue;
+        const idxs = c.ids.map(id => s.items.findIndex(x => x.id === id)).filter(i => i >= 0).sort((a, b) => a - b);
+        if (idxs.length !== c.ids.length) continue;
+        const moved = c.ids.map(id => s.items.find(x => x.id === id));
+        idxs.forEach((pos, j) => { s.items[pos] = moved[j]; });
+      }
+    }
+    return d;
+  }
+  function targetedVersion(doc, jd, title, o = {}) {
+    const plan = planTargeted(doc, jd, title, o);
+    return { doc: applyTargeted(doc, plan.changes), changes: plan.changes };
   }
 
   /* ---------------- diff ---------------- */
@@ -894,5 +982,5 @@
     };
   }
 
-  return { VERSION, CATEGORIES, band, checkText, parse, toText, clone, findItem, allItems, analyse, rewrite, newNumbers, metricQuestion, withMetric, summaryDraft, jobMatch, jobKeywords, targetedVersion, diff, fromAI, verbInfo, past, spellingIssues, variantName, ACTIONS };
+  return { VERSION, CATEGORIES, band, checkText, parse, toText, clone, findItem, allItems, analyse, rewrite, newNumbers, metricQuestion, withMetric, summaryDraft, jobMatch, jobKeywords, targetedVersion, planTargeted, applyTargeted, diff, fromAI, verbInfo, past, spellingIssues, variantName, ACTIONS };
 });
